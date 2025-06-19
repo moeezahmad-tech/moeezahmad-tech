@@ -1,16 +1,50 @@
-## Hi there 👋
+# 👋 Hi, I'm Moeez Ahmad
 
-<!--
-**moeezahmad643/moeezahmad643** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🚀 Website Developer & Freelance Branding Expert  
+🎯 I help freelancers & businesses build clean, high-converting websites that bring real results.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🧠 What I Do
+
+- 🔧 Redesign freelancer portfolios to attract better clients  
+- 💡 Build modern, SEO-optimized, and fast websites  
+- 🖼️ Align personal branding with website visuals  
+- 📈 Share content around freelancing, branding, and conversion-focused design
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML, CSS, JavaScript  
+- Responsive Design (Mobile First)  
+- Git & GitHub  
+- Hosting on Vercel, GitHub Pages, InfinityFree  
+- Cloudflare, SEO tools, Analytics  
+
+---
+
+## 📸 Content I Create
+
+- 🎥 Instagram Reels & Carousels (Tips + Redesigns)  
+- 📄 LinkedIn Strategy Posts (Freelancer-focused)  
+- 💻 Case studies & before/after portfolio breakdowns  
+
+---
+
+## 📬 Let's Connect
+
+- 🌐 [moeezahmad.tech](https://moeezahmad.tech)  
+- 🔗 [LinkedIn](https://linkedin.com/in/moeez-ahmadd)  
+- 📸 [Instagram](https://instagram.com/moeezahmad.tech)  
+- ✉️ moeezahmad.pk@gmail.com
+
+---
+
+### 💬 “I help freelancers and creators turn their online presence into client-winning machines.”
+
+---
+
+#### 🔖 Hashtags for SEO (add to your posts):
+
+`#WebsiteDeveloper` `#FreelancerBranding` `#PortfolioTips` `#FreelancePakistan` `#WebDesignTips` `#PersonalBranding`
