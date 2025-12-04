@@ -16,11 +16,12 @@
 
 ## 🛠️ Tech Stack
 
-- HTML, CSS, JavaScript  
-- Responsive Design (Mobile First)  
+- HTML, CSS, JavaScript
+- ReactJS, NodeJS, GraphJS
+- MySQL, SQLite, MongoDB
 - Git & GitHub  
 - Hosting on Vercel, GitHub Pages, InfinityFree  
-- Cloudflare, SEO tools, Analytics  
+- Cloudflare, AWS  
 
 ---
 
@@ -34,7 +35,7 @@
 
 ## 📬 Let's Connect
 
-- 🌐 [moeezahmad.tech](https://moeezahmad.tech)  
+- 🌐 [moeezahmad.techkreative.com](https://moeezahmad.techkreative.com)  
 - 🔗 [LinkedIn](https://linkedin.com/in/moeez-ahmadd)  
 - 📸 [Instagram](https://instagram.com/moeezahmad.tech)  
 - ✉️ moeezahmad.pk@gmail.com
