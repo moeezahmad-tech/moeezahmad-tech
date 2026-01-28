@@ -48,6 +48,13 @@ body {
     padding: 5px 15px;
     border-radius: 50px;
   }
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    color: #006eda;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 main{

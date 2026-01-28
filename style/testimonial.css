@@ -7,6 +7,15 @@
   flex-wrap: wrap;
   position: relative;
 
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    color: #006eda;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   .circle {
     height: 60vw;
     width: 60vw;
