@@ -1,80 +1,48 @@
-.Projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+.Projects { 
 
-  h1 {
-    font-size: 3rem;
-    line-height: 1;
-    color: #006eda;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  section {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex: 1;
-
-    >div {
-      width: 30%;
-      border: none;
-      box-shadow: 0 0 10px #ffffff3b;
-      border-radius: 2px;
-      height: 300px;
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-      
-      img {
-        transition: all 3s ease;
-        width: 100%;
-        transform: translateY(0px);
-      }
-
-      div {
-        transition: all 0.3s ease;
-        width: 100%;
-        height: 100%;
+    .project-list {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        background-color: white;
-        color: black;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+        > div{
+            min-width: 300px;
+            width: 30%;
+            background-color: rgba(92, 92, 92, 0.384);
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 5px;
+            padding-top: 10px;
+            img{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 11px;
+            }
+            div{
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                a{
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
 
-        h3 {
-          padding: 0 10px;
-          font-size: clamp(12px, 2vw, 16px);
-        }
+                    .bi{
+                        position: relative;
+                        top: 2px;
+                    }
 
-        p {
-          padding: 2px 10px;
-          font-size: clamp(8px, 2vw, 16px);
-        }
 
-        a {
-          color: white;
-          padding: 0 10px;
-          font-size: clamp(10px, 2vw, 16px);
-        }
-      }
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
 
-      &:hover {
-        .img1{
-          transform: translateY(-1140px);
         }
-        .img2{
-          transform: translateY(-870px);
-        }
-        .img3{
-          transform: translateY(-960px);
-        }
-      }
     }
-  }
+
+
 }

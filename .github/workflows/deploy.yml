@@ -20,6 +20,3 @@ jobs:
         
         local-dir: ./ 
         server-dir: ./moeezahmad/ 
-
-        timeout: 90000         
-        log-level: verbose
