@@ -21,11 +21,8 @@ body {
   background: linear-gradient(to right, #000000);
   scroll-behavior: smooth;
   color: white;
-
   overflow-x: hidden;
 }
-
-
 
 .bi {
   font-size: large;
@@ -59,4 +56,89 @@ body {
 
 main{
   padding: 5vw 0;
+}
+
+.colormagic-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.colormagic-content {
+  display: flex;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 90%;
+  align-items: center;
+}
+
+.colormagic-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.colormagic-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  filter: drop-shadow(0 10px 30px rgba(43, 0, 255, 0.3));
+  transition: transform 0.3s ease;
+}
+  
+.colormagic-image img:hover {
+  transform: scale(1.05);
+}
+
+.colormagic-info {
+  flex: 1;
+}
+
+.colormagic-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #006eda;
+  font-weight: 700;
+}
+
+.colormagic-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.colormagic-info .button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #006eda 0%, #006eda 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.colormagic-info .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 222, 218, 0.4);
+}
+
+@media (max-width: 768px) {
+  .colormagic-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .colormagic-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .colormagic-image img {
+    max-width: 300px;
+  }
 }

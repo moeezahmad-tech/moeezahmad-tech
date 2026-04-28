@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -103,7 +106,7 @@
             <p>Transforming ideas into flawless code, one pixel-perfect website at a time.</p>
             <a href="#connect" class="button">See My Work <i class="bi bi-arrow-right"></i></a>
         </div>
-        <img src="images/1.webp" alt="Moeez Ahmad - Website Developer">
+        <img src="images/me.gif" alt="Moeez Ahmad - Website Developer">
         <div class="circle"></div>
     </header>
 
@@ -114,7 +117,7 @@
 
         <section>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                     <i class="bi bi-window-fullscreen"></i>
                     <div class="service-title">Website Design</div>
                     <div class="service-desc">
@@ -122,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="bi bi-window-dock"></i>
                     <div class="service-title">Website Redesign</div>
                     <div class="service-desc">
@@ -130,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="bi bi-window-stack"></i>
                     <div class="service-title">Full Stack Tools</div>
                     <div class="service-desc">
@@ -138,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="bi bi-easel"></i>
                     <div class="service-title">Online Presence</div>
                     <div class="service-desc">
@@ -153,7 +156,7 @@
         <div class="top">
         </div>
         <section class="main-work">
-            <div class="work2">
+            <div class="work2" data-aos="fade-right" data-aos-delay="100">
                 <h1>Prepare to be blown away!</h1>
                 <p>Step into the code dojo, where your website transforms from "just functional" to "holy smokes, this
                     is fast!" From forgotten landing pages to high-performance web apps, I turn tech headaches into
@@ -167,7 +170,7 @@
                     </ul>
                 </div>
             </div>
-            <img class="lg" src="images/work.webp">
+            <img class="lg" src="images/work.webp" data-aos="fade-left" data-aos-delay="100">
 
         </section>
     </main>
@@ -177,25 +180,43 @@
             <h1>Wanted to Learn from Me.</h1>
         </div>
         <section class="course-list">
-            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42nF08oBiGoByU5zFwerka_T"><img class="sm"
+            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42nF08oBiGoByU5zFwerka_T" data-aos="zoom-in" data-aos-delay="0"><img class="sm"
                     src="images/Courses/c1.webp" alt="Moeez Ahmad - Website Developer"></a>
-            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42n4KrLjlV0LurswCr8SRNuQ"><img class="sm"
+            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42n4KrLjlV0LurswCr8SRNuQ" data-aos="zoom-in" data-aos-delay="100"><img class="sm"
                     src="images/Courses/c2.webp" alt="Moeez Ahmad - Website Developer"></a>
-            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42l0X0aTAn3t8JcwNRwooDus"><img class="sm"
+            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42l0X0aTAn3t8JcwNRwooDus" data-aos="zoom-in" data-aos-delay="200"><img class="sm"
                     src="images/Courses/c3.webp" alt="Moeez Ahmad - Website Developer"></a>
-            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42m2q9WzfuvokA7h-RZ53RUw"><img class="sm"
+            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42m2q9WzfuvokA7h-RZ53RUw" data-aos="zoom-in" data-aos-delay="300"><img class="sm"
                     src="images/Courses/c4.webp" alt="Moeez Ahmad - Website Developer"></a>
-            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42mIBAkmqqcYLzMEG9EMjakr"><img class="sm"
+            <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42mIBAkmqqcYLzMEG9EMjakr" data-aos="zoom-in" data-aos-delay="400"><img class="sm"
                     src="images/Courses/c5.webp" alt="Moeez Ahmad - Website Developer"></a>
+        </section>
+    </main>
+
+    <main>
+        <div class="top">
+            <h1>Featured Project</h1>
+        </div>
+        <section class="colormagic-section" data-aos="fade-up" data-aos-delay="0">
+            <div class="colormagic-content">
+                <div class="colormagic-image">
+                    <img src="images/colormagic-logo.png" alt="Color Magic - Color Palette Explorer">
+                </div>
+                <div class="colormagic-info">
+                    <h2>Color Magic</h2>
+                    <p>An intelligent color palette explorer featuring thousands of professional color schemes. Browse and discover beautiful color palettes by theme (Neon, Vintage, Minimalist, Earthy, Pastel), search by hex codes, or let Color Magic inspire your next project. Perfect for designers, developers, and creative professionals looking for the perfect color combination.</p>
+                    <a href="https://colormagic.techkreative.com" class="button">Explore Color Magic <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
         </section>
     </main>
 
     <main class="Projects" id="Projects">
         <div class="top">
-            <h1>My Projects</h1>
+            <h1>My Frontend Projects</h1>
         </div>
         <section class="project-list">
-            <div>
+            <div data-aos="fade-up" data-aos-delay="0">
                 <div class="img-box">
                     <img class="img1" src="images/projects/p (1).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -204,7 +225,7 @@
                     <a href="https://techkreative.com">Visit Site <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="100">
                 <div class="img-box">
                     <img class="img2" src="images/projects/p (9).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -214,7 +235,7 @@
                         href="https://moeezahmad-tech.github.io/my_static_sites/real%20estate%20blue/index.html">Visit Site <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="200">
                 <div class="img-box">
                     <img class="img3" src="images/projects/p (10).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -223,7 +244,7 @@
                     <a href="https://moeezahmad-tech.github.io/my_static_sites/real%20Estate/index.html">Visit Site <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
                 <div class="img-box">
                     <img class="img4" src="images/projects/p (2).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -232,7 +253,7 @@
                     <a href="https://moeezahmad-tech.github.io/my_static_sites/HypeLink/index.html">Visit Site <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="400">
                 <div class="img-box">
                     <img class="img" src="images/projects/p (3).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -241,7 +262,7 @@
                     <a href="https://abdulmutalib.page.gd">Visit Site <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="500">
                 <div class="img-box">
                     <img class="img" src="images/projects/p (4).webp" alt="Moeez Ahmad - Website Developer">
                 </div>
@@ -258,7 +279,7 @@
             <h1>Client feedback</h1>
         </div>
         <section class="testimonial">
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
                 <p>
                     I highly recommend Moeez for any creative project! He’s a skilled web developer and an amazing
                     freelancer.
@@ -274,7 +295,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                 <p>
                     I highly recommend Moeez for any creative project! He’s a skilled web developer and an amazing
                     freelancer.
@@ -290,7 +311,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                 <p>
                     If you need someone who’s creative, easy to work with, and knows what they’re doing — Moeez is 100%
                     worth it.
@@ -305,7 +326,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
                 <p>
                     I recently got my LinkedIn banner and header done by Moeez Ahmad, and honestly — he nailed it.
                     His approach is meticulous and quick, yet he makes sure the result is absolutely perfect. It's a
@@ -320,7 +341,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
                 <p>
                     I had the pleasure of working with Moeez Ahmad and experiencing his creative process first-hand. His
                     ability
@@ -337,7 +358,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
                 <p>
                     I had the opportunity to work with Moeez Ahmad as a portfolio for myself. I’m genuinely impressed by
                     how visually striking the banner is and how professional and easy Moeez’s efforts were. Work
@@ -400,6 +421,18 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'
         integrity='sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=='
         crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            offset: 100
+        });
+    </script>
+    
     <script src="script/nav.js"></script>
     <script src="script/work.js"></script>
     <script src="js/animation.js"></script>
