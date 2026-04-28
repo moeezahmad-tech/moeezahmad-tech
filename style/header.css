@@ -62,7 +62,7 @@ header {
     width: 80%;
     min-width: 300px;
     object-fit: cover;
-    filter: saturate(1.4);
+    filter: saturate(1.0);
   }
 }
 
