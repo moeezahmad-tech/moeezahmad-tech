@@ -473,6 +473,9 @@ img {
   font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 145px;
+  border: 1.5px solid transparent;
   gap: 8px;
   box-shadow: 0 8px 20px var(--primary-blue-glow);
   transition: var(--transition);
@@ -494,6 +497,8 @@ img {
   border: 1.5px solid var(--text-dark);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 145px;
   gap: 8px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
