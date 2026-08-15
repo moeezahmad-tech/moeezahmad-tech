@@ -1,792 +1,1237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moeez Ahmad — Website Developer & Digital Executioner</title>
 
     <!-- Meta Description & SEO -->
-    <meta name="description"
-        content="Moeez Ahmad - Website Developer & Digital Executioner. Transforming ideas into flawless code with custom, responsive websites, full-stack solutions, and digital marketing expertise.">
-    <meta name="keywords"
-        content="Moeez Ahmad, web developer, website design, portfolio, full stack, digital marketing, Lahore, Pakistan, responsive websites, web development, projects, courses">
-    <meta name="author" content="Moeez Ahmad">
-    <meta property="og:title" content="Moeez Ahmad — Website Developer">
-    <meta property="og:description"
-        content="Transforming ideas into flawless code, one pixel-perfect website at a time.">
-    <meta property="og:image" content="images/1.webp">
-    <meta property="og:type" content="website">
+    <meta
+      name="description"
+      content="Moeez Ahmad - Website Developer & Digital Executioner. Transforming ideas into flawless code with custom, responsive websites, full-stack solutions, and digital marketing expertise."
+    />
+    <meta
+      name="keywords"
+      content="Moeez Ahmad, web developer, website design, portfolio, full stack, digital marketing, Lahore, Pakistan, responsive websites, web development, projects, courses"
+    />
+    <meta name="author" content="Moeez Ahmad" />
+    <meta property="og:title" content="Moeez Ahmad — Website Developer" />
+    <meta
+      property="og:description"
+      content="Transforming ideas into flawless code, one pixel-perfect website at a time."
+    />
+    <meta property="og:image" content="images/1.webp" />
+    <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
 
     <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- AOS - Animate On Scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Custom Unique CSS -->
-    <link rel="stylesheet" href="style/index2.css">
-</head>
+    <link rel="stylesheet" href="style/index2.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="site-wrapper">
-
-        <!-- ==========================================
+      <!-- ==========================================
              Navigation Bar (Capsule / Pill Design)
              ========================================== -->
-        <header class="nav-container" data-aos="fade-down" data-aos-duration="800">
-            <nav class="nav-pill">
-                <a href="index2.html" class="nav-brand">
-                    <span class="nav-avatar-badge">M</span>
-                    <span>Moeez</span>
-                </a>
+      <header
+        class="nav-container"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
+        <nav class="nav-pill">
+          <a href="#hero" class="nav-brand">
+            <img src="images/logo.png" alt="Moeez Ahmad" class="nav-logo-img" />
+            <span>Moeez</span>
+          </a>
 
-                <ul class="nav-links">
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#experience">Resume</a></li>
-                    <li><a href="#projects">Project</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
+          <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Resume</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
 
-                <a href="#contact" class="nav-cta">
-                    Hire Me <i class="bi bi-arrow-up-right"></i>
-                </a>
+          <a href="#contact" class="nav-cta">
+            Hire Me <i class="bi bi-arrow-up-right"></i>
+          </a>
 
-                <button class="nav-toggle" id="menuToggle" aria-label="Toggle navigation menu">
-                    <i class="bi bi-list"></i>
-                </button>
-            </nav>
-        </header>
+          <button
+            class="nav-toggle"
+            id="menuToggle"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </nav>
+      </header>
 
-        <!-- Mobile Fullscreen Menu Drawer -->
-        <div class="mobile-menu" id="mobileMenu">
-            <button class="close-btn" id="menuClose" aria-label="Close menu">&times;</button>
-            <ul class="mobile-menu-links">
-                <li><a href="#hero" class="mobile-link">Home</a></li>
-                <li><a href="#about" class="mobile-link">About</a></li>
-                <li><a href="#services" class="mobile-link">Services</a></li>
-                <li><a href="#experience" class="mobile-link">Resume / Experience</a></li>
-                <li><a href="#projects" class="mobile-link">Projects</a></li>
-                <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
-                <li><a href="#contact" class="mobile-link">Contact</a></li>
-            </ul>
-            <div class="mobile-socials">
-                <a href="https://www.linkedin.com/in/moeezahmad-tech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.youtube.com/@moeezahmad.techkreative" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                <a href="https://www.instagram.com/moeezahmad.tech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.facebook.com/moeezahmad.tech" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="https://wa.me/923266037125" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            </div>
+      <!-- Mobile Fullscreen Menu Drawer -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="menuClose" aria-label="Close menu">
+          &times;
+        </button>
+        <ul class="mobile-menu-links">
+          <li><a href="#hero" class="mobile-link">Home</a></li>
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#services" class="mobile-link">Services</a></li>
+          <li>
+            <a href="#experience" class="mobile-link">Resume / Experience</a>
+          </li>
+          <li><a href="#projects" class="mobile-link">Projects</a></li>
+          <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+          <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <div class="mobile-socials">
+          <a
+            href="https://www.linkedin.com/in/moeezahmad-tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/@moeezahmad.techkreative"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            ><i class="bi bi-youtube"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/moeezahmad.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/moeezahmad.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://wa.me/923266037125"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
         </div>
+      </div>
 
-        <!-- ==========================================
+      <!-- ==========================================
              Hero Section (Curved Arch Portrait + Badges)
              ========================================== -->
-        <section class="hero-section" id="hero">
-            <!-- Hello Floating Pill -->
-            <div data-aos="fade-down" data-aos-delay="100">
-                <span class="hello-badge">
-                    Hello! <span class="sparkle"><i class="bi bi-stars"></i></span>
-                </span>
+      <section class="hero-section" id="hero">
+        <!-- Hello Floating Pill -->
+        <div data-aos="fade-down" data-aos-delay="100">
+          <span class="hello-badge">
+            Hello! <span class="sparkle"><i class="bi bi-stars"></i></span>
+          </span>
+        </div>
+
+        <!-- Big Headline matching reference layout -->
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+          I'm <span class="name-highlight">Moeez,</span><br />
+          Website Developer
+        </h1>
+
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+          Transforming ideas into flawless code, one pixel-perfect website at a
+          time.
+        </p>
+
+        <!-- Hero Showcase Grid (Left widget, Center Arch Portrait, Right widget) -->
+        <div class="hero-showcase">
+          <!-- Left Quote Card & Client Stats -->
+          <div
+            class="hero-left-widget"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+            <div class="hero-quote-card">
+              <span class="quote-icon"><i class="bi bi-quote"></i></span>
+              <p>
+                “Moeez's exceptional web development ensured our project's
+                success. Highly recommended!”
+              </p>
             </div>
 
-            <!-- Big Headline matching reference layout -->
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                I'm <span class="name-highlight">Moeez,</span><br>
-                Website Developer
-            </h1>
-
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-                Transforming ideas into flawless code, one pixel-perfect website at a time.
-            </p>
-
-            <!-- Hero Showcase Grid (Left widget, Center Arch Portrait, Right widget) -->
-            <div class="hero-showcase">
-                
-                <!-- Left Quote Card & Client Stats -->
-                <div class="hero-left-widget" data-aos="fade-right" data-aos-delay="400">
-                    <div class="hero-quote-card">
-                        <span class="quote-icon"><i class="bi bi-quote"></i></span>
-                        <p>“Moeez's exceptional web development ensured our project's success. Highly recommended!”</p>
-                    </div>
-
-                    <div class="hero-stat-card">
-                        <div class="stat-num">450+</div>
-                        <div class="stat-label">Clients & Projects Served</div>
-                    </div>
-                </div>
-
-                <!-- Center: Blue Arch + Cutout Photo + Action Buttons -->
-                <div class="hero-center-portrait" data-aos="zoom-in" data-aos-delay="350">
-                    <div class="arch-background"></div>
-                    
-                    <div class="portrait-img-wrapper">
-                        <img src="images/me.png" alt="Moeez Ahmad - Website Developer">
-                    </div>
-
-                    <div class="hero-actions-container">
-                        <a href="#projects" class="btn-primary-pill">
-                            Portfolio <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                        <a href="#contact" class="btn-secondary-pill">
-                            Hire Me
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Rating & Experience Box -->
-                <div class="hero-right-widget" data-aos="fade-left" data-aos-delay="400">
-                    <div class="hero-rating-box">
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <div class="exp-num">5+ Years</div>
-                        <div class="exp-label">Industry Experience</div>
-                    </div>
-
-                    <div class="hero-badge-pill">
-                        <i class="bi bi-patch-check-fill"></i> 100% Quality Guaranteed
-                    </div>
-                </div>
-
+            <div class="hero-stat-card">
+              <div class="stat-num">450+</div>
+              <div class="stat-label">Clients & Projects Served</div>
             </div>
-        </section>
+          </div>
 
+          <!-- Center: Blue Arch + Cutout Photo + Action Buttons -->
+          <div
+            class="hero-center-portrait"
+            data-aos="zoom-in"
+            data-aos-delay="350"
+          >
+            <div class="arch-background"></div>
 
-        <!-- ==========================================
+            <div class="portrait-img-wrapper">
+              <img src="images/me.png" alt="Moeez Ahmad - Website Developer" />
+            </div>
+
+            <div class="hero-actions-container">
+              <a href="#projects" class="btn-primary-pill">
+                Portfolio <i class="bi bi-arrow-up-right"></i>
+              </a>
+              <a href="#contact" class="btn-secondary-pill"> Hire Me </a>
+            </div>
+          </div>
+
+          <!-- Right Rating & Experience Box -->
+          <div
+            class="hero-right-widget"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
+            <div class="hero-rating-box">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="exp-num">5+ Years</div>
+              <div class="exp-label">Industry Experience</div>
+            </div>
+
+            <div class="hero-badge-pill">
+              <i class="bi bi-patch-check-fill"></i> 100% Quality Guaranteed
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Services Section (Dark Container with Highlight Card)
              ========================================== -->
-        <section class="services-dark-container" id="services" data-aos="fade-up" data-aos-duration="900">
-            <div class="services-header">
+      <section
+        class="services-dark-container"
+        id="services"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div class="services-header">
+          <div>
+            <h2>My <span>Services</span></h2>
+          </div>
+          <p>
+            Comprehensive digital solutions covering custom frontend & backend
+            engineering, responsive modern layouts, and search performance
+            optimization.
+          </p>
+        </div>
+
+        <div class="services-cards-grid">
+          <!-- Service Card 1: Website Design -->
+          <div
+            class="dark-service-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div>
+              <div class="service-card-top">
                 <div>
-                    <h2>My <span>Services</span></h2>
+                  <h3 class="service-title">UI/UX & Web Design</h3>
+                  <p class="service-summary">
+                    Custom, responsive websites tailored to your brand identity
+                    and business objectives.
+                  </p>
                 </div>
-                <p>
-                    Comprehensive digital solutions covering custom frontend & backend engineering, responsive modern layouts, and search performance optimization.
-                </p>
+              </div>
+
+              <div class="service-card-mockup">
+                <img
+                  src="images/projects/p (1).webp"
+                  alt="Website Design Preview"
+                  class="mockup-preview-img"
+                />
+              </div>
             </div>
 
-            <div class="services-cards-grid">
-                
-                <!-- Service Card 1: Website Design -->
-                <div class="dark-service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <div class="service-card-top">
-                            <div>
-                                <h3 class="service-title">UI/UX & Web Design</h3>
-                                <p class="service-summary">Custom, responsive websites tailored to your brand identity and business objectives.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-card-mockup">
-                            <img src="images/projects/p (1).webp" alt="Website Design Preview" class="mockup-preview-img">
-                        </div>
-                    </div>
-
-                    <div class="service-card-bottom">
-                        <span class="service-icon-label">
-                            <i class="bi bi-window-fullscreen"></i> Design System
-                        </span>
-                        <a href="#projects" class="service-arrow-btn" aria-label="View design projects">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service Card 2: Web Development / Redesign (HIGHLIGHTED BLUE) -->
-                <div class="dark-service-card highlight-card" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <div class="service-card-top">
-                            <div>
-                                <h3 class="service-title">Full Stack Web Dev</h3>
-                                <p class="service-summary">Modernizing outdated websites with clean UX, blazing fast performance, and full-stack capabilities.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-card-mockup">
-                            <img src="images/projects/p (9).webp" alt="Web Development Preview" class="mockup-preview-img">
-                        </div>
-                    </div>
-
-                    <div class="service-card-bottom">
-                        <span class="service-icon-label">
-                            <i class="bi bi-code-slash"></i> Clean Architecture
-                        </span>
-                        <a href="#contact" class="service-arrow-btn" aria-label="Hire for web dev">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Service Card 3: Landing Pages & Growth -->
-                <div class="dark-service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div>
-                        <div class="service-card-top">
-                            <div>
-                                <h3 class="service-title">Landing Pages & SEO</h3>
-                                <p class="service-summary">Strategic digital solutions to maximize conversions and visibility across search engines & social channels.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-card-mockup">
-                            <img src="images/projects/p (10).webp" alt="Landing Page Preview" class="mockup-preview-img">
-                        </div>
-                    </div>
-
-                    <div class="service-card-bottom">
-                        <span class="service-icon-label">
-                            <i class="bi bi-graph-up-arrow"></i> High Conversion
-                        </span>
-                        <a href="#projects" class="service-arrow-btn" aria-label="View landing pages">
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="service-card-bottom">
+              <span class="service-icon-label">
+                <i class="bi bi-window-fullscreen"></i> Design System
+              </span>
+              <a
+                href="#projects"
+                class="service-arrow-btn"
+                aria-label="View design projects"
+              >
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
-        </section>
+          </div>
 
+          <!-- Service Card 2: Web Development / Redesign (HIGHLIGHTED BLUE) -->
+          <div
+            class="dark-service-card highlight-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div>
+              <div class="service-card-top">
+                <div>
+                  <h3 class="service-title">Full Stack Web Dev</h3>
+                  <p class="service-summary">
+                    Modernizing outdated websites with clean UX, blazing fast
+                    performance, and full-stack capabilities.
+                  </p>
+                </div>
+              </div>
 
-        <!-- ==========================================
+              <div class="service-card-mockup">
+                <img
+                  src="images/projects/p (9).webp"
+                  alt="Web Development Preview"
+                  class="mockup-preview-img"
+                />
+              </div>
+            </div>
+
+            <div class="service-card-bottom">
+              <span class="service-icon-label">
+                <i class="bi bi-code-slash"></i> Clean Architecture
+              </span>
+              <a
+                href="#contact"
+                class="service-arrow-btn"
+                aria-label="Hire for web dev"
+              >
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 3: Landing Pages & Growth -->
+          <div
+            class="dark-service-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div>
+              <div class="service-card-top">
+                <div>
+                  <h3 class="service-title">Landing Pages & SEO</h3>
+                  <p class="service-summary">
+                    Strategic digital solutions to maximize conversions and
+                    visibility across search engines & social channels.
+                  </p>
+                </div>
+              </div>
+
+              <div class="service-card-mockup">
+                <img
+                  src="images/projects/p (10).webp"
+                  alt="Landing Page Preview"
+                  class="mockup-preview-img"
+                />
+              </div>
+            </div>
+
+            <div class="service-card-bottom">
+              <span class="service-icon-label">
+                <i class="bi bi-graph-up-arrow"></i> High Conversion
+              </span>
+              <a
+                href="#projects"
+                class="service-arrow-btn"
+                aria-label="View landing pages"
+              >
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Work Experience Timeline Section
              ========================================== -->
-        <section class="experience-section" id="experience">
-            <div class="section-heading-center" data-aos="fade-up">
-                <span class="section-pill-tag">Career Journey</span>
-                <h2>My Work Experience</h2>
+      <section class="experience-section" id="experience">
+        <div class="section-heading-center" data-aos="fade-up">
+          <span class="section-pill-tag">Career Journey</span>
+          <h2>My Work Experience</h2>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Timeline Item 1: SolnetInfo -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-left">
+              <h4 class="timeline-company">SolnetInfo</h4>
+              <span class="timeline-date">Jun 2026 - Present</span>
             </div>
-
-            <div class="experience-timeline">
-                
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-left">
-                        <h4 class="timeline-company">TechKreative</h4>
-                        <span class="timeline-date">2023 - Present</span>
-                    </div>
-                    <div class="timeline-center">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-right">
-                        <h3 class="timeline-role">Lead Web Developer & Founder</h3>
-                        <p class="timeline-desc">
-                            Spearheading end-to-end full-stack web applications, scalable user interfaces, and custom digital tool development for global clients and enterprise workflows.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-left">
-                        <h4 class="timeline-company">Self-Employed, Global</h4>
-                        <span class="timeline-date">2021 - Present</span>
-                    </div>
-                    <div class="timeline-center">
-                        <div class="timeline-node"></div>
-                        <div class="timeline-line"></div>
-                    </div>
-                    <div class="timeline-right">
-                        <h3 class="timeline-role">Freelance Full-Stack Developer</h3>
-                        <p class="timeline-desc">
-                            Delivering bespoke responsive web solutions, CMS integrations, custom APIs, and high-converting landing pages for 450+ international businesses and creators.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-left">
-                        <h4 class="timeline-company">Digital Creator & Educator</h4>
-                        <span class="timeline-date">2022 - Present</span>
-                    </div>
-                    <div class="timeline-center">
-                        <div class="timeline-node"></div>
-                    </div>
-                    <div class="timeline-right">
-                        <h3 class="timeline-role">Tech Instructor & Mentor</h3>
-                        <p class="timeline-desc">
-                            Authoring comprehensive web development tutorials, project walkthroughs, and frontend masterclasses for aspiring developers worldwide.
-                        </p>
-                    </div>
-                </div>
-
+            <div class="timeline-center">
+              <div class="timeline-node"></div>
+              <div class="timeline-line"></div>
             </div>
-        </section>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Software Engineer</h3>
+              <p class="timeline-desc">
+                Engineering scalable full-stack software solutions, crafting
+                high-performance web applications, and collaborating on
+                enterprise-grade software architecture.
+              </p>
+            </div>
+          </div>
 
+          <!-- Timeline Item 2: TechKreative -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-left">
+              <h4 class="timeline-company">TechKreative</h4>
+              <span class="timeline-date">2023 - Present</span>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-node"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Lead Web Developer & Founder</h3>
+              <p class="timeline-desc">
+                Spearheading end-to-end full-stack web applications, scalable
+                user interfaces, and custom digital tool development for global
+                clients and enterprise workflows.
+              </p>
+            </div>
+          </div>
 
-        <!-- ==========================================
+          <!-- Timeline Item 3: Freelance -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-left">
+              <h4 class="timeline-company">Self-Employed, Global</h4>
+              <span class="timeline-date">2021 - Present</span>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-node"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Freelance Full-Stack Developer</h3>
+              <p class="timeline-desc">
+                Delivering bespoke responsive web solutions, CMS integrations,
+                custom APIs, and high-converting landing pages for 450+
+                international businesses and creators.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Educator -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-left">
+              <h4 class="timeline-company">Digital Creator & Educator</h4>
+              <span class="timeline-date">2022 - Present</span>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-node"></div>
+            </div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Tech Instructor & Mentor</h3>
+              <p class="timeline-desc">
+                Authoring comprehensive web development tutorials, project
+                walkthroughs, and frontend masterclasses for aspiring developers
+                worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Capabilities / Code Dojo Section
              ========================================== -->
-        <section class="capabilities-section" id="about" data-aos="fade-up">
-            <div class="capabilities-info">
-                <h2>Prepare to be blown away!</h2>
-                <p>
-                    Step into the code dojo, where your website transforms from "just functional" to "holy smokes, this is fast!" From forgotten landing pages to high-performance web apps, I turn tech headaches into seamless digital experiences—no magic, just clean code.
-                </p>
+      <section class="capabilities-section" id="about" data-aos="fade-up">
+        <div class="capabilities-info">
+          <h2>Prepare to be blown away!</h2>
+          <p>
+            Step into the code dojo, where your website transforms from "just
+            functional" to "holy smokes, this is fast!" From forgotten landing
+            pages to high-performance web apps, I turn tech headaches into
+            seamless digital experiences—no magic, just clean code.
+          </p>
 
-                <ul class="skills-checklist">
-                    <li><i class="bi bi-check-circle-fill"></i> Custom website development</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Responsive & mobile-first</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Full-stack web applications</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Performance optimization</li>
-                </ul>
-            </div>
+          <ul class="skills-checklist">
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Custom website development
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Responsive & mobile-first
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Full-stack web
+              applications
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Performance optimization
+            </li>
+          </ul>
+        </div>
 
-            <div class="capabilities-visual">
-                <img src="images/work.webp" alt="Work showcase illustration">
-            </div>
-        </section>
+        <div class="capabilities-visual">
+          <img src="images/work.webp" alt="Work showcase illustration" />
+        </div>
+      </section>
 
-
-        <!-- ==========================================
+      <!-- ==========================================
              Featured Project (Color Magic)
              ========================================== -->
-        <section class="featured-project-section" data-aos="fade-up">
-            <div class="featured-project-card">
-                <div class="featured-project-media">
-                    <img src="images/colormagic-logo.png" alt="Color Magic - Color Palette Explorer">
-                </div>
-                <div class="featured-project-info">
-                    <span class="featured-badge">Featured Product</span>
-                    <h3>Color Magic</h3>
-                    <p>
-                        An intelligent color palette explorer featuring thousands of professional color schemes. Browse and discover beautiful color palettes by theme (Neon, Vintage, Minimalist, Earthy, Pastel), search by hex codes, or let Color Magic inspire your next project. Perfect for designers, developers, and creative professionals.
-                    </p>
-                    <a href="https://colormagic.techkreative.com" target="_blank" rel="noopener noreferrer" class="btn-primary-pill">
-                        Explore Color Magic <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section class="featured-project-section" data-aos="fade-up">
+        <div class="featured-project-card">
+          <div class="featured-project-media">
+            <img
+              src="images/colormagic-logo.png"
+              alt="Color Magic - Color Palette Explorer"
+            />
+          </div>
+          <div class="featured-project-info">
+            <span class="featured-badge">Featured Product</span>
+            <h3>Color Magic</h3>
+            <p>
+              An intelligent color palette explorer featuring thousands of
+              professional color schemes. Browse and discover beautiful color
+              palettes by theme (Neon, Vintage, Minimalist, Earthy, Pastel),
+              search by hex codes, or let Color Magic inspire your next project.
+              Perfect for designers, developers, and creative professionals.
+            </p>
+            <a
+              href="https://colormagic.techkreative.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary-pill"
+            >
+              Explore Color Magic <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-
-        <!-- ==========================================
+      <!-- ==========================================
              Frontend Projects Showcase Grid
              ========================================== -->
-        <section class="projects-gallery-section" id="projects">
-            <div class="section-heading-center" data-aos="fade-up">
-                <span class="section-pill-tag">Portfolio</span>
-                <h2>My Frontend Projects</h2>
+      <section class="projects-gallery-section" id="projects">
+        <div class="section-heading-center" data-aos="fade-up">
+          <span class="section-pill-tag">Portfolio</span>
+          <h2>My Frontend Projects</h2>
+        </div>
+
+        <div class="projects-grid-modern">
+          <!-- Project 1 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="project-img-holder">
+              <img
+                src="images/projects/p (1).webp"
+                alt="TechKreative Platform"
+              />
             </div>
-
-            <div class="projects-grid-modern">
-                
-                <!-- Project 1 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="0">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (1).webp" alt="TechKreative Platform">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>TechKreative</h3>
-                            <p>Modern tech and creative agency website built with fast loading architecture and responsive UI.</p>
-                        </div>
-                        <a href="https://techkreative.com" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (9).webp" alt="Real Estate Blue">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>Real Estate Blue</h3>
-                            <p>Contemporary real estate property listing portal with advanced filtering and sleek card layouts.</p>
-                        </div>
-                        <a href="https://moeezahmad-tech.github.io/my_static_sites/real%20estate%20blue/index.html" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (10).webp" alt="Real Estate Platform">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>Real Estate Prime</h3>
-                            <p>Luxury residential and commercial property showcase website with intuitive navigation.</p>
-                        </div>
-                        <a href="https://moeezahmad-tech.github.io/my_static_sites/real%20Estate/index.html" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (2).webp" alt="HypeLink">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>HypeLink</h3>
-                            <p>Bio link aggregating platform with vibrant themes and interactive widgets for creators.</p>
-                        </div>
-                        <a href="https://moeezahmad-tech.github.io/my_static_sites/HypeLink/index.html" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (3).webp" alt="Abdul Mutalib Portfolio">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>Abdul Mutalib Portfolio</h3>
-                            <p>Clean, interactive developer personal website designed for high conversions and clarity.</p>
-                        </div>
-                        <a href="https://abdulmutalib.page.gd" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card-modern" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-img-holder">
-                        <img src="images/projects/p (4).webp" alt="AK Executive Travel">
-                    </div>
-                    <div class="project-card-body">
-                        <div>
-                            <h3>AK Executive Travel</h3>
-                            <p>Premium chauffeur and executive travel booking platform based in the United Kingdom.</p>
-                        </div>
-                        <a href="https://akexecutivetravel.co.uk/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                            Visit Site <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="project-card-body">
+              <div>
+                <h3>TechKreative</h3>
+                <p>
+                  Modern tech and creative agency website built with fast
+                  loading architecture and responsive UI.
+                </p>
+              </div>
+              <a
+                href="https://techkreative.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
-        </section>
+          </div>
 
+          <!-- Project 2 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-img-holder">
+              <img src="images/projects/p (9).webp" alt="Real Estate Blue" />
+            </div>
+            <div class="project-card-body">
+              <div>
+                <h3>Real Estate Blue</h3>
+                <p>
+                  Contemporary real estate property listing portal with advanced
+                  filtering and sleek card layouts.
+                </p>
+              </div>
+              <a
+                href="https://moeezahmad-tech.github.io/my_static_sites/real%20estate%20blue/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-        <!-- ==========================================
+          <!-- Project 3 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-img-holder">
+              <img
+                src="images/projects/p (10).webp"
+                alt="Real Estate Platform"
+              />
+            </div>
+            <div class="project-card-body">
+              <div>
+                <h3>Real Estate Prime</h3>
+                <p>
+                  Luxury residential and commercial property showcase website
+                  with intuitive navigation.
+                </p>
+              </div>
+              <a
+                href="https://moeezahmad-tech.github.io/my_static_sites/real%20Estate/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-img-holder">
+              <img src="images/projects/p (2).webp" alt="HypeLink" />
+            </div>
+            <div class="project-card-body">
+              <div>
+                <h3>HypeLink</h3>
+                <p>
+                  Bio link aggregating platform with vibrant themes and
+                  interactive widgets for creators.
+                </p>
+              </div>
+              <a
+                href="https://moeezahmad-tech.github.io/my_static_sites/HypeLink/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-img-holder">
+              <img
+                src="images/projects/p (3).webp"
+                alt="Abdul Mutalib Portfolio"
+              />
+            </div>
+            <div class="project-card-body">
+              <div>
+                <h3>Abdul Mutalib Portfolio</h3>
+                <p>
+                  Clean, interactive developer personal website designed for
+                  high conversions and clarity.
+                </p>
+              </div>
+              <a
+                href="https://abdulmutalib.page.gd"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="project-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="project-img-holder">
+              <img src="images/projects/p (4).webp" alt="AK Executive Travel" />
+            </div>
+            <div class="project-card-body">
+              <div>
+                <h3>AK Executive Travel</h3>
+                <p>
+                  Premium chauffeur and executive travel booking platform based
+                  in the United Kingdom.
+                </p>
+              </div>
+              <a
+                href="https://akexecutivetravel.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link-btn"
+              >
+                Visit Site <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Courses / Learning Section
              ========================================== -->
-        <section class="courses-section" data-aos="fade-up">
-            <div class="section-heading-center">
-                <span class="section-pill-tag">Tutorials & Guides</span>
-                <h2>Want to Learn from Me?</h2>
-            </div>
+      <section class="courses-section" data-aos="fade-up">
+        <div class="section-heading-center">
+          <span class="section-pill-tag">Tutorials & Guides</span>
+          <h2>Want to Learn from Me?</h2>
+        </div>
 
-            <div class="courses-scroll-track">
-                <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42nF08oBiGoByU5zFwerka_T" target="_blank" rel="noopener noreferrer" class="course-card-link" data-aos="zoom-in" data-aos-delay="0">
-                    <img src="images/Courses/c1.webp" alt="Web Dev Course 1">
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42n4KrLjlV0LurswCr8SRNuQ" target="_blank" rel="noopener noreferrer" class="course-card-link" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="images/Courses/c2.webp" alt="Web Dev Course 2">
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42l0X0aTAn3t8JcwNRwooDus" target="_blank" rel="noopener noreferrer" class="course-card-link" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="images/Courses/c3.webp" alt="Web Dev Course 3">
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42m2q9WzfuvokA7h-RZ53RUw" target="_blank" rel="noopener noreferrer" class="course-card-link" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="images/Courses/c4.webp" alt="Web Dev Course 4">
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PL9BaL-erd42mIBAkmqqcYLzMEG9EMjakr" target="_blank" rel="noopener noreferrer" class="course-card-link" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="images/Courses/c5.webp" alt="Web Dev Course 5">
-                </a>
-            </div>
-        </section>
+        <div class="courses-scroll-track">
+          <a
+            href="https://www.youtube.com/playlist?list=PL9BaL-erd42nF08oBiGoByU5zFwerka_T"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="course-card-link"
+            data-aos="zoom-in"
+            data-aos-delay="0"
+          >
+            <img src="images/Courses/c1.webp" alt="Web Dev Course 1" />
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PL9BaL-erd42n4KrLjlV0LurswCr8SRNuQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="course-card-link"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img src="images/Courses/c2.webp" alt="Web Dev Course 2" />
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PL9BaL-erd42l0X0aTAn3t8JcwNRwooDus"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="course-card-link"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img src="images/Courses/c3.webp" alt="Web Dev Course 3" />
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PL9BaL-erd42m2q9WzfuvokA7h-RZ53RUw"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="course-card-link"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <img src="images/Courses/c4.webp" alt="Web Dev Course 4" />
+          </a>
+          <a
+            href="https://www.youtube.com/playlist?list=PL9BaL-erd42mIBAkmqqcYLzMEG9EMjakr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="course-card-link"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <img src="images/Courses/c5.webp" alt="Web Dev Course 5" />
+          </a>
+        </div>
+      </section>
 
-
-        <!-- ==========================================
+      <!-- ==========================================
              Client Feedback / Testimonials
              ========================================== -->
-        <section class="testimonials-section" id="testimonials">
-            <div class="section-heading-center" data-aos="fade-up">
-                <span class="section-pill-tag">Testimonials</span>
-                <h2>Client Feedback</h2>
+      <section class="testimonials-section" id="testimonials">
+        <div class="section-heading-center" data-aos="fade-up">
+          <span class="section-pill-tag">Testimonials</span>
+          <h2>Client Feedback</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Feedback 1 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
             </div>
-
-            <div class="testimonials-grid">
-                
-                <!-- Feedback 1 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="0">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “I highly recommend Moeez for any creative project! He’s a skilled web developer and an amazing freelancer. His ability to analyze problems and work through them is unmatched, bringing his vision to life every time.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/affan.webp" alt="Affan Tasadduq" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Affan Tasadduq</h4>
-                            <p>Freelance Video Editor on Fiverr</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback 2 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “If you need someone who’s creative, easy to work with, and knows what they’re doing — Moeez is 100% worth it. I can’t recommend him enough.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/asad.webp" alt="Asad Ali" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Asad Ali</h4>
-                            <p>Freelance Full Stack Developer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback 3 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “Moeez is extremely efficient and attentive to every design requirement. His technical knowledge and quick turnaround transformed our website completely.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/aleem.webp" alt="Muhammad Aleem" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Muhammad Aleem</h4>
-                            <p>Video Editor & Creator</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback 4 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “I recently got my LinkedIn banner and header done by Moeez Ahmad, and honestly — he nailed it. His approach is meticulous and quick, yet he makes sure the result is absolutely perfect.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/huzaofa.webp" alt="Muhammad Huzaifa" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Muhammad Huzaifa</h4>
-                            <p>Software Developer | Data Analyst</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback 5 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="400">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “I had the pleasure of working with Moeez and experiencing his creative process first-hand. His ability to bring ideas to life is fantastic, and his approach was fast but super clear.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/bilal.webp" alt="Bilal Arshad" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Bilal Arshad</h4>
-                            <p>Expert Thumbnail Designer | 150+ Clients</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feedback 6 -->
-                <div class="testimonial-card-modern" data-aos="fade-up" data-aos-delay="500">
-                    <div class="testimonial-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p class="testimonial-quote">
-                        “I had the opportunity to work with Moeez for my personal branding. I’m genuinely impressed by how visually striking the work is and how professional and easy Moeez’s efforts were.”
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="images/clients/nimra.webp" alt="Nimra Graphics" class="testimonial-avatar">
-                        <div class="testimonial-meta">
-                            <h4>Nimra Graphics</h4>
-                            <p>Brand Identity & Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-
+            <p class="testimonial-quote">
+              “I highly recommend Moeez for any creative project! He’s a skilled
+              web developer and an amazing freelancer. His ability to analyze
+              problems and work through them is unmatched, bringing his vision
+              to life every time.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/affan.webp"
+                alt="Affan Tasadduq"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Affan Tasadduq</h4>
+                <p>Freelance Video Editor on Fiverr</p>
+              </div>
             </div>
-        </section>
+          </div>
 
+          <!-- Feedback 2 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              “If you need someone who’s creative, easy to work with, and knows
+              what they’re doing — Moeez is 100% worth it. I can’t recommend him
+              enough.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/asad.webp"
+                alt="Asad Ali"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Asad Ali</h4>
+                <p>Freelance Full Stack Developer</p>
+              </div>
+            </div>
+          </div>
 
-        <!-- ==========================================
+          <!-- Feedback 3 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              “Moeez is extremely efficient and attentive to every design
+              requirement. His technical knowledge and quick turnaround
+              transformed our website completely.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/aleem.webp"
+                alt="Muhammad Aleem"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Muhammad Aleem</h4>
+                <p>Video Editor & Creator</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback 4 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              “I recently got my LinkedIn banner and header done by Moeez Ahmad,
+              and honestly — he nailed it. His approach is meticulous and quick,
+              yet he makes sure the result is absolutely perfect.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/huzaofa.webp"
+                alt="Muhammad Huzaifa"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Muhammad Huzaifa</h4>
+                <p>Software Developer | Data Analyst</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback 5 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              “I had the pleasure of working with Moeez and experiencing his
+              creative process first-hand. His ability to bring ideas to life is
+              fantastic, and his approach was fast but super clear.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/bilal.webp"
+                alt="Bilal Arshad"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Bilal Arshad</h4>
+                <p>Expert Thumbnail Designer | 150+ Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback 6 -->
+          <div
+            class="testimonial-card-modern"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">
+              “I had the opportunity to work with Moeez for my personal
+              branding. I’m genuinely impressed by how visually striking the
+              work is and how professional and easy Moeez’s efforts were.”
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="images/clients/nimra.webp"
+                alt="Nimra Graphics"
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-meta">
+                <h4>Nimra Graphics</h4>
+                <p>Brand Identity & Graphic Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Contact / CTA Section
              ========================================== -->
-        <section class="contact-section" id="contact" data-aos="fade-up">
-            <div class="contact-layout">
-                
-                <div class="contact-info">
-                    <span class="contact-intro-badge">Let's Connect</span>
-                    <h2>Got a wild idea?<br>Reach out if you dare.</h2>
-                    
-                    <div class="contact-location">
-                        <i class="bi bi-geo-alt-fill"></i> Lahore, Pakistan
-                    </div>
+      <section class="contact-section" id="contact" data-aos="fade-up">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <span class="contact-intro-badge">Let's Connect</span>
+            <h2>Got a wild idea?<br />Reach out if you dare.</h2>
 
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px;">
-                        <a href="mailto:moeezahmad.tech@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; color: var(--text-light-muted); font-size: 0.95rem;">
-                            <i class="bi bi-envelope-fill" style="color: #60a5fa;"></i> moeezahmad.tech@gmail.com
-                        </a>
-                        <a href="https://wa.me/923266037125" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; color: var(--text-light-muted); font-size: 0.95rem;">
-                            <i class="bi bi-whatsapp" style="color: #22c55e;"></i> +92 326 6037125
-                        </a>
-                    </div>
-
-                    <div class="contact-social-icons">
-                        <a href="https://www.linkedin.com/in/moeezahmad-tech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.youtube.com/@moeezahmad.techkreative" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="https://www.instagram.com/moeezahmad.tech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.facebook.com/moeezahmad.tech" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://wa.me/923266037125" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <form class="modern-contact-form" action="https://formspree.io/f/meajloeo" method="POST">
-                    <div class="form-row">
-                        <input type="text" class="modern-input" placeholder="First Name" name="first_name" required>
-                        <input type="text" class="modern-input" placeholder="Last Name" name="last_name" required>
-                    </div>
-                    
-                    <input type="email" class="modern-input" placeholder="Your Email Address" name="email" required>
-                    
-                    <select name="service" class="modern-select" required>
-                        <option value="" disabled selected>What service do you need?</option>
-                        <option value="Custom Website Development">Custom Website Development</option>
-                        <option value="Full Stack Web Application">Full Stack Web Application</option>
-                        <option value="E-Commerce Solutions">E-Commerce Solutions</option>
-                        <option value="SEO & Performance Optimization">SEO & Performance Optimization</option>
-                        <option value="Website Redesign">Website Redesign</option>
-                        <option value="Ongoing Maintenance & Support">Ongoing Maintenance & Support</option>
-                    </select>
-
-                    <textarea rows="4" class="modern-textarea" name="message" placeholder="Tell me about your project..." required></textarea>
-                    
-                    <div class="form-checkbox-wrapper">
-                        <input type="checkbox" id="agreementCheck" name="agree_terms" required>
-                        <label for="agreementCheck">I agree with the <b>Terms and Conditions</b></label>
-                    </div>
-
-                    <button type="submit" class="form-submit-btn">
-                        Send Message <i class="bi bi-send-fill"></i>
-                    </button>
-                </form>
-
+            <div class="contact-location">
+              <i class="bi bi-geo-alt-fill"></i> Lahore, Pakistan
             </div>
-        </section>
 
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 25px;
+              "
+            >
+              <a
+                href="mailto:moeezahmad.tech@gmail.com"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  color: var(--text-light-muted);
+                  font-size: 0.95rem;
+                "
+              >
+                <i class="bi bi-envelope-fill" style="color: #60a5fa"></i>
+                moeezahmad.tech@gmail.com
+              </a>
+              <a
+                href="https://wa.me/923266037125"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 10px;
+                  color: var(--text-light-muted);
+                  font-size: 0.95rem;
+                "
+              >
+                <i class="bi bi-whatsapp" style="color: #22c55e"></i> +92 326
+                6037125
+              </a>
+            </div>
 
-        <!-- ==========================================
+            <div class="contact-social-icons">
+              <a
+                href="https://www.linkedin.com/in/moeezahmad-tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@moeezahmad.techkreative"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/moeezahmad.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/moeezahmad.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://wa.me/923266037125"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <form
+            class="modern-contact-form"
+            action="https://formspree.io/f/meajloeo"
+            method="POST"
+          >
+            <div class="form-row">
+              <input
+                type="text"
+                class="modern-input"
+                placeholder="First Name"
+                name="first_name"
+                required
+              />
+              <input
+                type="text"
+                class="modern-input"
+                placeholder="Last Name"
+                name="last_name"
+                required
+              />
+            </div>
+
+            <input
+              type="email"
+              class="modern-input"
+              placeholder="Your Email Address"
+              name="email"
+              required
+            />
+
+            <select name="service" class="modern-select" required>
+              <option value="" disabled selected>
+                What service do you need?
+              </option>
+              <option value="Custom Website Development">
+                Custom Website Development
+              </option>
+              <option value="Full Stack Web Application">
+                Full Stack Web Application
+              </option>
+              <option value="E-Commerce Solutions">E-Commerce Solutions</option>
+              <option value="SEO & Performance Optimization">
+                SEO & Performance Optimization
+              </option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Ongoing Maintenance & Support">
+                Ongoing Maintenance & Support
+              </option>
+            </select>
+
+            <textarea
+              rows="4"
+              class="modern-textarea"
+              name="message"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+
+            <div class="form-checkbox-wrapper">
+              <input
+                type="checkbox"
+                id="agreementCheck"
+                name="agree_terms"
+                required
+              />
+              <label for="agreementCheck"
+                >I agree with the <b>Terms and Conditions</b></label
+              >
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              Send Message <i class="bi bi-send-fill"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ==========================================
              Footer
              ========================================== -->
-        <footer class="site-footer">
-            <p>
-                Copyright © 2025 Moeez Ahmad • Portfolio developed by Moeez Ahmad • All rights reserved.
-            </p>
-        </footer>
-
+      <footer class="site-footer">
+        <p>
+          Copyright © 2025 Moeez Ahmad • Portfolio developed by Moeez Ahmad •
+          All rights reserved.
+        </p>
+      </footer>
     </div>
 
     <!-- Scripts: AOS & Interaction -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 80
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 80,
+      });
+
+      // Mobile Menu Drawer Toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const menuClose = document.getElementById("menuClose");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.add("active");
         });
+      }
 
-        // Mobile Menu Drawer Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const menuClose = document.getElementById('menuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-            });
-        }
-
-        if (menuClose && mobileMenu) {
-            menuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-            });
-        }
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-            });
+      if (menuClose && mobileMenu) {
+        menuClose.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
         });
+      }
 
-        // Active state update on scroll for nav links
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 150;
-                const sectionId = current.getAttribute('id');
-                const link = document.querySelector(`.nav-links a[href*=${sectionId}]`);
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
-                    if (link) link.classList.add('active');
-                }
-            });
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
         });
+      });
+
+      // Dynamic Image Hover Scrolling
+      function initImageScrollOnHover() {
+        const cards = document.querySelectorAll(
+          ".project-card-modern, .dark-service-card",
+        );
+        cards.forEach((card) => {
+          const holder = card.querySelector(
+            ".project-img-holder, .service-card-mockup",
+          );
+          if (!holder) return;
+          const img = holder.querySelector("img");
+          if (!img) return;
+
+          function calculateScroll() {
+            const holderHeight = holder.clientHeight;
+            const imgHeight = img.offsetHeight;
+            if (imgHeight > holderHeight) {
+              const dist = imgHeight - holderHeight;
+              img.style.setProperty("--scroll-y", `-${dist}px`);
+              const duration = Math.min(Math.max(dist / 65, 5), 12);
+              img.style.transitionDuration = `${duration}s`;
+              img.style.transitionTimingFunction = "ease-in-out";
+            }
+          }
+
+          if (img.complete) {
+            calculateScroll();
+          } else {
+            img.addEventListener("load", calculateScroll);
+          }
+          card.addEventListener("mouseenter", calculateScroll);
+        });
+      }
+
+      window.addEventListener("load", initImageScrollOnHover);
+      window.addEventListener("resize", initImageScrollOnHover);
     </script>
-</body>
-
+  </body>
 </html>
