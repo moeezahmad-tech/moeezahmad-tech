@@ -51,6 +51,10 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  scroll-padding-top: 85px;
 }
 
 body {
@@ -58,7 +62,10 @@ body {
   color: var(--text-body);
   font-family: var(--font-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -67,9 +74,10 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px clamp(16px, 3.5vw, 50px) 60px;
+  padding: 15px clamp(14px, 3vw, 40px) 60px;
   background-color: var(--bg-white);
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 a {
@@ -277,7 +285,7 @@ img {
    ========================================================================== */
 .hero-section {
   position: relative;
-  padding: 20px 20px 0;
+  padding: 20px 0 0;
   text-align: center;
   overflow: visible;
 }
@@ -326,6 +334,8 @@ img {
   max-width: 620px;
   margin: 0 auto 30px;
   font-weight: 400;
+  text-align: justify;
+  text-align-last: center;
 }
 
 /* Hero Center Grid (Left Testimonial, Center Arch + Photo, Right Stats) */
@@ -375,6 +385,7 @@ img {
   line-height: 1.5;
   margin-bottom: 0;
   font-weight: 400;
+  text-align: justify;
 }
 
 .hero-stat-card {
@@ -415,7 +426,7 @@ img {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 540px;
+  width: min(540px, 90vw);
   height: 380px;
   background: linear-gradient(180deg, var(--primary-blue) 0%, #004b99 100%);
   border-top-left-radius: 270px;
@@ -467,22 +478,33 @@ img {
 .btn-primary-pill {
   background-color: var(--primary-blue);
   color: #ffffff;
-  padding: 12px 28px;
+  padding: 0 28px;
+  height: 48px;
   border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.95rem;
+  line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 145px;
-  border: 1.5px solid transparent;
+  border: 1.5px solid var(--primary-blue);
   gap: 8px;
   box-shadow: 0 8px 20px var(--primary-blue-glow);
   transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.btn-primary-pill i {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .btn-primary-pill:hover {
   background-color: var(--primary-blue-hover);
+  border-color: var(--primary-blue-hover);
   transform: translateY(-3px);
   box-shadow: 0 12px 25px rgba(0, 110, 218, 0.4);
 }
@@ -490,10 +512,12 @@ img {
 .btn-secondary-pill {
   background-color: var(--bg-white);
   color: var(--text-dark);
-  padding: 12px 28px;
+  padding: 0 28px;
+  height: 48px;
   border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.95rem;
+  line-height: 1;
   border: 1.5px solid var(--text-dark);
   display: inline-flex;
   align-items: center;
@@ -502,6 +526,7 @@ img {
   gap: 8px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  box-sizing: border-box;
 }
 
 .btn-secondary-pill:hover {
@@ -625,7 +650,7 @@ img {
 /* 3-Column Services Cards */
 .services-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
 }
 
@@ -772,7 +797,7 @@ img {
    Work Experience Timeline Section
    ========================================================================== */
 .experience-section {
-  padding: 30px 20px 70px;
+  padding: 30px 0 70px;
 }
 
 .section-heading-center {
@@ -964,7 +989,7 @@ img {
    Featured Project (Color Magic)
    ========================================================================== */
 .featured-project-section {
-  padding: 20px 20px 60px;
+  padding: 20px 0 60px;
 }
 
 .featured-project-card {
@@ -1033,12 +1058,12 @@ img {
    Frontend Projects Showcase Grid
    ========================================================================== */
 .projects-gallery-section {
-  padding: 30px 20px 70px;
+  padding: 30px 0 70px;
 }
 
 .projects-grid-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 28px;
 }
 
@@ -1125,12 +1150,12 @@ img {
    Courses / Education Section
    ========================================================================== */
 .courses-section {
-  padding: 30px 20px 70px;
+  padding: 30px 0 70px;
 }
 
 .courses-scroll-track {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 28px;
   max-width: 1300px;
   margin: 0 auto;
@@ -1169,12 +1194,12 @@ img {
    Client Feedback / Testimonials
    ========================================================================== */
 .testimonials-section {
-  padding: 30px 20px 70px;
+  padding: 30px 0 70px;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 24px;
 }
 
@@ -1208,6 +1233,7 @@ img {
   line-height: 1.6;
   margin-bottom: 20px;
   font-style: italic;
+  text-align: justify;
 }
 
 .testimonial-author {
@@ -1438,25 +1464,196 @@ img {
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 992px) {
-  .hero-showcase {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .nav-links,
+  .nav-cta {
+    display: none;
   }
   
-  .hero-left-widget,
-  .hero-right-widget {
-    text-align: center;
+  .nav-toggle {
+    display: flex;
     align-items: center;
     justify-content: center;
   }
-  
-  .hero-quote-card,
-  .hero-rating-box {
-    text-align: center;
-    max-width: 380px;
+
+  .site-wrapper {
+    padding: 16px 20px 50px;
+  }
+
+  /* Hero Showcase Mobile/Tablet Hierarchy: Portrait FIRST, then Social Proof */
+  .hero-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 480px;
     margin: 0 auto;
   }
   
+  /* Order 1: Center portrait with the blue arch & action buttons */
+  .hero-center-portrait {
+    order: 1;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto 25px;
+  }
+
+  .arch-background {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(320px, 86vw);
+    height: 280px;
+    background: linear-gradient(180deg, var(--primary-blue) 0%, #004b99 100%);
+    border-top-left-radius: 160px;
+    border-top-right-radius: 160px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+    box-shadow: 0 14px 35px var(--primary-blue-glow);
+  }
+
+  .portrait-img-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    line-height: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .portrait-img-wrapper img {
+    width: 100%;
+    max-width: min(310px, 84vw);
+    height: auto;
+    display: block;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.22));
+  }
+
+  .hero-actions-container {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    white-space: nowrap;
+  }
+
+  .btn-primary-pill {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 0 22px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.92rem;
+    line-height: 1;
+    min-width: 130px;
+    border: 1.5px solid var(--primary-blue);
+    box-shadow: 0 6px 18px var(--primary-blue-glow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .btn-secondary-pill {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    border: 1.5px solid var(--text-dark);
+    padding: 0 22px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.92rem;
+    line-height: 1;
+    min-width: 130px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Order 2: Left social proof widget (Quote + 100+ stat) */
+  .hero-left-widget {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .hero-quote-card {
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+  }
+
+  .hero-stat-card {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+  }
+
+  .hero-stat-card .stat-num {
+    font-size: 2.6rem;
+    color: var(--primary-blue);
+  }
+
+  /* Order 3: Right social proof widget (Rating box + Quality badge) */
+  .hero-right-widget {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-rating-box {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+  }
+
+  .hero-rating-box .exp-label {
+    border-bottom: none;
+  }
+
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1483,20 +1680,32 @@ img {
     align-items: flex-start;
     gap: 15px;
   }
+
+  .services-dark-container {
+    padding: 35px 25px;
+  }
+
+  .capabilities-section {
+    padding: 35px 25px;
+  }
+
+  .featured-project-card {
+    padding: 35px 25px;
+  }
+
+  .contact-section {
+    padding: 40px 25px;
+  }
 }
 
 @media (max-width: 768px) {
-  .nav-links,
-  .nav-cta {
-    display: none;
+  .site-wrapper {
+    padding: 14px 16px 40px;
   }
-  
-  .nav-toggle {
-    display: block;
-  }
-  
+
   .services-dark-container {
-    padding: 35px 20px;
+    padding: 30px 18px;
+    border-radius: var(--radius-md);
   }
   
   .form-row {
@@ -1506,19 +1715,114 @@ img {
   .skills-checklist {
     grid-template-columns: 1fr;
   }
-  
-  .arch-background {
-    width: 320px;
-    height: 220px;
-    border-top-left-radius: 160px;
-    border-top-right-radius: 160px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+
+  .capabilities-section {
+    padding: 30px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .featured-project-card {
+    padding: 30px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .contact-section {
+    padding: 35px 18px;
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 576px) {
+  .site-wrapper {
+    padding: 12px 14px 35px;
   }
   
-  .portrait-img-wrapper img {
+  .nav-container {
+    top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-pill {
+    padding: 6px 14px;
+  }
+
+  .nav-brand {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  .nav-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 7.8vw, 2.35rem);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
     max-width: 320px;
-    height: auto;
+    margin-bottom: 22px;
+    text-align: justify;
+    text-align-last: center;
+  }
+
+  .arch-background {
+    width: min(290px, 86vw);
+    height: 250px;
+  }
+
+  .portrait-img-wrapper img {
+    max-width: min(280px, 84vw);
+  }
+
+  .hero-actions-container {
+    bottom: 12px;
+    gap: 10px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    min-width: 125px;
+    height: 42px;
+    padding: 0 18px;
+    font-size: 0.88rem;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  .services-cards-grid,
+  .projects-grid-modern,
+  .courses-scroll-track,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .featured-project-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .capabilities-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-layout h2 {
+    font-size: 1.7rem;
+  }
+  
+  .modern-input,
+  .modern-select,
+  .modern-textarea {
+    padding: 12px 14px;
+  }
+  
+  .form-submit-btn {
+    padding: 13px 24px;
+    font-size: 0.95rem;
   }
 }
 
