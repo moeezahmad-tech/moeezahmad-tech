@@ -4,15 +4,8 @@ export default function Hero() {
   return (
     <>
       <section className="hero-section" id="hero">
-        {/* Hello Floating Pill */}
-        <div data-aos="fade-down" data-aos-delay="100">
-          <span className="hello-badge">
-            Hello! <span className="sparkle"><i className="bi bi-stars"></i></span>
-          </span>
-        </div>
-
         {/* Headline */}
-        <h1 className="hero-title" data-aos="fade-up" data-aos-delay="200">
+        <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
           I&apos;m <span className="name-highlight">Moeez Ahmad,</span>
           <br />
           Full-Stack AI Engineer
