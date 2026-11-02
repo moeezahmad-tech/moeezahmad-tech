@@ -77,14 +77,6 @@ const directChannels = [
     icon: "bi-github",
     note: "Public code & contributions",
   },
-  {
-    title: "Timezone & Location",
-    value: "Lahore, Pakistan (UTC+5)",
-    actionText: "Check Global Overlap",
-    link: "https://www.timeanddate.com/worldclock/pakistan/lahore",
-    icon: "bi-globe-central-south-asia",
-    note: "Overlaps US, UK, EU, UAE",
-  },
 ];
 
 const roadmapSteps = [
