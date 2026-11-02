@@ -1,15 +1,27 @@
-name: 🚀 Deploy Static HTML
+name: 🚀 Deploy Next.js to Server
 on:
   push:
     branches:
       - main
 jobs:
   web-deploy:
-    name: 🎉 Sync to Server
+    name: 🎉 Build & Sync to Server
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
+
+    - name: ⚙️ Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: 📦 Install Dependencies
+      run: npm ci
+
+    - name: 🏗️ Build Next.js App
+      run: npm run build
 
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -17,6 +29,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        
-        local-dir: ./ 
-        server-dir: ./moeezahmad/ 
+        local-dir: ./out/
+        server-dir: ./moeezahmad/
