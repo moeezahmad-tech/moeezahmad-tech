@@ -8,19 +8,18 @@ import Courses from "@/components/Courses";
 export const metadata: Metadata = {
   title: "Experience & Roles — Moeez Ahmad",
   description:
-    "Explore Moeez Ahmad's roles: Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative (10-member team, 200+ projects), freelance full-stack developer, and educator.",
+    "Explore Moeez Ahmad's roles: Software Engineer Intern at SolnetInfo (WaqtAI, Hisaab AI), Co-Founder & CEO of TechKreative (8-member team, 200+ projects), freelance full-stack developer, and educator.",
 };
 
 const techKreativeTeam = [
-  { name: "Tayyaba Khan", role: "Co-Founder & Director" },
-  { name: "Moeez Ahmad", role: "Co-Founder, CEO & Web Expert" },
-  { name: "Muhammad Junaid", role: "Creative Lead" },
-  { name: "Abdul Mutalib", role: "Full-Stack Developer" },
-  { name: "Asama Rafique", role: "Designer & Media" },
-  { name: "Zaki Ul Hassan", role: "Growth Specialist" },
-  { name: "Umair Khan", role: "Technical Associate" },
-  { name: "Zulqarnain Imtiaz", role: "Content & SEO" },
-  { name: "Abdullah Hafeez", role: "Production Associate" },
+  { name: "Tayyaba Khan", role: "Co-Founder & Director", initials: "TK" },
+  { name: "Moeez Ahmad", role: "Co-Founder, CEO & Web Expert", initials: "MA" },
+  { name: "Muhammad Junaid", role: "Creative Lead", initials: "MJ" },
+  { name: "Abdul Mutalib", role: "Full-Stack Developer", initials: "AM" },
+  { name: "Asama Rafique", role: "Designer & Media", initials: "AR" },
+  { name: "Zaki Ul Hassan", role: "Growth Specialist", initials: "ZH" },
+  { name: "Umair Khan", role: "Technical Associate", initials: "UK" },
+  { name: "Zulqarnain Imtiaz", role: "Content & SEO", initials: "ZI" },
 ];
 
 const contentThemes = [
@@ -41,7 +40,7 @@ const contentThemes = [
   },
   {
     theme: "Agency Building Journey",
-    desc: "Documenting our ongoing 'Creating Our Own Agency' series — scaling TechKreative to a 10-member team.",
+    desc: "Documenting our ongoing 'Creating Our Own Agency' series — scaling TechKreative to an 8-member team.",
     icon: "bi-building-up",
   },
   {
@@ -75,7 +74,7 @@ export default function ExperiencePage() {
 
         {/* Roles Breakdown */}
         <section style={{ margin: "40px 0" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             {/* SolnetInfo */}
             <div className="about-card-box" data-aos="fade-up">
               <div
@@ -101,12 +100,37 @@ export default function ExperiencePage() {
               </div>
 
               <p style={{ fontSize: "0.98rem", color: "var(--text-body)" }}>
-                Works directly with the SolnetInfo development team on production-level software systems, gaining deep hands-on experience in enterprise reliability and scalable software practices.
+                Works directly with the SolnetInfo engineering team on production-level software systems, focusing on enterprise reliability, high-performance architecture, and production AI platforms.
               </p>
+
+              {/* SolnetInfo Production Systems Worked On */}
+              <div style={{ margin: "20px 0 16px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
+                <div style={{ background: "#f8fafc", padding: "18px", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                    <i className="bi bi-whatsapp" style={{ color: "#22c55e", fontSize: "1.3rem" }}></i>
+                    <strong style={{ color: "var(--text-dark)", fontSize: "1rem" }}>WaqtAI</strong>
+                    <span className="role-pill" style={{ fontSize: "0.72rem", padding: "2px 8px" }}>Enterprise AI</span>
+                  </div>
+                  <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5, margin: 0 }}>
+                    WhatsApp-first AI Operating System for service businesses. Handles automated meetings, reminders, bookings, payments, and client follow-ups with a centralized web control plane for business owners and team members.
+                  </p>
+                </div>
+
+                <div style={{ background: "#f8fafc", padding: "18px", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                    <i className="bi bi-cpu-fill" style={{ color: "var(--primary-blue)", fontSize: "1.3rem" }}></i>
+                    <strong style={{ color: "var(--text-dark)", fontSize: "1rem" }}>Hisaab AI</strong>
+                    <span className="role-pill" style={{ fontSize: "0.72rem", padding: "2px 8px" }}>Agentic AI Platform</span>
+                  </div>
+                  <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.5, margin: 0 }}>
+                    AI-native tax intelligence platform for Pakistan (FBR / IRIS) and cross-border income. Pairs deterministic tax rule engines with real-time multi-agent AI (SSE streaming), RAG knowledge base, and wealth statement property valuation.
+                  </p>
+                </div>
+              </div>
 
               <ul style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "8px", marginTop: "12px" }}>
                 <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                  Maintains, scales, and continually improves production-level software systems.
+                  Maintains, scales, and continually improves production-level software and AI systems.
                 </li>
                 <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
                   Applies rigorous engineering practices focused on system reliability, high availability, and performance scalability.
@@ -150,7 +174,7 @@ export default function ExperiencePage() {
                   Guides clients from initial ideation to fully launched digital products, websites, and AI tools.
                 </li>
                 <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                  Leads a 10-member multidisciplinary team spanning full-stack development, design, video editing, and SEO.
+                  Leads an 8-member multidisciplinary team spanning full-stack development, design, video editing, and SEO.
                 </li>
                 <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
                   Helped 50+ clients establish digital identities and shipped 200+ individual projects globally.
@@ -180,7 +204,7 @@ export default function ExperiencePage() {
               <tr>
                 <td className="label-cell">Track Record</td>
                 <td className="val-cell">
-                  <strong>200+ projects completed &bull; 50+ happy clients &bull; 10-member team</strong>
+                  <strong>200+ projects completed &bull; 50+ happy clients &bull; 8-member team</strong>
                 </td>
               </tr>
               <tr>
@@ -198,25 +222,25 @@ export default function ExperiencePage() {
             </tbody>
           </table>
 
-          <h3 style={{ fontSize: "1.18rem", marginBottom: "14px", color: "var(--text-dark)" }}>
-            Multidisciplinary Team (10 Members)
-          </h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "12px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
+            <h3 style={{ fontSize: "1.2rem", margin: 0, color: "var(--text-dark)" }}>
+              Multidisciplinary Team (8 Members)
+            </h3>
+            <span className="role-pill" style={{ fontSize: "0.78rem" }}>
+              Balanced 8-Member Core Team
+            </span>
+          </div>
+
+          {/* Balanced 4x2 Team Grid */}
+          <div className="team-4col-grid">
             {techKreativeTeam.map((member) => (
-              <div
-                key={member.name}
-                style={{
-                  background: "#ffffff",
-                  padding: "12px 16px",
-                  borderRadius: "var(--radius-sm)",
-                  border: "1px solid #e2e8f0",
-                }}
-              >
-                <div style={{ fontWeight: 600, color: "var(--text-dark)", fontSize: "0.92rem" }}>
-                  {member.name}
+              <div key={member.name} className="team-member-card">
+                <div className="team-member-avatar">
+                  {member.initials}
                 </div>
-                <div style={{ color: "var(--primary-blue)", fontSize: "0.8rem", marginTop: "2px" }}>
-                  {member.role}
+                <div>
+                  <div className="team-member-name">{member.name}</div>
+                  <div className="team-member-role">{member.role}</div>
                 </div>
               </div>
             ))}

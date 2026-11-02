@@ -15,42 +15,42 @@ const storyArc = [
     step: "01",
     title: "Student & Builder",
     subtitle: "UET Lahore",
-    desc: "Pursuing Computer Science with foundational interests in gaming, animation, and modern web technologies.",
+    desc: "Pursuing Computer Science with foundational interests in gaming, animation, and modern web architectures.",
     icon: "bi-mortarboard-fill",
   },
   {
     step: "02",
-    title: "Freelancer & Web Developer",
+    title: "Freelancer & Developer",
     subtitle: "2021 – Present",
-    desc: "Built custom websites and landing pages for 100+ clients globally, establishing robust digital identities.",
+    desc: "Built custom responsive websites and web applications for 100+ clients globally, establishing robust digital identities.",
     icon: "bi-laptop",
   },
   {
     step: "03",
     title: "AI-Focused Engineer",
     subtitle: "Machine Learning & AI Tools",
-    desc: "Engineering full-stack AI solutions, prompt systems, and privacy-first browser tools like Color Magic.",
+    desc: "Engineering full-stack AI solutions, prompt systems, RAG workflows, and browser-first privacy tools like Color Magic.",
     icon: "bi-cpu-fill",
   },
   {
     step: "04",
     title: "Agency Founder & CEO",
     subtitle: "TechKreative",
-    desc: "Co-founded TechKreative with Tayyaba Khan, scaling a 10-member team delivering web, AI, SEO, and branding.",
+    desc: "Co-founded TechKreative with Tayyaba Khan, scaling an 8-member multidisciplinary team delivering web, AI, SEO, and branding.",
     icon: "bi-rocket-takeoff-fill",
   },
   {
     step: "05",
     title: "Production Engineer",
     subtitle: "SolnetInfo",
-    desc: "Joined the SolnetInfo engineering team to maintain, scale, and optimize enterprise production-level software.",
+    desc: "Contributing to the SolnetInfo engineering team on production-level software and AI systems including WaqtAI and Hisaab AI.",
     icon: "bi-gear-wide-connected",
   },
   {
     step: "06",
-    title: "Creator & Community Builder",
-    subtitle: "Video into Client Magnets",
-    desc: "Partnering with 15 designers and creatives on video campaigns, YouTube masterclasses, and technical content.",
+    title: "Creator & Community",
+    subtitle: "Turning Video into Magnets",
+    desc: "Partnering with 15 designers and creatives on video campaigns, YouTube technical tutorials, and developer masterclasses.",
     icon: "bi-camera-video-fill",
   },
 ];
@@ -60,19 +60,22 @@ const educationList = [
     institution: "University of Engineering and Technology, Lahore",
     program: "Computer Science, Gaming and Animation",
     period: "Undergraduate",
-    desc: "Rigorous computer science curriculum with focus on software architecture, graphics, algorithms, and web technologies.",
+    desc: "Rigorous computer science curriculum with strong emphasis on software architecture, computer graphics, algorithms, and web technologies.",
+    icon: "bi-mortarboard",
   },
   {
     institution: "Punjab Group of Colleges",
     program: "Website Development & Information Technology",
     period: "2023 – 2025",
     desc: "Specialized coursework in frontend/backend development, database structures, web protocols, and modern development stacks.",
+    icon: "bi-laptop",
   },
   {
     institution: "Al Siraat High School",
     program: "Intermediate in Computer Science (ICS)",
     period: "Foundational",
-    desc: "Foundational studies in computer science, programming logic, mathematics, and analytical computing.",
+    desc: "Foundational studies in computer science, programming logic, mathematics, and analytical computing principles.",
+    icon: "bi-journal-code",
   },
 ];
 
@@ -88,7 +91,7 @@ const certList = [
     icon: "bi-layers-fill",
   },
   {
-    title: "Learning LinkedIn: Power Your Professional Journey",
+    title: "Learning LinkedIn: Professional Journey",
     issuer: "LinkedIn",
     icon: "bi-linkedin",
   },
@@ -108,7 +111,7 @@ const certList = [
     icon: "bi-palette-fill",
   },
   {
-    title: "Microsoft Office Specialist: Word Associate (Office 2019)",
+    title: "Microsoft Office Specialist: Word Associate",
     issuer: "Microsoft",
     icon: "bi-award-fill",
   },
@@ -119,12 +122,27 @@ const certList = [
   },
 ];
 
-const linkedinSkills = [
-  "AI Engineer", "AI Solutions", "Artificial Intelligence", "Software Engineer", "Software Engineering",
-  "Full-Stack Developer", "Full-Stack Web Development", "Web Developer", "Website Development",
-  "Design Development", "Customization", "Ideation", "Building Products", "Digital Solutions",
-  "SEO Strategy", "Growth & Reach", "Digital Identity", "CEO & Leadership", "Freelancing",
-  "Quality Management", "Portfolio Development"
+const skillCategories = [
+  {
+    title: "AI & Machine Learning",
+    icon: "bi-cpu-fill",
+    skills: ["AI Engineering", "Agentic AI", "RAG Architecture", "Prompt Systems", "LLM Integration", "AI Tooling"],
+  },
+  {
+    title: "Full-Stack Web Engineering",
+    icon: "bi-code-slash",
+    skills: ["Next.js & React", "TypeScript & JS", "HTML5 & CSS Grid", "REST & SSE APIs", "Performance Tuning", "Responsive UI"],
+  },
+  {
+    title: "Agency & Product Leadership",
+    icon: "bi-rocket-takeoff-fill",
+    skills: ["Co-Founder & CEO", "Ideation to Launch", "Quality Management", "8-Member Team Lead", "Client Consulting", "Product Roadmaps"],
+  },
+  {
+    title: "Digital Growth & Branding",
+    icon: "bi-graph-up-arrow",
+    skills: ["SEO Strategy", "Digital Identity", "LinkedIn Growth", "Content Systems", "Conversion Optimization", "Video Strategy"],
+  },
 ];
 
 export default function AboutPage() {
@@ -144,7 +162,27 @@ export default function AboutPage() {
           </p>
         </section>
 
-        {/* Professional Story & Personal Story */}
+        {/* 4-Item Balanced Metrics Strip */}
+        <section className="metrics-4col-strip" data-aos="fade-up" data-aos-delay="100">
+          <div className="metric-box">
+            <span className="metric-number">200+</span>
+            <span className="metric-label">Projects Completed</span>
+          </div>
+          <div className="metric-box">
+            <span className="metric-number">50+</span>
+            <span className="metric-label">Clients Globally</span>
+          </div>
+          <div className="metric-box">
+            <span className="metric-number">8</span>
+            <span className="metric-label">Core Team Members</span>
+          </div>
+          <div className="metric-box">
+            <span className="metric-number">5+</span>
+            <span className="metric-label">Years Digital Experience</span>
+          </div>
+        </section>
+
+        {/* Professional Story & Personal Story Narrative Grid */}
         <section className="about-narrative-grid">
           <div className="about-card-box" data-aos="fade-right">
             <h2>Professional Story</h2>
@@ -167,8 +205,8 @@ export default function AboutPage() {
             </p>
             <p>
               Alongside TechKreative, I work with the <strong>SolnetInfo</strong> development team on maintaining, scaling,
-              and improving production-level software. This gives me experience across both client-focused product
-              development and production engineering.
+              and improving production-level software and AI systems such as WaqtAI and Hisaab AI. This gives me deep experience
+              across both client-focused product execution and high-scale production engineering.
             </p>
 
             <h3 style={{ marginTop: "28px", fontSize: "1.3rem" }}>Personal Story</h3>
@@ -179,7 +217,8 @@ export default function AboutPage() {
             </p>
             <p>
               Today, I split my work between engineering, entrepreneurship, and content creation. I build products, lead
-              TechKreative, and create content that makes technology, freelancing, and agency building more accessible.
+              an 8-member team at TechKreative, and create technical content that makes modern web engineering, AI tools,
+              and agency building accessible to everyone.
             </p>
 
             <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
@@ -234,25 +273,27 @@ export default function AboutPage() {
                 </tr>
               </tbody>
             </table>
+
+            <div style={{ marginTop: "24px", padding: "18px", background: "#f8fafc", borderRadius: "var(--radius-sm)", border: "1px solid #e2e8f0" }}>
+              <span className="section-pill-tag" style={{ marginBottom: "6px" }}>Positioning</span>
+              <p style={{ margin: 0, fontSize: "0.92rem", color: "var(--text-body)", fontStyle: "italic", lineHeight: 1.6 }}>
+                &ldquo;From Ideation to Products: turning ideas into practical, reliable, user-focused digital solutions.&rdquo;
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Final Positioning Statement Box */}
-        <section className="about-card-box" data-aos="fade-up" style={{ marginBottom: "50px", textAlign: "center", background: "#f8fafc" }}>
-          <span className="section-pill-tag">Positioning Statement</span>
-          <p style={{ fontSize: "1.2rem", color: "var(--text-dark)", fontWeight: 600, maxWidth: "800px", margin: "14px auto 0", lineHeight: 1.6 }}>
-            &ldquo;I’m Moeez Ahmad, a Full-Stack AI Engineer and Co-Founder of TechKreative. I build websites, AI-powered tools, and SEO-driven digital products that help businesses turn ideas into reliable, scalable, and growth-focused solutions.&rdquo;
-          </p>
-        </section>
-
-        {/* 6-Stage Portfolio Story Arc */}
+        {/* 6-Stage Journey & Story Arc (Balanced 3x2 Grid) */}
         <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
           <div className="section-heading-center">
             <span className="section-pill-tag">Evolution</span>
             <h2>My Journey &amp; Story Arc</h2>
+            <p style={{ maxWidth: "600px", margin: "8px auto 0", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+              A structured progression from computer science foundations to full-scale agency leadership and enterprise AI engineering.
+            </p>
           </div>
 
-          <div className="process-grid">
+          <div className="cards-3col-grid">
             {storyArc.map((arc) => (
               <div key={arc.step} className="process-step-box">
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -269,18 +310,24 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Education Section */}
-        <section data-aos="fade-up">
+        {/* Education Section (Balanced 3-Column Grid) */}
+        <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
           <div className="section-heading-center">
             <span className="section-pill-tag">Academic Background</span>
             <h2>Education</h2>
+            <p style={{ maxWidth: "580px", margin: "8px auto 0", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+              Formal training in computer science, software systems, and modern web application development.
+            </p>
           </div>
 
-          <div className="cards-2col-grid">
+          <div className="cards-3col-grid">
             {educationList.map((edu) => (
               <div key={edu.institution} className="edu-card">
                 <div>
-                  <span className="period">{edu.period}</span>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span className="period">{edu.period}</span>
+                    <i className={`bi ${edu.icon}`} style={{ color: "var(--primary-blue)", fontSize: "1.2rem" }}></i>
+                  </div>
                   <h4>{edu.institution}</h4>
                   <p style={{ fontWeight: 600, color: "var(--text-dark)", marginTop: "4px" }}>
                     {edu.program}
@@ -292,18 +339,21 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Certifications Section */}
-        <section data-aos="fade-up">
+        {/* Certifications Section (Balanced 4-Column Grid: 2 rows of 4) */}
+        <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
           <div className="section-heading-center">
             <span className="section-pill-tag">Credentials</span>
             <h2>Certifications &amp; Honors</h2>
+            <p style={{ maxWidth: "580px", margin: "8px auto 0", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+              Continuous professional learning in cloud computing, full-stack systems, and product branding.
+            </p>
           </div>
 
-          <div className="cards-2col-grid">
+          <div className="cards-4col-grid">
             {certList.map((cert) => (
               <div key={cert.title} className="cert-card">
-                <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                  <i className={`bi ${cert.icon}`} style={{ fontSize: "1.5rem", color: "var(--primary-blue)" }}></i>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                  <i className={`bi ${cert.icon}`} style={{ fontSize: "1.4rem", color: "var(--primary-blue)", flexShrink: 0 }}></i>
                   <div>
                     <h4>{cert.title}</h4>
                     <span className="issuer">{cert.issuer}</span>
@@ -314,21 +364,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* LinkedIn Skills Cloud */}
+        {/* Categorized Skills Section (Balanced 4-Column Grid) */}
         <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
           <div className="section-heading-center">
             <span className="section-pill-tag">Technical Competencies</span>
             <h2>Skills &amp; Specializations</h2>
+            <p style={{ maxWidth: "580px", margin: "8px auto 0", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+              Core technical and strategic proficiencies organized by domain.
+            </p>
           </div>
 
-          <div className="about-card-box">
-            <div className="skill-badges-list" style={{ justifyContent: "center", gap: "10px" }}>
-              {linkedinSkills.map((skill) => (
-                <span key={skill} className="skill-badge-tag" style={{ fontSize: "0.86rem", padding: "8px 14px" }}>
-                  {skill}
-                </span>
-              ))}
-            </div>
+          <div className="cards-4col-grid">
+            {skillCategories.map((cat) => (
+              <div key={cat.title} className="skill-cat-card">
+                <h3>
+                  <i className={`bi ${cat.icon}`} style={{ color: "var(--primary-blue)" }}></i>
+                  {cat.title}
+                </h3>
+                <div className="skill-badges-list">
+                  {cat.skills.map((skill) => (
+                    <span key={skill} className="skill-badge-tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>

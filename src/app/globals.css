@@ -2077,7 +2077,7 @@ img {
   font-weight: 500;
 }
 
-/* Education & Certifications */
+/* Education & Certifications — Balanced Grid Layouts */
 .cards-2col-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -2085,6 +2085,113 @@ img {
   margin: 24px 0 50px;
 }
 
+.cards-3col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px 0 50px;
+}
+
+.cards-4col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 24px 0 50px;
+}
+
+/* About Metrics Strip */
+.metrics-4col-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 25px 0 45px;
+}
+
+.metric-box {
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.metric-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
+}
+
+.metric-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Team 4-Column Grid */
+.team-4col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.team-member-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: var(--transition);
+}
+
+.team-member-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.team-member-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-blue), #3b82f6);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 110, 218, 0.25);
+}
+
+.team-member-name {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.92rem;
+}
+
+.team-member-role {
+  color: var(--primary-blue);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Education & Certifications Cards */
 .edu-card, .cert-card {
   background: var(--bg-white);
   border: 1px solid #e2e8f0;
@@ -2120,6 +2227,7 @@ img {
   color: var(--text-muted);
   font-size: 0.9rem;
   margin-top: 8px;
+  line-height: 1.55;
 }
 
 /* Skills Categories */
@@ -2134,15 +2242,22 @@ img {
   background: var(--bg-white);
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-md);
-  padding: 26px;
+  padding: 24px;
   box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.skill-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-md);
 }
 
 .skill-cat-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text-dark);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2162,6 +2277,13 @@ img {
   border-radius: var(--radius-pill);
   font-weight: 500;
   border: 1px solid #e2e8f0;
+  transition: var(--transition);
+}
+
+.skill-badge-tag:hover {
+  background: var(--primary-blue-light);
+  color: var(--primary-blue);
+  border-color: rgba(0, 110, 218, 0.2);
 }
 
 /* Process Section */
@@ -2179,11 +2301,15 @@ img {
   padding: 26px;
   position: relative;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .process-step-box:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
 }
 
 .process-step-num {
@@ -2199,13 +2325,13 @@ img {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   color: var(--text-dark);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .process-step-box p {
   font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Filter pills & Action Rows */
@@ -2248,7 +2374,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: clamp(20px, 4vw, 48px);
-  padding: 24px 20px;
+  padding: 22px 20px;
   margin: 30px auto 45px;
   max-width: 960px;
   background: var(--bg-subtle);
@@ -2266,6 +2392,7 @@ img {
   color: var(--text-dark);
   opacity: 0.85;
   transition: var(--transition);
+  text-decoration: none;
 }
 
 .trust-item:hover {
@@ -2350,10 +2477,109 @@ img {
   line-height: 1.6;
 }
 
+/* Enterprise Production AI Systems */
+.enterprise-ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin: 30px 0 50px;
+}
+
+.enterprise-ai-card {
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enterprise-ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.enterprise-badge-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.enterprise-ai-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.enterprise-ai-subtitle {
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.enterprise-ai-desc {
+  color: var(--text-body);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.enterprise-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.enterprise-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.enterprise-feature-item i {
+  font-size: 1.15rem;
+  color: var(--primary-blue);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.enterprise-feature-item strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.enterprise-feature-item span {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  display: block;
+}
+
+.enterprise-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 /* AI Project Roadmap Cards */
 .ai-roadmap-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 30px 0 60px;
 }
@@ -2403,9 +2629,248 @@ img {
   line-height: 1.5;
 }
 
+/* Courses Masterclass Layout */
+.course-featured-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 32px;
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  align-items: center;
+  transition: var(--transition);
+}
 
+.course-featured-hero:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: #cbd5e1;
+}
+
+.course-featured-media {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--shadow-sm);
+}
+
+.course-featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.course-featured-hero:hover .course-featured-media img {
+  transform: scale(1.03);
+}
+
+.course-featured-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-featured-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.course-level-pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #047857;
+  background: #d1fae5;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.course-featured-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.course-featured-content p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.course-topics-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.course-topic-item {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.course-topic-item i {
+  color: #22c55e;
+}
+
+.course-watch-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ef4444;
+  color: #ffffff !important;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+  width: fit-content;
+}
+
+.course-watch-btn-primary:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.35);
+}
+
+.courses-4col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Verified YouTube Channel Banner */
+.youtube-channel-strip {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md);
+  margin-top: 10px;
+}
+
+.yt-strip-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.yt-strip-icon {
+  font-size: 2.2rem;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(239, 68, 68, 0.12);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.yt-strip-left h4 {
+  font-family: var(--font-heading);
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verified-badge {
+  color: #38bdf8;
+  font-size: 1rem;
+}
+
+.yt-strip-left p {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.yt-subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ef4444;
+  color: #ffffff !important;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+}
+
+.yt-subscribe-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.hello-badge {
+  animation: floatSlow 3.8s ease-in-out infinite;
+}
+
+.btn-primary-pill i {
+  transition: transform 0.25s ease;
+}
+
+.btn-primary-pill:hover i {
+  transform: translateX(3px);
+}
+
+/* Responsive Grid Rules */
 @media (max-width: 1024px) {
-  .courses-scroll-track,
+  .cards-4col-grid,
+  .courses-4col-grid,
+  .team-4col-grid,
+  .metrics-4col-strip,
+  .ai-roadmap-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  .cards-3col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+  .enterprise-ai-grid,
+  .course-featured-hero {
+    grid-template-columns: 1fr !important;
+  }
   .testimonials-grid,
   .projects-grid-modern {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -2414,11 +2879,25 @@ img {
 }
 
 @media (max-width: 680px) {
-  .courses-scroll-track,
+  .cards-4col-grid,
+  .courses-4col-grid,
+  .cards-3col-grid,
+  .team-4col-grid,
+  .metrics-4col-strip,
+  .ai-roadmap-grid,
   .testimonials-grid,
   .projects-grid-modern,
-  .services-cards-grid {
+  .services-cards-grid,
+  .course-topics-list {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 16px !important;
+  }
+  .youtube-channel-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+  .yt-strip-left {
+    flex-direction: column;
+    text-align: center;
   }
 }

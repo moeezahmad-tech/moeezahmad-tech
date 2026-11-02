@@ -137,9 +137,153 @@ export default function ProjectsPage() {
           <span className="section-pill-tag">Portfolio &amp; Work</span>
           <h1>Featured Projects &amp; Case Studies</h1>
           <p>
-            Explore client web applications, documented case studies, and AI-powered product concepts
-            built with focus on speed, clean architecture, and business outcomes.
+            Explore enterprise AI systems at SolnetInfo, open-source utilities, client web applications,
+            and AI-driven product concepts built for reliability, scale, and performance.
           </p>
+        </section>
+
+        {/* ==========================================
+            ENTERPRISE PRODUCTION AI SYSTEMS (SolnetInfo)
+            ========================================== */}
+        <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
+          <div className="section-heading-center">
+            <span className="section-pill-tag">Production Engineering</span>
+            <h2>Enterprise AI Systems @ SolnetInfo</h2>
+            <p style={{ maxWidth: "660px", margin: "10px auto 0", color: "var(--text-muted)" }}>
+              High-impact production AI architectures engineered at SolnetInfo. Proprietary systems solving real-world operational and regulatory challenges.
+            </p>
+          </div>
+
+          <div className="enterprise-ai-grid">
+            {/* WaqtAI */}
+            <div className="enterprise-ai-card" data-aos="fade-up" data-aos-delay="100">
+              <div className="enterprise-ai-header">
+                <div className="enterprise-badge-row">
+                  <span className="role-pill">
+                    <i className="bi bi-shield-lock-fill"></i> Enterprise Private AI
+                  </span>
+                  <span className="role-pill dark">Product of SolnetInfo</span>
+                </div>
+                <h3>
+                  <i className="bi bi-whatsapp" style={{ color: "#22c55e", marginRight: "8px" }}></i>
+                  WaqtAI
+                </h3>
+                <h4 className="enterprise-ai-subtitle">
+                  WhatsApp-First AI Operating System for Service Businesses
+                </h4>
+              </div>
+
+              <p className="enterprise-ai-desc">
+                WaqtAI serves as an intelligent 24/7 WhatsApp AI assistant managing meetings, reminders,
+                client bookings, payment follow-ups, and customer touchpoints. It empowers service businesses
+                with smarter time management and greater operational productivity, paired with a centralized
+                web control plane for owners, administrators, and team members.
+              </p>
+
+              <div className="enterprise-feature-list">
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-calendar-check-fill"></i>
+                  <div>
+                    <strong>Automated Scheduling &amp; Bookings</strong>
+                    <span>Seamless calendar sync and conversational booking flows directly inside WhatsApp.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-bell-fill"></i>
+                  <div>
+                    <strong>Smart Reminders &amp; Client Follow-ups</strong>
+                    <span>Proactive customer engagement, reducing appointment no-shows and churn.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-cash-stack"></i>
+                  <div>
+                    <strong>Payment Tracking &amp; Notifications</strong>
+                    <span>Instant payment requests and invoice reconciliation alerts for clients and staff.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-speedometer2"></i>
+                  <div>
+                    <strong>Centralized Web Control Plane</strong>
+                    <span>Real-time dashboard for business owners to oversee conversations, staff schedules, and metrics.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="enterprise-tech-row">
+                <span className="skill-badge-tag">WhatsApp Cloud API</span>
+                <span className="skill-badge-tag">AI Assistant Architecture</span>
+                <span className="skill-badge-tag">Web Control Plane</span>
+                <span className="skill-badge-tag">Enterprise Reliability</span>
+              </div>
+            </div>
+
+            {/* Hisaab AI */}
+            <div className="enterprise-ai-card" data-aos="fade-up" data-aos-delay="200">
+              <div className="enterprise-ai-header">
+                <div className="enterprise-badge-row">
+                  <span className="role-pill">
+                    <i className="bi bi-shield-lock-fill"></i> Enterprise Private AI
+                  </span>
+                  <span className="role-pill dark">Product of SolnetInfo</span>
+                </div>
+                <h3>
+                  <i className="bi bi-cpu-fill" style={{ color: "var(--primary-blue)", marginRight: "8px" }}></i>
+                  Hisaab AI
+                </h3>
+                <h4 className="enterprise-ai-subtitle">
+                  AI-Native Tax Intelligence Platform (Pakistan FBR / IRIS &amp; Cross-Border)
+                </h4>
+              </div>
+
+              <p className="enterprise-ai-desc">
+                Hisaab (حساب — &ldquo;account / reckoning&rdquo;) is an AI-native tax platform built for Pakistan
+                (FBR / IRIS) and ready for cross-border income. It pairs a deterministic tax &amp; rules engine
+                with a RAG-grounded, real-time multi-agent AI layer so every answer is fast, personalized,
+                source-cited, and fully auditable.
+              </p>
+
+              <div className="enterprise-feature-list">
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-diagram-3-fill"></i>
+                  <div>
+                    <strong>Real-Time Agentic Multi-Agent AI</strong>
+                    <span>Specialist agents (Compliance, Optimizer, Cross-border, Filing, Document) orchestrated over SSE token streaming.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-book-fill"></i>
+                  <div>
+                    <strong>RAG-Grounded Tax Knowledge Base</strong>
+                    <span>Every generated answer cites verified legal passages from curated FBR tax codes and statutes.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-calculator-fill"></i>
+                  <div>
+                    <strong>Deterministic Tax Table Engine</strong>
+                    <span>Applies the 75% salary test, selects active First Schedule tables, and eliminates superseded tables.</span>
+                  </div>
+                </div>
+                <div className="enterprise-feature-item">
+                  <i className="bi bi-shield-check"></i>
+                  <div>
+                    <strong>AI Tax Optimizer &amp; Audit-Risk</strong>
+                    <span>Evaluates liability against live slabs, legitimate deductions, and calculates pre-submission audit risk.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="enterprise-tech-row">
+                <span className="skill-badge-tag">React &amp; TypeScript</span>
+                <span className="skill-badge-tag">Anthropic Claude</span>
+                <span className="skill-badge-tag">Edge Functions (SSE)</span>
+                <span className="skill-badge-tag">RAG Knowledge Base</span>
+                <span className="skill-badge-tag">FBR Tax Engine</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ==========================================
@@ -148,7 +292,7 @@ export default function ProjectsPage() {
         <section className="case-study-container" data-aos="fade-up">
           <div className="case-study-header">
             <span className="featured-badge" style={{ marginBottom: "12px", display: "inline-block" }}>
-              Detailed Case Study &bull; Open Source
+              Detailed Case Study &bull; Open Source Product
             </span>
             <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.8rem, 3vw, 2.4rem)", color: "var(--text-dark)", marginBottom: "8px" }}>
               Color Magic — Open-Source Color Palette Generator &amp; Explorer

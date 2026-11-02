@@ -11,14 +11,14 @@ const experiences: TimelineItem[] = [
     company: "SolnetInfo",
     date: "July 2026 - Present",
     role: "Software Engineer",
-    desc: "Maintains, scales, and improves production-level software as part of the SolnetInfo engineering team, focusing on system reliability, fault-tolerant architecture, and performance scalability.",
+    desc: "Contributing to enterprise production software and high-impact AI systems at SolnetInfo, including WaqtAI (WhatsApp-first AI operating system) and Hisaab AI (AI-native tax intelligence platform), focusing on agentic architectures, system reliability, and scale.",
     hasLine: true,
   },
   {
     company: "TechKreative",
     date: "June 2025 - Present",
     role: "CEO & Co-Founder",
-    desc: "Spearheading product and technology direction at TechKreative. Leading end-to-end full-stack web applications, AI integrations, scalable user interfaces, and brand-focused digital experiences from ideation to launch.",
+    desc: "Spearheading product and technology direction at TechKreative. Leading an 8-member multidisciplinary team delivering bespoke full-stack web applications, AI integrations, scalable user interfaces, and brand-focused digital experiences with 200+ projects completed.",
     hasLine: true,
   },
   {
@@ -51,19 +51,19 @@ export default function Experience() {
             key={exp.company}
             className="timeline-item"
             data-aos="fade-up"
-            data-aos-delay={(index + 1) * 100}
+            data-aos-delay={index * 150}
           >
-            <div className="timeline-left">
-              <h4 className="timeline-company">{exp.company}</h4>
-              <span className="timeline-date">{exp.date}</span>
+            <div className="timeline-node">
+              <span className="node-dot"></span>
+              {exp.hasLine && <span className="node-line"></span>}
             </div>
-            <div className="timeline-center">
-              <div className="timeline-node"></div>
-              {exp.hasLine && <div className="timeline-line"></div>}
-            </div>
-            <div className="timeline-right">
-              <h3 className="timeline-role">{exp.role}</h3>
-              <p className="timeline-desc">{exp.desc}</p>
+            <div className="timeline-content">
+              <div className="timeline-header">
+                <h3>{exp.company}</h3>
+                <span className="timeline-date">{exp.date}</span>
+              </div>
+              <h4 className="timeline-role">{exp.role}</h4>
+              <p>{exp.desc}</p>
             </div>
           </div>
         ))}
