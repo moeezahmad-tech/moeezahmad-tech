@@ -5,9 +5,34 @@ import Footer from "@/components/Footer";
 import AosInit from "@/components/AosInit";
 
 export const metadata: Metadata = {
-  title: "About Moeez Ahmad — Full-Stack AI Engineer & Software Engineer Intern",
+  title: "About Me — Career, Education & Story",
   description:
-    "Learn about Moeez Ahmad: Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, education at UET Lahore, and core philosophies.",
+    "Learn about Moeez Ahmad: Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, education at UET Lahore, and core engineering philosophies.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Moeez Ahmad | Full-Stack AI Engineer",
+    description:
+      "Career trajectory, computer science education at UET Lahore, certifications, and technical proficiencies.",
+    url: "/about",
+    type: "profile",
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Moeez Ahmad | Full-Stack AI Engineer",
+    description:
+      "Career trajectory, education, certifications, and engineering philosophy.",
+    images: ["/images/me.png"],
+  },
 };
 
 const storyArc = [

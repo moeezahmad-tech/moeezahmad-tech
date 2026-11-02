@@ -6,9 +6,34 @@ import AosInit from "@/components/AosInit";
 import Courses from "@/components/Courses";
 
 export const metadata: Metadata = {
-  title: "Experience & Roles — Moeez Ahmad",
+  title: "Experience & Leadership",
   description:
-    "Explore Moeez Ahmad's roles: Software Engineer Intern at SolnetInfo (WaqtAI, Hisaab AI), Co-Founder & CEO of TechKreative (8-member team, 200+ projects), freelance full-stack developer, and educator.",
+    "Explore Moeez Ahmad's roles: Software Engineer Intern at SolnetInfo (contributing to WaqtAI & Hisaab AI), Co-Founder & CEO of TechKreative, freelance development, and tech education.",
+  alternates: {
+    canonical: "/experience",
+  },
+  openGraph: {
+    title: "Experience & Leadership | Moeez Ahmad",
+    description:
+      "Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, and full-stack AI creator.",
+    url: "/experience",
+    type: "profile",
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad Experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Experience & Leadership | Moeez Ahmad",
+    description:
+      "Software Engineer Intern at SolnetInfo and CEO of TechKreative.",
+    images: ["/images/me.png"],
+  },
 };
 
 const techKreativeTeam = [

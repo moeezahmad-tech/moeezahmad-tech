@@ -6,9 +6,33 @@ import AosInit from "@/components/AosInit";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Services & Solutions — Moeez Ahmad | TechKreative",
+  title: "Services & Solutions",
   description:
-    "Explore services by Moeez Ahmad & TechKreative: Website development, AI-powered tools, SEO services, LinkedIn growth, graphic design, and video editing.",
+    "Explore full-stack engineering and agency services by Moeez Ahmad & TechKreative: Website development, AI-powered tools, SEO services, LinkedIn growth, and brand design.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Services & Solutions | Moeez Ahmad & TechKreative",
+    description:
+      "Website development, AI-powered tools, SEO strategy, and digital growth services.",
+    url: "/services",
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Services & Tech Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services & Solutions | Moeez Ahmad",
+    description:
+      "Full-stack web engineering, AI tooling, and SEO growth services.",
+    images: ["/images/me.png"],
+  },
 };
 
 interface ServiceDetail {

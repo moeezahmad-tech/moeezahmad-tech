@@ -5,9 +5,33 @@ import AosInit from "@/components/AosInit";
 import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
+  title: "Contact & Project Inquiry",
   description:
-    "Get in touch with Moeez Ahmad for full-stack web development, AI engineering, custom responsive websites, and TechKreative agency partnerships. Guaranteed reply within 24 hours.",
+    "Get in touch with Moeez Ahmad for full-stack web development, AI engineering, custom websites, and TechKreative agency partnerships. Guaranteed reply within 24 hours.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Moeez Ahmad | Start a Project",
+    description:
+      "Start a full-stack web project, AI tool integration, or TechKreative partnership. Direct response within 24 hours.",
+    url: "/contact",
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Moeez Ahmad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Moeez Ahmad | Start a Project",
+    description:
+      "Reach out for full-stack web and AI engineering partnerships.",
+    images: ["/images/me.png"],
+  },
 };
 
 const directChannels = [

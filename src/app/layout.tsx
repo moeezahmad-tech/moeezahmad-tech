@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  getBaseUrl,
+  generatePersonSchema,
+  generateWebSiteSchema,
+  generateOrganizationSchema,
+} from "@/lib/seo";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -16,30 +23,74 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const baseUrl = getBaseUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moeezahmad.dev"),
-  title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
+    template: "%s | Moeez Ahmad",
+  },
   description:
     "Moeez Ahmad is a Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, and Co-Founder/CEO of TechKreative. Building scalable websites, AI-powered tools, and digital growth systems.",
+  applicationName: "Moeez Ahmad Portfolio",
   keywords: [
     "Moeez Ahmad",
     "Moeez Ahmad Software Engineer",
     "Moeez Ahmad Full-Stack AI Engineer",
     "Moeez Ahmad TechKreative",
     "Full-Stack AI Engineer Lahore",
-    "Web developer Lahore",
-    "AI engineer Pakistan",
-    "TechKreative web development",
+    "Web Developer Lahore",
+    "Software Engineer Pakistan",
+    "SolnetInfo Software Engineer",
+    "TechKreative Web Development",
+    "WaqtAI",
+    "Hisaab AI",
     "Color Magic",
-    "Next.js Developer",
+    "Next.js App Router Portfolio",
+    "Agentic AI Engineer",
   ],
-  authors: [{ name: "Moeez Ahmad" }],
+  authors: [{ name: "Moeez Ahmad", url: baseUrl }],
+  creator: "Moeez Ahmad",
+  publisher: "TechKreative",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer Intern",
-    description:
-      "Building scalable websites, AI-powered tools, and digital growth systems for businesses and creators.",
-    images: ["/images/me.png"],
     type: "website",
+    locale: "en_US",
+    url: baseUrl,
+    siteName: "Moeez Ahmad",
+    title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
+    description:
+      "Building scalable websites, AI-powered tools, and digital growth systems for businesses and creators globally.",
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad — Full-Stack AI Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
+    description:
+      "Building scalable websites, AI-powered tools, and SEO-driven digital products.",
+    images: ["/images/me.png"],
+    creator: "@moeezahmad_tech",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -52,55 +103,20 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://moeezahmad.dev/#person",
-      name: "Moeez Ahmad",
-      jobTitle: "Full-Stack AI Engineer & Software Engineer Intern",
-      worksFor: [
-        {
-          "@type": "Organization",
-          name: "SolnetInfo",
-        },
-        {
-          "@type": "Organization",
-          name: "TechKreative",
-          url: "https://www.techkreative.com/",
-        },
-      ],
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "University of Engineering and Technology, Lahore",
-      },
-      url: "https://moeezahmad.dev/",
-      sameAs: [
-        "https://www.linkedin.com/in/moeezahmad-tech/",
-        "https://www.instagram.com/moeezahmad.tech/",
-        "https://www.youtube.com/@moeezahmad.techkreative",
-        "https://www.facebook.com/moeezahmad.tech/",
-        "https://colormagic.techkreative.com/open-source.html",
-      ],
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://moeezahmad.dev/#website",
-      url: "https://moeezahmad.dev/",
-      name: "Moeez Ahmad Portfolio",
-      publisher: {
-        "@id": "https://moeezahmad.dev/#person",
-      },
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const rootJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generatePersonSchema(),
+      generateWebSiteSchema(),
+      generateOrganizationSchema(),
+    ],
+  };
+
   return (
     <html
       lang="en"
@@ -111,10 +127,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={rootJsonLd} />
       </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
