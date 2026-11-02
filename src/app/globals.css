@@ -3883,76 +3883,108 @@ img {
 @media (max-width: 768px) {
   .contact-section,
   .contact-section.contact-light-theme {
-    padding: 24px 14px !important;
+    padding: 20px 12px !important;
     margin: 20px 0 35px !important;
     border-radius: var(--radius-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .contact-layout {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .contact-form-wrapper,
   .contact-light-theme .contact-form-wrapper {
-    padding: 18px 14px !important;
+    padding: 16px 12px !important;
     border-radius: var(--radius-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
   }
 
   .form-glow-header {
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
     padding-bottom: 10px !important;
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 8px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    width: 100% !important;
   }
 
   .form-glow-header h3,
   .contact-light-theme .form-glow-header h3 {
     font-size: 1.25rem !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
   }
 
   .form-sub-badge,
   .contact-light-theme .form-sub-badge {
-    font-size: 0.75rem !important;
+    font-size: 0.74rem !important;
     padding: 3px 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    white-space: normal !important;
   }
 
   .service-chips-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    width: 100% !important;
   }
 
   .service-chip-btn,
   .contact-light-theme .service-chip-btn {
-    padding: 8px 10px !important;
-    font-size: 0.8rem !important;
-    line-height: 1.25 !important;
-    min-height: 42px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 8px 8px !important;
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
+    min-height: 40px !important;
     gap: 6px !important;
     display: flex !important;
     align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .service-chip-btn span {
+    min-width: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-weight: 600 !important;
   }
 
   .service-chip-btn i,
   .contact-light-theme .service-chip-btn i {
-    font-size: 0.92rem !important;
+    font-size: 0.88rem !important;
     flex-shrink: 0 !important;
   }
 
   .form-row {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 10px !important;
     margin-bottom: 10px !important;
+    width: 100% !important;
   }
 
   .form-field-group {
     margin-bottom: 12px !important;
+    width: 100% !important;
   }
 
   /* 16px font-size prevents iOS Safari from automatically zooming into the input */
@@ -3962,68 +3994,78 @@ img {
   .contact-light-theme .modern-input,
   .contact-light-theme .modern-select,
   .contact-light-theme .modern-textarea {
+    width: 100% !important;
+    max-width: 100% !important;
     font-size: 16px !important;
-    padding: 11px 14px 11px 38px !important;
+    padding: 11px 12px 11px 36px !important;
     border-radius: 8px !important;
+    box-sizing: border-box !important;
   }
 
   .modern-textarea,
   .contact-light-theme .modern-textarea {
-    padding-left: 14px !important;
+    padding-left: 12px !important;
     min-height: 95px !important;
   }
 
   .input-icon,
   .contact-light-theme .input-icon {
-    left: 12px !important;
+    left: 11px !important;
     font-size: 0.95rem !important;
   }
 
   .form-footer-row {
     gap: 12px !important;
     margin-top: 4px !important;
+    width: 100% !important;
   }
 
   .form-checkbox-wrapper,
   .contact-light-theme .form-checkbox-wrapper {
-    font-size: 0.8rem !important;
+    font-size: 0.78rem !important;
     line-height: 1.35 !important;
     gap: 8px !important;
   }
 
   .form-submit-btn-glow {
-    padding: 12px 20px !important;
-    font-size: 0.95rem !important;
-    height: 46px !important;
+    padding: 12px 16px !important;
+    font-size: 0.92rem !important;
+    height: 44px !important;
+    width: 100% !important;
   }
 
   .form-privacy-note,
   .contact-light-theme .form-privacy-note {
-    font-size: 0.74rem !important;
+    font-size: 0.72rem !important;
     margin-top: 8px !important;
+    text-align: center !important;
   }
 }
 
 @media (max-width: 420px) {
   .contact-section,
   .contact-section.contact-light-theme {
-    padding: 18px 10px !important;
+    padding: 16px 8px !important;
   }
 
   .contact-form-wrapper,
   .contact-light-theme .contact-form-wrapper {
-    padding: 14px 10px !important;
+    padding: 14px 8px !important;
+  }
+
+  .service-chips-grid {
+    gap: 5px !important;
   }
 
   .service-chip-btn,
   .contact-light-theme .service-chip-btn {
-    padding: 7px 6px !important;
-    font-size: 0.74rem !important;
+    padding: 7px 5px !important;
+    font-size: 0.72rem !important;
     gap: 4px !important;
   }
 
   .service-chip-btn i,
   .contact-light-theme .service-chip-btn i {
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
   }
 }
