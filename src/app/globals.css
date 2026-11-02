@@ -2425,27 +2425,31 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: clamp(20px, 4vw, 48px);
-  padding: 22px 20px;
-  margin: 30px auto 45px;
-  max-width: 960px;
+  flex-wrap: nowrap;
+  gap: clamp(14px, 2.2vw, 32px);
+  padding: 12px 28px;
+  margin: 4px auto 40px;
+  max-width: 1140px;
+  width: fit-content;
   background: var(--bg-subtle);
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-pill);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
 .trust-item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: clamp(0.85rem, 1vw, 0.94rem);
   color: var(--text-dark);
-  opacity: 0.85;
+  opacity: 0.9;
   transition: var(--transition);
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .trust-item:hover {
@@ -2456,7 +2460,18 @@ img {
 
 .trust-item i {
   color: var(--primary-blue);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .trust-strip {
+    flex-wrap: wrap;
+    border-radius: var(--radius-lg);
+    padding: 14px 18px;
+    gap: 12px 18px;
+    width: 100%;
+    margin: 14px auto 35px;
+  }
 }
 
 /* Detailed Case Study Layout */
