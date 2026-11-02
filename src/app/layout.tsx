@@ -18,35 +18,76 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://moeezahmad.dev"),
-  title: "Moeez Ahmad — Full-Stack AI Engineer | Software Engineer Intern | Co-Founder & CEO @ TechKreative",
+  title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer",
   description:
-    "Moeez Ahmad is a Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, and Co-Founder/CEO of TechKreative based in Lahore, Pakistan. From Ideation to Products: building scalable web products, AI-powered tools, and digital growth systems.",
+    "Moeez Ahmad is a Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, and Co-Founder/CEO of TechKreative. Building scalable websites, AI-powered tools, and digital growth systems.",
   keywords: [
     "Moeez Ahmad",
-    "Full-Stack AI Engineer",
-    "Software Engineer Intern",
-    "TechKreative",
-    "SolnetInfo",
-    "AI Engineer",
+    "Moeez Ahmad Software Engineer",
+    "Moeez Ahmad Full-Stack AI Engineer",
+    "Moeez Ahmad TechKreative",
+    "Full-Stack AI Engineer Lahore",
+    "Web developer Lahore",
+    "AI engineer Pakistan",
+    "TechKreative web development",
     "Color Magic",
-    "Web Developer",
-    "Portfolio",
     "Next.js Developer",
-    "SEO Expert",
-    "Lahore",
-    "Pakistan",
   ],
   authors: [{ name: "Moeez Ahmad" }],
   openGraph: {
     title: "Moeez Ahmad — Full-Stack AI Engineer & Software Engineer Intern",
     description:
-      "From Ideation to Products: building scalable web products, AI-powered tools, and digital growth systems.",
+      "Building scalable websites, AI-powered tools, and digital growth systems for businesses and creators.",
     images: ["/images/me.png"],
     type: "website",
   },
   icons: {
     icon: "/favicon.ico",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://moeezahmad.dev/#person",
+      name: "Moeez Ahmad",
+      jobTitle: "Full-Stack AI Engineer & Software Engineer Intern",
+      worksFor: [
+        {
+          "@type": "Organization",
+          name: "SolnetInfo",
+        },
+        {
+          "@type": "Organization",
+          name: "TechKreative",
+          url: "https://www.techkreative.com/",
+        },
+      ],
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "University of Engineering and Technology, Lahore",
+      },
+      url: "https://moeezahmad.dev/",
+      sameAs: [
+        "https://www.linkedin.com/in/moeezahmad-tech/",
+        "https://www.instagram.com/moeezahmad.tech/",
+        "https://www.youtube.com/@moeezahmad.techkreative",
+        "https://www.facebook.com/moeezahmad.tech/",
+        "https://colormagic.techkreative.com/open-source.html",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://moeezahmad.dev/#website",
+      url: "https://moeezahmad.dev/",
+      name: "Moeez Ahmad Portfolio",
+      publisher: {
+        "@id": "https://moeezahmad.dev/#person",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -56,6 +97,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${outfit.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

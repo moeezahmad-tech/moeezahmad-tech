@@ -7,7 +7,7 @@ import AosInit from "@/components/AosInit";
 export const metadata: Metadata = {
   title: "About Moeez Ahmad — Full-Stack AI Engineer & Software Engineer Intern",
   description:
-    "Discover Moeez Ahmad's story arc: Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, professional philosophy, education at UET Lahore, and credentials.",
+    "Learn about Moeez Ahmad: Full-Stack AI Engineer, Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, education at UET Lahore, and core philosophies.",
 };
 
 const storyArc = [
@@ -15,42 +15,42 @@ const storyArc = [
     step: "01",
     title: "Student & Builder",
     subtitle: "UET Lahore",
-    desc: "Pursuing Computer Science with interests spanning gaming, animation, and foundational web engineering.",
+    desc: "Pursuing Computer Science with foundational interests in gaming, animation, and modern web technologies.",
     icon: "bi-mortarboard-fill",
   },
   {
     step: "02",
     title: "Freelancer & Web Developer",
     subtitle: "2021 – Present",
-    desc: "Shipped 100+ bespoke websites and landing pages, helping businesses and creators establish distinct digital identities.",
+    desc: "Built custom websites and landing pages for 100+ clients globally, establishing robust digital identities.",
     icon: "bi-laptop",
   },
   {
     step: "03",
     title: "AI-Focused Engineer",
     subtitle: "Machine Learning & AI Tools",
-    desc: "Engineering full-stack AI solutions, agentic workflows, and privacy-first browser tools like Color Magic.",
+    desc: "Engineering full-stack AI solutions, prompt systems, and privacy-first browser tools like Color Magic.",
     icon: "bi-cpu-fill",
   },
   {
     step: "04",
     title: "Agency Founder & CEO",
     subtitle: "TechKreative",
-    desc: "Co-founded TechKreative with Tayyaba Khan, scaling a 10-member multidisciplinary creative and technical team.",
+    desc: "Co-founded TechKreative with Tayyaba Khan, scaling a 10-member team delivering web, AI, SEO, and branding.",
     icon: "bi-rocket-takeoff-fill",
   },
   {
     step: "05",
     title: "Production Engineer",
     subtitle: "SolnetInfo",
-    desc: "Joined SolnetInfo's engineering team, maintaining, scaling, and optimizing production-grade software.",
+    desc: "Joined the SolnetInfo engineering team to maintain, scale, and optimize enterprise production-level software.",
     icon: "bi-gear-wide-connected",
   },
   {
     step: "06",
     title: "Creator & Community Builder",
-    subtitle: "Turning Video into Client Magnets",
-    desc: "Collaborative creator campaigns with 15 designers, YouTube tutorials, and agency-building content.",
+    subtitle: "Video into Client Magnets",
+    desc: "Partnering with 15 designers and creatives on video campaigns, YouTube masterclasses, and technical content.",
     icon: "bi-camera-video-fill",
   },
 ];
@@ -60,7 +60,7 @@ const educationList = [
     institution: "University of Engineering and Technology, Lahore",
     program: "Computer Science, Gaming and Animation",
     period: "Undergraduate",
-    desc: "Rigorous computer science studies with technical emphasis on algorithms, computer graphics, animation, and software engineering.",
+    desc: "Rigorous computer science curriculum with focus on software architecture, graphics, algorithms, and web technologies.",
   },
   {
     institution: "Punjab Group of Colleges",
@@ -72,7 +72,7 @@ const educationList = [
     institution: "Al Siraat High School",
     program: "Intermediate in Computer Science (ICS)",
     period: "Foundational",
-    desc: "Foundational computer science education covering programming logic, mathematics, and computing principles.",
+    desc: "Foundational studies in computer science, programming logic, mathematics, and analytical computing.",
   },
 ];
 
@@ -140,41 +140,54 @@ export default function AboutPage() {
           <h1>Moeez Ahmad</h1>
           <p>
             Full-Stack AI Engineer, Software Engineer Intern @ SolnetInfo, and Co-Founder/CEO @ TechKreative.
-            Building at the intersection of AI, production software, and digital growth.
+            Turning ideas into reliable, scalable, and user-focused digital solutions.
           </p>
         </section>
 
-        {/* Narrative & Identity Table */}
+        {/* Professional Story & Personal Story */}
         <section className="about-narrative-grid">
           <div className="about-card-box" data-aos="fade-right">
-            <h2>From Ideation to Products</h2>
+            <h2>Professional Story</h2>
             <p>
-              I&apos;m <strong>Moeez Ahmad</strong>, a Full-Stack AI Engineer, Software Engineer, and Co-Founder of
-              TechKreative, based in Lahore, Punjab, Pakistan.
+              I’m <strong>Moeez Ahmad</strong>, a Full-Stack AI Engineer, Software Engineer Intern, and Co-Founder of
+              TechKreative, based in Lahore, Pakistan. My work sits at the intersection of software engineering and
+              artificial intelligence. I build websites, AI-powered tools, and SEO-driven solutions that help businesses
+              establish a stronger digital presence and reach the right audience.
             </p>
             <p>
-              My work sits at the intersection of software engineering and artificial intelligence.
-              I design and develop websites, AI-powered tools, and SEO-driven strategies that help businesses
-              build a stronger online presence and reach the right audience. From idea to deployment,
-              I focus on creating products that solve real problems, work reliably, and deliver genuine value.
+              From ideation to deployment, I focus on solving real problems rather than simply adding features. I care
+              about practicality, efficiency, customization, quality, and the end user. Whether I am building a website,
+              integrating AI into a product, or improving search visibility, my goal is to create something useful,
+              reliable, and scalable.
             </p>
             <p>
               As the Co-Founder of <strong>TechKreative</strong>, I help businesses access high-quality web, AI, design,
-              and growth services. TechKreative unites website development, SEO, LinkedIn growth, social-media management,
-              graphic design, and video editing together as a complete digital growth partner.
+              and growth services. TechKreative combines website development, SEO, LinkedIn growth, social-media management,
+              graphic design, and video editing into one complete digital partner.
             </p>
             <p>
-              Alongside TechKreative, I work with the <strong>SolnetInfo development team as a Software Engineer Intern</strong> on
-              maintaining, scaling, and improving production-level software. This bridges the gap between client-focused product
-              development and rigorous enterprise software engineering.
+              Alongside TechKreative, I work with the <strong>SolnetInfo</strong> development team on maintaining, scaling,
+              and improving production-level software. This gives me experience across both client-focused product
+              development and production engineering.
+            </p>
+
+            <h3 style={{ marginTop: "28px", fontSize: "1.3rem" }}>Personal Story</h3>
+            <p>
+              I started as a Computer Science student at UET Lahore with interests in gaming, animation, and web technologies.
+              Over time, my focus shifted toward building practical digital products: websites for clients, AI-powered tools,
+              and systems that help businesses grow online.
+            </p>
+            <p>
+              Today, I split my work between engineering, entrepreneurship, and content creation. I build products, lead
+              TechKreative, and create content that makes technology, freelancing, and agency building more accessible.
             </p>
 
             <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <Link href="/experience" className="btn-primary-pill">
-                View Work Experience <i className="bi bi-arrow-right"></i>
+              <Link href="/projects" className="btn-primary-pill">
+                Explore Projects <i className="bi bi-arrow-right"></i>
               </Link>
               <Link href="/contact" className="btn-secondary-pill">
-                Let&apos;s Collaborate
+                Work Together
               </Link>
             </div>
           </div>
@@ -197,7 +210,7 @@ export default function AboutPage() {
                 </tr>
                 <tr>
                   <td className="label-cell">Primary Focus</td>
-                  <td className="val-cell">Full-Stack AI, Web Apps, SEO &amp; Growth</td>
+                  <td className="val-cell">Full-Stack AI, Web Products, SEO &amp; Growth</td>
                 </tr>
                 <tr>
                   <td className="label-cell">Personal Site</td>
@@ -217,27 +230,19 @@ export default function AboutPage() {
                 </tr>
                 <tr>
                   <td className="label-cell">Languages</td>
-                  <td className="val-cell">Urdu (Native/Full), Punjabi (Native/Full), English (Working)</td>
+                  <td className="val-cell">Urdu (Native), Punjabi (Native), English (Working)</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        {/* Professional Philosophy & Mission */}
-        <section className="about-card-box" data-aos="fade-up" style={{ marginBottom: "60px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
-          <div className="section-heading-center" style={{ marginBottom: "16px" }}>
-            <span className="section-pill-tag">Core Beliefs</span>
-            <h2>Professional Philosophy &amp; Founder Mission</h2>
-          </div>
-          <div style={{ maxWidth: "850px", margin: "0 auto", textAlign: "center" }}>
-            <p style={{ fontSize: "1.12rem", fontStyle: "italic", color: "var(--text-dark)", marginBottom: "18px" }}>
-              &ldquo;Technology should be practical, efficient, and built with the end user in mind. Real value comes from solving real business problems rather than simply adding features.&rdquo;
-            </p>
-            <p style={{ fontSize: "0.98rem", color: "var(--text-body)", lineHeight: 1.7 }}>
-              My mission is to make high-quality software engineering, modern AI tools, and digital-growth services accessible to businesses of all sizes and locations — not just enterprise corporations. Whether building an open-source tool like Color Magic or scaling client brands through TechKreative, the focus remains: <strong>practical utility, clean code, and measurable impact.</strong>
-            </p>
-          </div>
+        {/* Final Positioning Statement Box */}
+        <section className="about-card-box" data-aos="fade-up" style={{ marginBottom: "50px", textAlign: "center", background: "#f8fafc" }}>
+          <span className="section-pill-tag">Positioning Statement</span>
+          <p style={{ fontSize: "1.2rem", color: "var(--text-dark)", fontWeight: 600, maxWidth: "800px", margin: "14px auto 0", lineHeight: 1.6 }}>
+            &ldquo;I’m Moeez Ahmad, a Full-Stack AI Engineer and Co-Founder of TechKreative. I build websites, AI-powered tools, and SEO-driven digital products that help businesses turn ideas into reliable, scalable, and growth-focused solutions.&rdquo;
+          </p>
         </section>
 
         {/* 6-Stage Portfolio Story Arc */}

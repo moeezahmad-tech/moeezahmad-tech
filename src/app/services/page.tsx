@@ -25,7 +25,7 @@ const detailedServices: ServiceDetail[] = [
     badge: "Core Engineering",
     icon: "bi-laptop",
     summary:
-      "Fast, secure, modern websites and full-stack web applications designed to convert visitors into paying clients.",
+      "Fast, secure, modern websites and full-stack web applications designed to convert visitors into customers.",
     capabilities: [
       "Custom Next.js & React architecture",
       "Mobile-first, responsive, and cross-browser testing",
@@ -103,23 +103,28 @@ const detailedServices: ServiceDetail[] = [
 const processSteps = [
   {
     num: "01",
-    title: "Discovery & Ideation",
-    desc: "We analyze your business challenge, target market, and strategic goals to map out technical requirements.",
+    title: "Discovery & Requirement Gathering",
+    desc: "Initial consultation to unpack your business challenge, define concrete deliverables, and clarify technical parameters.",
   },
   {
     num: "02",
-    title: "Design & UX System",
-    desc: "Crafting modern, responsive UI and high-fidelity visuals that establish immediate credibility and trust.",
+    title: "Information Architecture & Wireframes",
+    desc: "Mapping out high-converting user journeys, site flow, and structural wireframes for intuitive navigation.",
   },
   {
     num: "03",
-    title: "Full-Stack & AI Build",
-    desc: "Engineering scalable code, integrating smart AI utilities, and adhering to strict software quality standards.",
+    title: "Design & Full-Stack Development",
+    desc: "Crafting modern, responsive UI and writing clean, scalable code with modern frameworks and robust database backends.",
   },
   {
     num: "04",
-    title: "Launch, SEO & Scale",
-    desc: "Deploying production-grade builds, fine-tuning SEO indexing, and setting up growth systems to attract clients.",
+    title: "SEO Setup & Performance Optimization",
+    desc: "Rigorous technical SEO implementation, structured schema, and performance tuning for lightning-fast speeds.",
+  },
+  {
+    num: "05",
+    title: "Launch, Testing & Handover",
+    desc: "End-to-end quality assurance, production deployment, client walkthrough, and post-launch documentation.",
   },
 ];
 
@@ -174,11 +179,11 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* The 4-Step Process: From Ideation to Products */}
+        {/* The 5-Step Process: From Ideation to Products */}
         <section data-aos="fade-up" style={{ margin: "50px 0" }}>
           <div className="section-heading-center">
             <span className="section-pill-tag">How We Work</span>
-            <h2>From Ideation to Product</h2>
+            <h2>From Ideation to Product: 5-Stage Process</h2>
           </div>
 
           <div className="process-grid">

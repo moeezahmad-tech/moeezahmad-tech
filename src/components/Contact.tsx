@@ -5,13 +5,17 @@ export default function Contact() {
         <div className="contact-info">
           <span className="contact-intro-badge">Let&apos;s Connect</span>
           <h2>
-            Got a wild idea?
+            Looking to build a website
             <br />
-            Reach out if you dare.
+            or AI tool? Let&apos;s talk.
           </h2>
 
+          <p style={{ color: "var(--text-light-muted)", fontSize: "0.95rem", marginBottom: "20px" }}>
+            I’m open to collaborations, partnerships, and projects involving custom websites, AI-powered tools, SEO, and digital growth.
+          </p>
+
           <div className="contact-location">
-            <i className="bi bi-geo-alt-fill"></i> Lahore, Pakistan
+            <i className="bi bi-geo-alt-fill"></i> Lahore, Punjab, Pakistan
           </div>
 
           <div
@@ -126,31 +130,36 @@ export default function Contact() {
             required
           />
 
-          <select name="service" className="modern-select" defaultValue="" required>
-            <option value="" disabled>
-              What service do you need?
-            </option>
-            <option value="Custom Website Development">
-              Custom Website Development
-            </option>
-            <option value="Full Stack Web Application">
-              Full Stack Web Application
-            </option>
-            <option value="E-Commerce Solutions">E-Commerce Solutions</option>
-            <option value="SEO &amp; Performance Optimization">
-              SEO &amp; Performance Optimization
-            </option>
-            <option value="Website Redesign">Website Redesign</option>
-            <option value="Ongoing Maintenance &amp; Support">
-              Ongoing Maintenance &amp; Support
-            </option>
-          </select>
+          <div className="form-row">
+            <select name="service" className="modern-select" defaultValue="" required>
+              <option value="" disabled>
+                What service do you need?
+              </option>
+              <option value="Website Development">Website Development</option>
+              <option value="AI-Powered Tool Development">AI-Powered Tool Development</option>
+              <option value="SEO & Organic Growth">SEO &amp; Organic Growth</option>
+              <option value="LinkedIn Growth & Personal Branding">LinkedIn Growth &amp; Personal Branding</option>
+              <option value="Graphic Design & Brand Identity">Graphic Design &amp; Brand Identity</option>
+              <option value="Video Editing & Content Creation">Video Editing &amp; Content Creation</option>
+              <option value="Full TechKreative Agency Partner">Full TechKreative Agency Partner</option>
+            </select>
+
+            <select name="budget_range" className="modern-select" defaultValue="">
+              <option value="" disabled>
+                Estimated Budget Range
+              </option>
+              <option value="Under $500">&lt; $500 (Quick Launch / Redesign)</option>
+              <option value="$500 - $1,500">$500 - $1,500 (Full Website / SEO)</option>
+              <option value="$1,500 - $3,500">$1,500 - $3,500 (Full-Stack Web App / AI)</option>
+              <option value="$3,500+">$3,500+ (Enterprise / Retainer Agency)</option>
+            </select>
+          </div>
 
           <textarea
             rows={4}
             className="modern-textarea"
             name="message"
-            placeholder="Tell me about your project..."
+            placeholder="Tell me about your project, goals, or idea..."
             required
           ></textarea>
 
@@ -174,4 +183,3 @@ export default function Contact() {
     </section>
   );
 }
-
