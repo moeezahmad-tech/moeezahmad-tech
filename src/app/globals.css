@@ -652,7 +652,8 @@ img {
 /* 3-Column Services Cards */
 .services-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
   gap: 24px;
 }
 
@@ -1067,7 +1068,8 @@ img {
 
 .projects-grid-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
   gap: 28px;
 }
 
@@ -1153,7 +1155,7 @@ img {
 }
 
 /* ==========================================================================
-   Courses / Education Section
+   Courses / Education Section (Balanced 3-Column Structured Grid)
    ========================================================================== */
 .courses-section {
   padding: 30px 0 70px;
@@ -1161,43 +1163,151 @@ img {
 
 .courses-scroll-track {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   max-width: 1300px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
-.course-card-link {
-  display: block;
+.course-card-modern {
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   transition: var(--transition);
-  background-color: var(--bg-white);
-  border: 1px solid #e2e8f0;
+}
+
+.course-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: #cbd5e1;
+}
+
+.course-thumbnail-holder {
   position: relative;
-}
-
-.course-card-link:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 110, 218, 0.18);
-  border-color: var(--primary-blue);
-}
-
-.course-card-link img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.course-thumbnail-holder img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
 
-.course-card-link:hover img {
-  transform: scale(1.04);
+.course-card-modern:hover .course-thumbnail-holder img {
+  transform: scale(1.05);
+}
+
+.course-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2.6rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.course-card-modern:hover .course-play-overlay {
+  opacity: 1;
+}
+
+.course-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.course-hub-banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-card-body {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.course-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.course-card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.course-card-body p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.course-watch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: var(--transition);
+  border: 1px solid #e2e8f0;
+}
+
+.course-watch-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
 }
 
 /* ==========================================================================
-   Client Feedback / Testimonials
+   Client Feedback / Testimonials (Balanced 3-Column Structured Grid)
    ========================================================================== */
 .testimonials-section {
   padding: 30px 0 70px;
@@ -1205,8 +1315,9 @@ img {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  align-items: stretch;
 }
 
 .testimonial-card-modern {
@@ -1218,7 +1329,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
   transition: var(--transition);
+  text-align: left;
 }
 
 .testimonial-card-modern:hover {
@@ -1227,19 +1340,33 @@ img {
   border-color: var(--primary-blue);
 }
 
+.testimonial-card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
 .testimonial-stars {
   color: #f59e0b;
-  font-size: 1rem;
-  margin-bottom: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  gap: 3px;
+}
+
+.testimonial-quote-badge {
+  color: rgba(0, 110, 218, 0.2);
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
 .testimonial-quote {
   font-size: 0.92rem;
   color: var(--text-body);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-style: italic;
-  text-align: justify;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  font-style: normal;
+  text-align: left;
 }
 
 .testimonial-author {
@@ -2274,4 +2401,24 @@ img {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+
+@media (max-width: 1024px) {
+  .courses-scroll-track,
+  .testimonials-grid,
+  .projects-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .courses-scroll-track,
+  .testimonials-grid,
+  .projects-grid-modern,
+  .services-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
 }
