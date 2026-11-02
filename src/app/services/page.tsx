@@ -6,9 +6,9 @@ import AosInit from "@/components/AosInit";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Services & Solutions — Moeez Ahmad",
+  title: "Services & Solutions — Moeez Ahmad | TechKreative",
   description:
-    "Explore digital services by Moeez Ahmad: Full-stack web development, AI engineering, UI/UX design systems, high-converting landing pages, and TechKreative agency solutions.",
+    "Explore services by Moeez Ahmad & TechKreative: Website development, AI-powered tools, SEO services, LinkedIn growth, graphic design, and video editing.",
 };
 
 interface ServiceDetail {
@@ -21,55 +21,81 @@ interface ServiceDetail {
 
 const detailedServices: ServiceDetail[] = [
   {
-    title: "Full-Stack Web & AI Engineering",
+    title: "Website Development",
     badge: "Core Engineering",
-    icon: "bi-cpu-fill",
+    icon: "bi-laptop",
     summary:
-      "Engineering robust, production-grade web applications and AI-powered tools designed to scale securely without performance bottlenecks.",
+      "Fast, secure, modern websites and full-stack web applications designed to convert visitors into paying clients.",
     capabilities: [
-      "Next.js & React full-stack application development",
-      "API design, REST/GraphQL endpoints, and secure databases",
-      "AI & machine learning feature integration",
-      "Production deployment, CI/CD pipelines, and cloud hosting",
+      "Custom Next.js & React architecture",
+      "Mobile-first, responsive, and cross-browser testing",
+      "Full-stack capabilities with secure databases",
+      "Sub-second load times & Core Web Vitals optimization",
     ],
   },
   {
-    title: "UI/UX & Brand Design Systems",
+    title: "AI Engineering & AI Tools",
+    badge: "Emerging Tech",
+    icon: "bi-cpu-fill",
+    summary:
+      "Engineering practical, user-focused AI tools and full-stack AI integrations that solve real business bottlenecks.",
+    capabilities: [
+      "AI-powered custom web applications & tools",
+      "Client-side privacy-first algorithms (e.g. Color Magic)",
+      "LLM & API integrations with custom prompt engineering",
+      "Production-ready deployment & ongoing maintenance",
+    ],
+  },
+  {
+    title: "SEO Services & Organic Growth",
+    badge: "Search Authority",
+    icon: "bi-graph-up-arrow",
+    summary:
+      "Improving search visibility, semantic indexing, and driving organic traffic through proven, data-backed SEO strategies.",
+    capabilities: [
+      "Technical SEO auditing and on-page optimization",
+      "Keyword research, structured data & schema markup",
+      "High-speed architecture for search rank prioritization",
+      "Conversion tracking & analytics integration",
+    ],
+  },
+  {
+    title: "LinkedIn Growth & Profile Optimization",
+    badge: "B2B Positioning",
+    icon: "bi-linkedin",
+    summary:
+      "Optimized professional profiles, strategic thought-leadership content, and meaningful B2B networking funnels.",
+    capabilities: [
+      "Headline, banner, and summary authority optimization",
+      "Freelancer-focused strategy posts & carousels",
+      "Content frameworks to turn profile visits into inbound inquiries",
+      "Establishing executive and personal brand authority",
+    ],
+  },
+  {
+    title: "Graphic Design & Brand Identity",
     badge: "Visual Excellence",
     icon: "bi-palette-fill",
     summary:
-      "Crafting bespoke, pixel-perfect user interfaces that align with your personal brand and create memorable impressions.",
+      "High-quality visuals, custom design systems, and cohesive branding that create an unforgettable first impression.",
     capabilities: [
-      "Custom responsive design for desktop, tablet, and mobile",
-      "Reusable design components and clean design tokens",
-      "Interactive micro-animations and smooth user flows",
-      "Figma to production-ready Next.js / Tailwind code",
+      "Brand identity guidelines, palettes, and typography",
+      "Social media assets, promotional kits, and slide decks",
+      "Canva-based agile design workflows & Figma UI files",
+      "Cohesive alignment across all digital touchpoints",
     ],
   },
   {
-    title: "Landing Pages & Conversion SEO",
-    badge: "High Growth",
-    icon: "bi-graph-up-arrow",
+    title: "Video Editing & Content Creation",
+    badge: "Attention Engine",
+    icon: "bi-camera-reels-fill",
     summary:
-      "Strategic sales pages and search-optimized architectures that turn casual visitors into paying clients and qualified leads.",
+      "Engaging edits, short-form reels, and YouTube walkthroughs that capture attention and communicate messages clearly.",
     capabilities: [
-      "Conversion-focused copy layout and clear CTAs",
-      "Core Web Vitals optimization (blazing sub-second loads)",
-      "Technical SEO, semantic HTML, and OpenGraph social metadata",
-      "Analytics and lead capture integrations (Formspree, CRM)",
-    ],
-  },
-  {
-    title: "TechKreative Digital Agency Suite",
-    badge: "All-in-One Studio",
-    icon: "bi-rocket-takeoff-fill",
-    summary:
-      "Comprehensive digital presence solutions through TechKreative, co-founded to provide complete branding, content, and growth services.",
-    capabilities: [
-      "Complete brand identity and graphic design assets",
-      "Video editing and viral creator content strategy",
-      "LinkedIn profile optimization and personal branding",
-      "End-to-end digital marketing and audience acquisition",
+      "Reels, Shorts, and TikTok pacing & dynamic typography",
+      "Long-form educational walkthroughs and tutorials",
+      "'Turning video content into client magnets' methodology",
+      "Sound design, color grading, and thumbnail design",
     ],
   },
 ];
@@ -78,22 +104,22 @@ const processSteps = [
   {
     num: "01",
     title: "Discovery & Ideation",
-    desc: "We analyze your vision, target audience, and business goals to map out technical requirements and architecture.",
+    desc: "We analyze your business challenge, target market, and strategic goals to map out technical requirements.",
   },
   {
     num: "02",
     title: "Design & UX System",
-    desc: "Prototyping responsive layouts and high-fidelity visuals that establish trust and seamless navigation.",
+    desc: "Crafting modern, responsive UI and high-fidelity visuals that establish immediate credibility and trust.",
   },
   {
     num: "03",
-    title: "Engineering & AI Build",
-    desc: "Writing clean, maintainable, and type-safe code using Next.js, modern backend logic, and scalable databases.",
+    title: "Full-Stack & AI Build",
+    desc: "Engineering scalable code, integrating smart AI utilities, and adhering to strict software quality standards.",
   },
   {
     num: "04",
-    title: "Launch & Growth",
-    desc: "Deploying to production, optimizing speed, configuring SEO, and monitoring analytics for continuous improvement.",
+    title: "Launch, SEO & Scale",
+    desc: "Deploying production-grade builds, fine-tuning SEO indexing, and setting up growth systems to attract clients.",
   },
 ];
 
@@ -109,12 +135,12 @@ export default function ServicesPage() {
           <span className="section-pill-tag">Digital Solutions</span>
           <h1>Services &amp; Engineering Solutions</h1>
           <p>
-            From concept ideation to scalable digital products: combining software engineering,
-            AI integration, and conversion-focused design to help brands win online.
+            From concept ideation to launched products: combining software engineering, AI tooling,
+            search visibility, and agency creativity to help your brand stand out.
           </p>
         </section>
 
-        {/* Detailed Services Grid */}
+        {/* Detailed Services Grid (6 Core Offerings) */}
         <section style={{ margin: "40px 0 60px" }}>
           <div className="cards-2col-grid">
             {detailedServices.map((service, idx) => (
@@ -122,7 +148,7 @@ export default function ServicesPage() {
                 key={service.title}
                 className="about-card-box"
                 data-aos="fade-up"
-                data-aos-delay={idx * 100}
+                data-aos-delay={(idx % 2) * 100}
                 style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}
               >
                 <div>
@@ -151,7 +177,7 @@ export default function ServicesPage() {
         {/* The 4-Step Process: From Ideation to Products */}
         <section data-aos="fade-up" style={{ margin: "50px 0" }}>
           <div className="section-heading-center">
-            <span className="section-pill-tag">How I Work</span>
+            <span className="section-pill-tag">How We Work</span>
             <h2>From Ideation to Product</h2>
           </div>
 
@@ -172,10 +198,10 @@ export default function ServicesPage() {
         {/* Section CTA */}
         <section className="section-cta-row" data-aos="fade-up" style={{ marginBottom: "50px" }}>
           <Link href="/contact" className="btn-primary-pill" style={{ marginRight: "12px" }}>
-            Discuss Your Project <i className="bi bi-arrow-right"></i>
+            Start a Project with Us <i className="bi bi-arrow-right"></i>
           </Link>
           <Link href="/projects" className="btn-secondary-pill">
-            Explore Portfolio
+            View Work Portfolio
           </Link>
         </section>
       </main>

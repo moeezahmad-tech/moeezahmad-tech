@@ -6,78 +6,53 @@ import AosInit from "@/components/AosInit";
 import Courses from "@/components/Courses";
 
 export const metadata: Metadata = {
-  title: "Experience & Career Journey — Moeez Ahmad",
+  title: "Experience & Roles — Moeez Ahmad",
   description:
-    "Explore Moeez Ahmad's engineering career: Software Engineer at SolnetInfo, CEO & Co-Founder of TechKreative, freelance full-stack work, and tech mentorship.",
+    "Explore Moeez Ahmad's roles: Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative (10-member team, 200+ projects), freelance full-stack developer, and educator.",
 };
 
-interface RoleDeepDive {
-  title: string;
-  company: string;
-  period: string;
-  location: string;
-  badge: string;
-  summary: string;
-  highlights: string[];
-}
+const techKreativeTeam = [
+  { name: "Tayyaba Khan", role: "Co-Founder & Director" },
+  { name: "Moeez Ahmad", role: "Co-Founder, CEO & Web Expert" },
+  { name: "Muhammad Junaid", role: "Creative Lead" },
+  { name: "Abdul Mutalib", role: "Full-Stack Developer" },
+  { name: "Asama Rafique", role: "Designer & Media" },
+  { name: "Zaki Ul Hassan", role: "Growth Specialist" },
+  { name: "Umair Khan", role: "Technical Associate" },
+  { name: "Zulqarnain Imtiaz", role: "Content & SEO" },
+  { name: "Abdullah Hafeez", role: "Production Associate" },
+];
 
-const roles: RoleDeepDive[] = [
+const contentThemes = [
   {
-    title: "Software Engineer",
-    company: "SolnetInfo",
-    period: "July 2026 – Present",
-    location: "Lahore, Pakistan",
-    badge: "Production Software",
-    summary:
-      "Contributing as a core Software Engineer within SolnetInfo's software team, engineering robust software solutions and maintaining high-availability web applications.",
-    highlights: [
-      "Maintains, scales, and continuously improves production-level software systems.",
-      "Works on rigorous engineering practices focused on reliability, fault tolerance, and load scalability.",
-      "Collaborates cross-functionally on system architecture, database optimization, and performance monitoring.",
-    ],
+    theme: "Coding & Computer Science",
+    desc: "Hands-on tutorials, web development walkthroughs, and practical university projects from UET Lahore.",
+    icon: "bi-code-square",
   },
   {
-    title: "CEO & Co-Founder",
-    company: "TechKreative",
-    period: "June 2025 – Present",
-    location: "Lahore, Pakistan & Global",
-    badge: "Agency & Product Leadership",
-    summary:
-      "Co-founded TechKreative alongside Tayyaba Khan as an all-in-one digital agency and product studio bridging full-stack web engineering, branding, and conversion-focused growth.",
-    highlights: [
-      "Leads company technology and product direction, turning client ideas into functional, scalable digital products.",
-      "Oversees engineering across custom full-stack web applications, landing pages, and digital tools like Color Magic.",
-      "Coordinates cross-functional delivery including web development, brand identity, content creation, video editing, and digital strategy.",
-      "Served over 100+ businesses, founders, coaches, and creators globally.",
-    ],
+    theme: "AI Tools & Emerging Tech",
+    desc: "Explorations of agentic AI, Google AI tooling, and integrating large language models into everyday products.",
+    icon: "bi-robot",
   },
   {
-    title: "Freelance Full-Stack & AI Developer",
-    company: "Self-Employed",
-    period: "2021 – Present",
-    location: "Remote / Worldwide",
-    badge: "Global Client Delivery",
-    summary:
-      "Delivered bespoke responsive web solutions, APIs, and high-converting landing pages for international clients across the US, UK, and Middle East.",
-    highlights: [
-      "Engineered 100+ websites and custom portals with modern tech stacks including Next.js, React, Node.js, and Python.",
-      "Optimized Core Web Vitals, speed benchmarks, and search engine visibility for higher conversion rates.",
-      "Redesigned portfolios and sales funnels to position clients as premium authorities in their niches.",
-    ],
+    theme: "Freelancing & Client Growth",
+    desc: "Actionable frameworks for landing global clients, building trust, and pricing digital development work.",
+    icon: "bi-cash-coin",
   },
   {
-    title: "Digital Creator & Tech Instructor",
-    company: "TechKreative Community & YouTube",
-    period: "2022 – Present",
-    location: "Online",
-    badge: "Education & Mentorship",
-    summary:
-      "Creating engaging educational tutorials, video masterclasses, and project walkthroughs for aspiring software developers and digital creators.",
-    highlights: [
-      "Produced comprehensive YouTube playlists covering modern frontend, responsive design, and practical development.",
-      "Built creator campaigns focused on turning video content into client magnets and inbound business opportunities.",
-      "Mentored junior developers in transitioning from foundational coding to production-ready software.",
-    ],
+    theme: "Agency Building Journey",
+    desc: "Documenting our ongoing 'Creating Our Own Agency' series — scaling TechKreative to a 10-member team.",
+    icon: "bi-building-up",
+  },
+  {
+    theme: "Collaborative Creator Campaigns",
+    desc: "Partnered with 15 designers and creatives with the stated mission: 'Turning video content into client magnets.'",
+    icon: "bi-people-fill",
+  },
+  {
+    theme: "Student & University Life",
+    desc: "Sharing realities, challenges, and insights of balancing engineering school with building commercial products.",
+    icon: "bi-mortarboard",
   },
 ];
 
@@ -90,115 +65,198 @@ export default function ExperiencePage() {
       <main>
         {/* Page Header */}
         <section className="page-header-section" data-aos="fade-down">
-          <span className="section-pill-tag">Career Journey</span>
-          <h1>Work Experience &amp; Leadership</h1>
+          <span className="section-pill-tag">Career &amp; Roles</span>
+          <h1>Experience &amp; Leadership</h1>
           <p>
-            From engineering production software at SolnetInfo to founding and scaling TechKreative:
-            a proven track record of shipping scalable products and driving digital results.
+            Bridging production software engineering at SolnetInfo with agency leadership at TechKreative,
+            where we&apos;ve completed 200+ projects for 50+ clients globally.
           </p>
         </section>
 
         {/* Roles Breakdown */}
-        <section style={{ margin: "40px 0 60px" }}>
+        <section style={{ margin: "40px 0" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
-            {roles.map((role, idx) => (
+            {/* SolnetInfo */}
+            <div className="about-card-box" data-aos="fade-up">
               <div
-                key={role.company}
-                className="about-card-box"
-                data-aos="fade-up"
-                data-aos-delay={idx * 100}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  flexWrap: "wrap",
+                  gap: "12px",
+                  marginBottom: "14px",
+                }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    flexWrap: "wrap",
-                    gap: "12px",
-                    marginBottom: "14px",
-                  }}
-                >
-                  <div>
-                    <h2 style={{ fontSize: "1.45rem", marginBottom: "4px" }}>
-                      {role.title} <span style={{ color: "var(--primary-blue)" }}>@ {role.company}</span>
-                    </h2>
-                    <span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
-                      <i className="bi bi-calendar3"></i> {role.period} &bull;{" "}
-                      <i className="bi bi-geo-alt"></i> {role.location}
-                    </span>
-                  </div>
-                  <span className="role-pill">{role.badge}</span>
+                <div>
+                  <h2 style={{ fontSize: "1.45rem", marginBottom: "4px" }}>
+                    Software Engineer Intern <span style={{ color: "var(--primary-blue)" }}>@ SolnetInfo</span>
+                  </h2>
+                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                    <i className="bi bi-calendar3"></i> July 2026 – Present &bull;{" "}
+                    <i className="bi bi-geo-alt"></i> Lahore, Pakistan
+                  </span>
                 </div>
-
-                <p style={{ fontSize: "0.98rem", color: "var(--text-body)" }}>
-                  {role.summary}
-                </p>
-
-                <ul style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "8px", marginTop: "12px" }}>
-                  {role.highlights.map((h, i) => (
-                    <li key={i} style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
-                      {h}
-                    </li>
-                  ))}
-                </ul>
+                <span className="role-pill">Enterprise Production</span>
               </div>
-            ))}
+
+              <p style={{ fontSize: "0.98rem", color: "var(--text-body)" }}>
+                Works directly with the SolnetInfo development team on production-level software systems, gaining deep hands-on experience in enterprise reliability and scalable software practices.
+              </p>
+
+              <ul style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "8px", marginTop: "12px" }}>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Maintains, scales, and continually improves production-level software systems.
+                </li>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Applies rigorous engineering practices focused on system reliability, high availability, and performance scalability.
+                </li>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Collaborates within an established agile engineering team on software quality management and code refinement.
+                </li>
+              </ul>
+            </div>
+
+            {/* TechKreative */}
+            <div className="about-card-box" data-aos="fade-up">
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  flexWrap: "wrap",
+                  gap: "12px",
+                  marginBottom: "14px",
+                }}
+              >
+                <div>
+                  <h2 style={{ fontSize: "1.45rem", marginBottom: "4px" }}>
+                    Co-Founder / CEO <span style={{ color: "var(--primary-blue)" }}>@ TechKreative</span>
+                  </h2>
+                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                    <i className="bi bi-calendar3"></i> June 2025 – Present &bull;{" "}
+                    <i className="bi bi-geo-alt"></i> Lahore, Pakistan &amp; Global
+                  </span>
+                </div>
+                <span className="role-pill dark">Agency &amp; Product Leadership</span>
+              </div>
+
+              <p style={{ fontSize: "0.98rem", color: "var(--text-body)" }}>
+                Co-founded TechKreative alongside Tayyaba Khan as an all-in-one digital partner bridging full-stack web development and strategic digital experiences. Leads technology, AI tool development, and SEO-focused growth initiatives.
+              </p>
+
+              <ul style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "8px", marginTop: "12px" }}>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Guides clients from initial ideation to fully launched digital products, websites, and AI tools.
+                </li>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Leads a 10-member multidisciplinary team spanning full-stack development, design, video editing, and SEO.
+                </li>
+                <li style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.6 }}>
+                  Helped 50+ clients establish digital identities and shipped 200+ individual projects globally.
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* TechKreative Snapshot Card */}
+        {/* TechKreative Snapshot & Team */}
         <section className="about-card-box" data-aos="fade-up" style={{ marginBottom: "60px", background: "#f8fafc" }}>
           <div className="section-heading-center" style={{ marginBottom: "20px" }}>
-            <span className="section-pill-tag">Agency Snapshot</span>
-            <h2>About TechKreative</h2>
+            <span className="section-pill-tag">Company Profile</span>
+            <h2>TechKreative Profile &amp; Team</h2>
           </div>
 
-          <table className="identity-table">
+          <table className="identity-table" style={{ marginBottom: "28px" }}>
             <tbody>
               <tr>
-                <td className="label-cell">Company Name</td>
-                <td className="val-cell">TechKreative (Tech Kreative)</td>
+                <td className="label-cell">Company Mission</td>
+                <td className="val-cell">Make digital growth simple and effective for businesses of every size.</td>
               </tr>
               <tr>
-                <td className="label-cell">Co-Founders</td>
-                <td className="val-cell">Tayyaba Khan &amp; Moeez Ahmad</td>
+                <td className="label-cell">Leadership</td>
+                <td className="val-cell">Tayyaba Khan &amp; Moeez Ahmad (Co-Founders)</td>
+              </tr>
+              <tr>
+                <td className="label-cell">Track Record</td>
+                <td className="val-cell">
+                  <strong>200+ projects completed &bull; 50+ happy clients &bull; 10-member team</strong>
+                </td>
               </tr>
               <tr>
                 <td className="label-cell">Positioning</td>
                 <td className="val-cell">One-stop solution for design, development, and digital marketing</td>
               </tr>
               <tr>
-                <td className="label-cell">Core Services</td>
-                <td className="val-cell">
-                  Full-stack web development, high-converting landing pages, branding, graphic design, content creation, video editing, social-media assets, and LinkedIn optimization
-                </td>
-              </tr>
-              <tr>
-                <td className="label-cell">Target Audience</td>
-                <td className="val-cell">Freelancers, coaches, business owners, startups, and personal brands</td>
-              </tr>
-              <tr>
                 <td className="label-cell">Official Website</td>
                 <td className="val-cell">
-                  <a href="https://techkreative.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)", fontWeight: 600 }}>
+                  <a href="https://www.techkreative.com/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)", fontWeight: 600 }}>
                     techkreative.com <i className="bi bi-arrow-up-right"></i>
                   </a>
                 </td>
               </tr>
             </tbody>
           </table>
+
+          <h3 style={{ fontSize: "1.18rem", marginBottom: "14px", color: "var(--text-dark)" }}>
+            Multidisciplinary Team (10 Members)
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: "12px" }}>
+            {techKreativeTeam.map((member) => (
+              <div
+                key={member.name}
+                style={{
+                  background: "#ffffff",
+                  padding: "12px 16px",
+                  borderRadius: "var(--radius-sm)",
+                  border: "1px solid #e2e8f0",
+                }}
+              >
+                <div style={{ fontWeight: 600, color: "var(--text-dark)", fontSize: "0.92rem" }}>
+                  {member.name}
+                </div>
+                <div style={{ color: "var(--primary-blue)", fontSize: "0.8rem", marginTop: "2px" }}>
+                  {member.role}
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
-        {/* Courses Section */}
+        {/* Content Themes & Personal Brand Section */}
+        <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
+          <div className="section-heading-center">
+            <span className="section-pill-tag">Personal Brand &amp; Reach</span>
+            <h2>Content Themes: Turning Video into Client Magnets</h2>
+          </div>
+
+          <div className="cards-2col-grid">
+            {contentThemes.map((item) => (
+              <div key={item.theme} className="about-card-box" style={{ padding: "20px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
+                  <i className={`bi ${item.icon}`} style={{ fontSize: "1.4rem", color: "var(--primary-blue)" }}></i>
+                  <h4 style={{ fontFamily: "var(--font-heading)", color: "var(--text-dark)", fontSize: "1.05rem" }}>
+                    {item.theme}
+                  </h4>
+                </div>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* YouTube Tutorials Tracks */}
         <Courses />
 
         {/* Bottom CTA */}
         <section className="section-cta-row" data-aos="fade-up">
           <Link href="/projects" className="btn-primary-pill" style={{ marginRight: "12px" }}>
-            Explore Projects <i className="bi bi-arrow-right"></i>
+            Explore Selected Projects <i className="bi bi-arrow-right"></i>
           </Link>
           <Link href="/contact" className="btn-secondary-pill">
-            Let&apos;s Work Together
+            Get in Touch
           </Link>
         </section>
       </main>

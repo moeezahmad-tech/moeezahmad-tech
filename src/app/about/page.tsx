@@ -5,49 +5,81 @@ import Footer from "@/components/Footer";
 import AosInit from "@/components/AosInit";
 
 export const metadata: Metadata = {
-  title: "About Moeez Ahmad — Software Engineer & Full-Stack AI Engineer",
+  title: "About Moeez Ahmad — Full-Stack AI Engineer & Software Engineer Intern",
   description:
-    "Learn more about Moeez Ahmad: Software Engineer at SolnetInfo, CEO & Co-Founder of TechKreative, education at UET Lahore, certifications, and engineering philosophy.",
+    "Discover Moeez Ahmad's story arc: Software Engineer Intern at SolnetInfo, Co-Founder & CEO of TechKreative, professional philosophy, education at UET Lahore, and credentials.",
 };
 
-interface EducationItem {
-  institution: string;
-  program: string;
-  period: string;
-  desc: string;
-}
-
-const educationList: EducationItem[] = [
+const storyArc = [
   {
-    institution: "University of Engineering and Technology (UET), Lahore",
+    step: "01",
+    title: "Student & Builder",
+    subtitle: "UET Lahore",
+    desc: "Pursuing Computer Science with interests spanning gaming, animation, and foundational web engineering.",
+    icon: "bi-mortarboard-fill",
+  },
+  {
+    step: "02",
+    title: "Freelancer & Web Developer",
+    subtitle: "2021 – Present",
+    desc: "Shipped 100+ bespoke websites and landing pages, helping businesses and creators establish distinct digital identities.",
+    icon: "bi-laptop",
+  },
+  {
+    step: "03",
+    title: "AI-Focused Engineer",
+    subtitle: "Machine Learning & AI Tools",
+    desc: "Engineering full-stack AI solutions, agentic workflows, and privacy-first browser tools like Color Magic.",
+    icon: "bi-cpu-fill",
+  },
+  {
+    step: "04",
+    title: "Agency Founder & CEO",
+    subtitle: "TechKreative",
+    desc: "Co-founded TechKreative with Tayyaba Khan, scaling a 10-member multidisciplinary creative and technical team.",
+    icon: "bi-rocket-takeoff-fill",
+  },
+  {
+    step: "05",
+    title: "Production Engineer",
+    subtitle: "SolnetInfo",
+    desc: "Joined SolnetInfo's engineering team, maintaining, scaling, and optimizing production-grade software.",
+    icon: "bi-gear-wide-connected",
+  },
+  {
+    step: "06",
+    title: "Creator & Community Builder",
+    subtitle: "Turning Video into Client Magnets",
+    desc: "Collaborative creator campaigns with 15 designers, YouTube tutorials, and agency-building content.",
+    icon: "bi-camera-video-fill",
+  },
+];
+
+const educationList = [
+  {
+    institution: "University of Engineering and Technology, Lahore",
     program: "Computer Science, Gaming and Animation",
-    period: "2025",
-    desc: "Rigorous computer science curriculum focusing on software architecture, algorithms, and interactive systems.",
+    period: "Undergraduate",
+    desc: "Rigorous computer science studies with technical emphasis on algorithms, computer graphics, animation, and software engineering.",
   },
   {
     institution: "Punjab Group of Colleges",
     program: "Website Development & Information Technology",
     period: "2023 – 2025",
-    desc: "Comprehensive coursework in modern web development, programming fundamentals, and database systems.",
+    desc: "Specialized coursework in frontend/backend development, database structures, web protocols, and modern development stacks.",
   },
   {
     institution: "Al Siraat High School",
     program: "Intermediate in Computer Science (ICS)",
     period: "Foundational",
-    desc: "Early foundational studies in mathematics, computer logic, and programming concepts.",
+    desc: "Foundational computer science education covering programming logic, mathematics, and computing principles.",
   },
 ];
 
-interface CertItem {
-  title: string;
-  issuer: string;
-  icon: string;
-}
-
-const certList: CertItem[] = [
+const certList = [
   {
     title: "AWS Student Community Day Participant",
-    issuer: "Amazon Web Services (AWS)",
+    issuer: "Amazon Web Services",
     icon: "bi-cloud-check-fill",
   },
   {
@@ -87,6 +119,14 @@ const certList: CertItem[] = [
   },
 ];
 
+const linkedinSkills = [
+  "AI Engineer", "AI Solutions", "Artificial Intelligence", "Software Engineer", "Software Engineering",
+  "Full-Stack Developer", "Full-Stack Web Development", "Web Developer", "Website Development",
+  "Design Development", "Customization", "Ideation", "Building Products", "Digital Solutions",
+  "SEO Strategy", "Growth & Reach", "Digital Identity", "CEO & Leadership", "Freelancing",
+  "Quality Management", "Portfolio Development"
+];
+
 export default function AboutPage() {
   return (
     <div className="site-wrapper">
@@ -99,8 +139,8 @@ export default function AboutPage() {
           <span className="section-pill-tag">About Me</span>
           <h1>Moeez Ahmad</h1>
           <p>
-            Software Engineer, Full-Stack AI Engineer, and CEO of TechKreative.
-            Working at the intersection of AI, robust software architectures, and scalable digital products.
+            Full-Stack AI Engineer, Software Engineer Intern @ SolnetInfo, and Co-Founder/CEO @ TechKreative.
+            Building at the intersection of AI, production software, and digital growth.
           </p>
         </section>
 
@@ -109,22 +149,24 @@ export default function AboutPage() {
           <div className="about-card-box" data-aos="fade-right">
             <h2>From Ideation to Products</h2>
             <p>
-              I am Moeez Ahmad, a Software Engineer and Full-Stack AI Engineer based in
-              Lahore, Punjab, Pakistan. My focus is turning powerful AI models and innovative ideas
-              into efficient, reliable, safe, and scalable real-world products.
+              I&apos;m <strong>Moeez Ahmad</strong>, a Full-Stack AI Engineer, Software Engineer, and Co-Founder of
+              TechKreative, based in Lahore, Punjab, Pakistan.
             </p>
             <p>
-              Currently, I work as a <strong>Software Engineer at SolnetInfo</strong>, where I maintain, scale,
-              and optimize production-level software systems with a strong emphasis on reliability and fault tolerance.
+              My work sits at the intersection of software engineering and artificial intelligence.
+              I design and develop websites, AI-powered tools, and SEO-driven strategies that help businesses
+              build a stronger online presence and reach the right audience. From idea to deployment,
+              I focus on creating products that solve real problems, work reliably, and deliver genuine value.
             </p>
             <p>
-              Alongside engineering, I am the <strong>CEO and Co-Founder of TechKreative</strong>, an all-in-one digital
-              agency bridging full-stack web engineering, brand identity, and conversion-focused digital experiences.
-              We help founders, businesses, and creators launch and scale digital products from the ground up.
+              As the Co-Founder of <strong>TechKreative</strong>, I help businesses access high-quality web, AI, design,
+              and growth services. TechKreative unites website development, SEO, LinkedIn growth, social-media management,
+              graphic design, and video editing together as a complete digital growth partner.
             </p>
             <p>
-              Through content creation on YouTube and Instagram, I document my journey building software, university life
-              at UET Lahore, freelancing, and agency scaling, with a stated focus on turning video content into client magnets.
+              Alongside TechKreative, I work with the <strong>SolnetInfo development team as a Software Engineer Intern</strong> on
+              maintaining, scaling, and improving production-level software. This bridges the gap between client-focused product
+              development and rigorous enterprise software engineering.
             </p>
 
             <div style={{ marginTop: "24px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
@@ -132,7 +174,7 @@ export default function AboutPage() {
                 View Work Experience <i className="bi bi-arrow-right"></i>
               </Link>
               <Link href="/contact" className="btn-secondary-pill">
-                Get In Touch
+                Let&apos;s Collaborate
               </Link>
             </div>
           </div>
@@ -147,38 +189,78 @@ export default function AboutPage() {
                 </tr>
                 <tr>
                   <td className="label-cell">Current Role</td>
-                  <td className="val-cell">Software Engineer, SolnetInfo</td>
+                  <td className="val-cell">Software Engineer Intern, SolnetInfo</td>
                 </tr>
                 <tr>
                   <td className="label-cell">Founder Role</td>
-                  <td className="val-cell">CEO &amp; Co-Founder, TechKreative</td>
+                  <td className="val-cell">Co-Founder &amp; CEO, TechKreative</td>
                 </tr>
                 <tr>
                   <td className="label-cell">Primary Focus</td>
-                  <td className="val-cell">Full-Stack AI, Web Apps, Agency Growth</td>
+                  <td className="val-cell">Full-Stack AI, Web Apps, SEO &amp; Growth</td>
                 </tr>
                 <tr>
                   <td className="label-cell">Personal Site</td>
                   <td className="val-cell">
-                    <a href="https://moeezahmad.dev" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)" }}>
-                      moeezahmad.dev
+                    <a href="https://moeezahmad.dev/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)" }}>
+                      moeezahmad.dev <i className="bi bi-arrow-up-right"></i>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="label-cell">Agency Site</td>
+                  <td className="label-cell">Company Site</td>
                   <td className="val-cell">
-                    <a href="https://techkreative.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)" }}>
-                      techkreative.com
+                    <a href="https://www.techkreative.com/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-blue)" }}>
+                      techkreative.com <i className="bi bi-arrow-up-right"></i>
                     </a>
                   </td>
                 </tr>
                 <tr>
                   <td className="label-cell">Languages</td>
-                  <td className="val-cell">Urdu, Punjabi, English</td>
+                  <td className="val-cell">Urdu (Native/Full), Punjabi (Native/Full), English (Working)</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* Professional Philosophy & Mission */}
+        <section className="about-card-box" data-aos="fade-up" style={{ marginBottom: "60px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
+          <div className="section-heading-center" style={{ marginBottom: "16px" }}>
+            <span className="section-pill-tag">Core Beliefs</span>
+            <h2>Professional Philosophy &amp; Founder Mission</h2>
+          </div>
+          <div style={{ maxWidth: "850px", margin: "0 auto", textAlign: "center" }}>
+            <p style={{ fontSize: "1.12rem", fontStyle: "italic", color: "var(--text-dark)", marginBottom: "18px" }}>
+              &ldquo;Technology should be practical, efficient, and built with the end user in mind. Real value comes from solving real business problems rather than simply adding features.&rdquo;
+            </p>
+            <p style={{ fontSize: "0.98rem", color: "var(--text-body)", lineHeight: 1.7 }}>
+              My mission is to make high-quality software engineering, modern AI tools, and digital-growth services accessible to businesses of all sizes and locations — not just enterprise corporations. Whether building an open-source tool like Color Magic or scaling client brands through TechKreative, the focus remains: <strong>practical utility, clean code, and measurable impact.</strong>
+            </p>
+          </div>
+        </section>
+
+        {/* 6-Stage Portfolio Story Arc */}
+        <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
+          <div className="section-heading-center">
+            <span className="section-pill-tag">Evolution</span>
+            <h2>My Journey &amp; Story Arc</h2>
+          </div>
+
+          <div className="process-grid">
+            {storyArc.map((arc) => (
+              <div key={arc.step} className="process-step-box">
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div className="process-step-num">{arc.step}</div>
+                  <i className={`bi ${arc.icon}`} style={{ fontSize: "1.3rem", color: "var(--primary-blue)" }}></i>
+                </div>
+                <h4>{arc.title}</h4>
+                <span style={{ fontSize: "0.8rem", color: "var(--primary-blue)", fontWeight: 600, display: "block", marginBottom: "6px" }}>
+                  {arc.subtitle}
+                </span>
+                <p>{arc.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -227,59 +309,20 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Skills Categories */}
+        {/* LinkedIn Skills Cloud */}
         <section data-aos="fade-up" style={{ marginBottom: "60px" }}>
           <div className="section-heading-center">
-            <span className="section-pill-tag">Core Competencies</span>
-            <h2>Skills &amp; Expertise</h2>
+            <span className="section-pill-tag">Technical Competencies</span>
+            <h2>Skills &amp; Specializations</h2>
           </div>
 
-          <div className="skills-category-grid">
-            <div className="skill-cat-card">
-              <h3>
-                <i className="bi bi-cpu-fill" style={{ color: "var(--primary-blue)" }}></i>
-                Engineering &amp; AI
-              </h3>
-              <div className="skill-badges-list">
-                <span className="skill-badge-tag">Software Engineering</span>
-                <span className="skill-badge-tag">Full-Stack AI Engineering</span>
-                <span className="skill-badge-tag">Machine Learning &amp; AI</span>
-                <span className="skill-badge-tag">Next.js &amp; React</span>
-                <span className="skill-badge-tag">TypeScript &amp; JavaScript</span>
-                <span className="skill-badge-tag">Python &amp; Node.js</span>
-                <span className="skill-badge-tag">Production Scalability</span>
-                <span className="skill-badge-tag">Reliable Systems</span>
-              </div>
-            </div>
-
-            <div className="skill-cat-card">
-              <h3>
-                <i className="bi bi-briefcase-fill" style={{ color: "var(--primary-blue)" }}></i>
-                Product &amp; Business
-              </h3>
-              <div className="skill-badges-list">
-                <span className="skill-badge-tag">Product Ideation</span>
-                <span className="skill-badge-tag">Digital Agency Operations</span>
-                <span className="skill-badge-tag">Executive Leadership</span>
-                <span className="skill-badge-tag">Technology Strategy</span>
-                <span className="skill-badge-tag">Freelance Management</span>
-                <span className="skill-badge-tag">Client Acquisition</span>
-              </div>
-            </div>
-
-            <div className="skill-cat-card">
-              <h3>
-                <i className="bi bi-megaphone-fill" style={{ color: "var(--primary-blue)" }}></i>
-                Creative &amp; Growth
-              </h3>
-              <div className="skill-badges-list">
-                <span className="skill-badge-tag">Personal Branding</span>
-                <span className="skill-badge-tag">Video Content Creation</span>
-                <span className="skill-badge-tag">Digital Marketing</span>
-                <span className="skill-badge-tag">LinkedIn Optimization</span>
-                <span className="skill-badge-tag">UI/UX Design Systems</span>
-                <span className="skill-badge-tag">High-Converting Funnels</span>
-              </div>
+          <div className="about-card-box">
+            <div className="skill-badges-list" style={{ justifyContent: "center", gap: "10px" }}>
+              {linkedinSkills.map((skill) => (
+                <span key={skill} className="skill-badge-tag" style={{ fontSize: "0.86rem", padding: "8px 14px" }}>
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </section>
