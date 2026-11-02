@@ -724,7 +724,9 @@ img {
   border-radius: var(--radius-sm);
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  height: 180px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
   position: relative;
   overflow: hidden;
   display: block;
@@ -1087,7 +1089,9 @@ img {
 }
 
 .project-img-holder {
-  height: 230px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
   overflow: hidden;
   position: relative;
   background-color: #0f172a;
@@ -1108,7 +1112,7 @@ img {
 }
 
 .project-card-modern:hover .project-img-holder img {
-  transform: translateY(var(--scroll-y, calc(-100% + 230px)));
+  transform: translateY(var(--scroll-y, -60%));
 }
 
 .project-card-body {
