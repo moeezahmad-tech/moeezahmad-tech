@@ -3528,6 +3528,11 @@ img {
 }
 
 /* Responsive Rules for Contact */
+#contact,
+.contact-section {
+  scroll-margin-top: 90px;
+}
+
 @media (max-width: 1024px) {
   .contact-channels-4col-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -3535,9 +3540,130 @@ img {
   }
   .service-chips-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
   }
   .budget-chips-row {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section.contact-light-theme {
+    padding: 24px 14px !important;
+    margin: 20px 0 35px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .contact-form-wrapper {
+    padding: 18px 14px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .form-glow-header {
+    margin-bottom: 14px !important;
+    padding-bottom: 10px !important;
+    gap: 8px !important;
+  }
+
+  .form-glow-header h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .form-sub-badge {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .service-chips-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 7px !important;
+  }
+
+  .service-chip-btn {
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    min-height: 42px !important;
+    gap: 6px !important;
+  }
+
+  .service-chip-btn i {
+    font-size: 0.95rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .form-field-group {
+    margin-bottom: 12px !important;
+  }
+
+  /* 16px font size prevents iOS Safari from auto-zooming on focus */
+  .modern-input,
+  .modern-select,
+  .modern-textarea {
+    font-size: 16px !important;
+    padding: 11px 14px 11px 38px !important;
+    border-radius: 8px !important;
+  }
+
+  .modern-textarea {
+    padding-left: 14px !important;
+    min-height: 95px !important;
+  }
+
+  .input-icon {
+    left: 12px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .form-footer-row {
+    gap: 12px !important;
+    margin-top: 4px !important;
+  }
+
+  .form-checkbox-wrapper {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+    gap: 8px !important;
+  }
+
+  .form-submit-btn-glow {
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .form-privacy-note {
+    font-size: 0.74rem !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-section.contact-light-theme {
+    padding: 18px 10px !important;
+  }
+
+  .contact-form-wrapper {
+    padding: 14px 10px !important;
+  }
+
+  .service-chip-btn {
+    padding: 7px 6px !important;
+    font-size: 0.74rem !important;
+    gap: 5px !important;
+  }
+
+  .service-chip-btn i {
+    font-size: 0.85rem !important;
   }
 }
 
@@ -3546,14 +3672,8 @@ img {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
-  .service-chips-grid {
-    grid-template-columns: 1fr !important;
-  }
   .budget-chips-row {
     grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .contact-form-wrapper {
-    padding: 20px 16px !important;
   }
 }
 
@@ -3755,4 +3875,155 @@ img {
   color: var(--primary-blue);
   font-size: 0.74rem;
   font-weight: 600;
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsive Overrides for Contact Form
+   ========================================================================== */
+@media (max-width: 768px) {
+  .contact-section,
+  .contact-section.contact-light-theme {
+    padding: 24px 14px !important;
+    margin: 20px 0 35px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .contact-form-wrapper,
+  .contact-light-theme .contact-form-wrapper {
+    padding: 18px 14px !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .form-glow-header {
+    margin-bottom: 14px !important;
+    padding-bottom: 10px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .form-glow-header h3,
+  .contact-light-theme .form-glow-header h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .form-sub-badge,
+  .contact-light-theme .form-sub-badge {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .service-chips-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .service-chip-btn,
+  .contact-light-theme .service-chip-btn {
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+    min-height: 42px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .service-chip-btn i,
+  .contact-light-theme .service-chip-btn i {
+    font-size: 0.92rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .form-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .form-field-group {
+    margin-bottom: 12px !important;
+  }
+
+  /* 16px font-size prevents iOS Safari from automatically zooming into the input */
+  .modern-input,
+  .modern-select,
+  .modern-textarea,
+  .contact-light-theme .modern-input,
+  .contact-light-theme .modern-select,
+  .contact-light-theme .modern-textarea {
+    font-size: 16px !important;
+    padding: 11px 14px 11px 38px !important;
+    border-radius: 8px !important;
+  }
+
+  .modern-textarea,
+  .contact-light-theme .modern-textarea {
+    padding-left: 14px !important;
+    min-height: 95px !important;
+  }
+
+  .input-icon,
+  .contact-light-theme .input-icon {
+    left: 12px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .form-footer-row {
+    gap: 12px !important;
+    margin-top: 4px !important;
+  }
+
+  .form-checkbox-wrapper,
+  .contact-light-theme .form-checkbox-wrapper {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+    gap: 8px !important;
+  }
+
+  .form-submit-btn-glow {
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
+    height: 46px !important;
+  }
+
+  .form-privacy-note,
+  .contact-light-theme .form-privacy-note {
+    font-size: 0.74rem !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-section,
+  .contact-section.contact-light-theme {
+    padding: 18px 10px !important;
+  }
+
+  .contact-form-wrapper,
+  .contact-light-theme .contact-form-wrapper {
+    padding: 14px 10px !important;
+  }
+
+  .service-chip-btn,
+  .contact-light-theme .service-chip-btn {
+    padding: 7px 6px !important;
+    font-size: 0.74rem !important;
+    gap: 4px !important;
+  }
+
+  .service-chip-btn i,
+  .contact-light-theme .service-chip-btn i {
+    font-size: 0.82rem !important;
+  }
 }
