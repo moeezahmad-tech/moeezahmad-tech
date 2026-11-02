@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Experience from "@/components/Experience";
 import Capabilities from "@/components/Capabilities";
-import FeaturedProject from "@/components/FeaturedProject";
 import Projects from "@/components/Projects";
 import Courses from "@/components/Courses";
 import Testimonials from "@/components/Testimonials";
@@ -41,9 +40,6 @@ export default function Home() {
         </section>
 
         <Capabilities />
-
-        {/* Featured Open Source Spotlight */}
-        <FeaturedProject />
 
         {/* Projects Showcase with Portfolio Link */}
         <section>
