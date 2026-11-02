@@ -11,16 +11,8 @@ const serviceOptions = [
   { id: "agency", label: "TechKreative Retainer", icon: "bi-rocket-takeoff-fill" },
 ];
 
-const budgetOptions = [
-  "< $500",
-  "$500 – $1,500",
-  "$1,500 – $3,500",
-  "$3,500+",
-];
-
 export default function Contact() {
   const [selectedService, setSelectedService] = useState<string>("Full-Stack Web App");
-  const [selectedBudget, setSelectedBudget] = useState<string>("$1,500 – $3,500");
   const [copied, setCopied] = useState<boolean>(false);
 
   const copyEmail = () => {
@@ -30,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-section" id="contact" data-aos="fade-up">
+    <section className="contact-section contact-light-theme" id="contact" data-aos="fade-up">
       <div className="contact-ambient-glow"></div>
 
       <div className="contact-layout">
@@ -147,7 +139,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Column: High-end Contact Form */}
+        {/* Right Column: High-end Light-Themed Contact Form */}
         <div className="contact-form-wrapper">
           <div className="form-glow-header">
             <h3>Start a Project</h3>
@@ -161,9 +153,8 @@ export default function Contact() {
             action="https://formspree.io/f/meajloeo"
             method="POST"
           >
-            {/* Hidden inputs to pass state-selected service and budget */}
+            {/* Hidden input to pass selected service */}
             <input type="hidden" name="service_selected" value={selectedService} />
-            <input type="hidden" name="budget_selected" value={selectedBudget} />
 
             {/* Service Selection Chips */}
             <div className="form-field-group">
@@ -232,32 +223,13 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Budget Range Selection */}
-            <div className="form-field-group">
-              <label className="form-field-label">
-                <i className="bi bi-cash-stack"></i> Estimated Budget:
-              </label>
-              <div className="budget-chips-row">
-                {budgetOptions.map((budget) => (
-                  <button
-                    key={budget}
-                    type="button"
-                    className={`budget-chip-btn ${selectedBudget === budget ? "active" : ""}`}
-                    onClick={() => setSelectedBudget(budget)}
-                  >
-                    {budget}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Project Details Message */}
             <div className="form-field-group">
               <label className="form-field-label">
                 <i className="bi bi-chat-left-text-fill"></i> Project Overview:
               </label>
               <textarea
-                rows={4}
+                rows={5}
                 className="modern-textarea"
                 name="message"
                 placeholder="Tell me about your project, goals, key requirements, or timeline..."

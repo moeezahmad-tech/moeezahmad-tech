@@ -3488,3 +3488,165 @@ img {
     padding: 20px 16px !important;
   }
 }
+
+
+/* ==========================================================================
+   Contact Section — Light Theme Enhancements
+   ========================================================================== */
+.contact-section.contact-light-theme {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+  color: var(--text-dark) !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(0, 0, 0, 0.02) !important;
+}
+
+.contact-light-theme .contact-ambient-glow {
+  background: radial-gradient(circle, rgba(0, 110, 218, 0.08) 0%, transparent 70%) !important;
+}
+
+.contact-light-theme h2 {
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .contact-lead-desc {
+  color: #64748b !important;
+}
+
+.contact-light-theme .contact-badge-pill {
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #059669 !important;
+}
+
+.contact-light-theme .contact-mini-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.contact-light-theme .contact-mini-card.hover-lift:hover {
+  background: #ffffff !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.contact-light-theme .mini-card-label {
+  color: #64748b !important;
+}
+
+.contact-light-theme .mini-card-val {
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .mini-card-copy-btn {
+  background: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+.contact-light-theme .mini-card-copy-btn:hover {
+  background: var(--primary-blue-light) !important;
+  border-color: var(--primary-blue) !important;
+  color: var(--primary-blue) !important;
+}
+
+.contact-light-theme .contact-social-icons a {
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+.contact-light-theme .contact-social-icons a:hover {
+  background: var(--primary-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--primary-blue) !important;
+}
+
+.contact-light-theme .social-bar-label {
+  color: #64748b !important;
+}
+
+.contact-light-theme .contact-form-wrapper {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: none !important;
+}
+
+.contact-light-theme .form-glow-header {
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.contact-light-theme .form-glow-header h3 {
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .form-sub-badge {
+  background: #eff6ff !important;
+  color: #2563eb !important;
+  border: 1px solid #bfdbfe !important;
+}
+
+.contact-light-theme .form-field-label {
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .service-chip-btn {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.contact-light-theme .service-chip-btn i {
+  color: var(--primary-blue) !important;
+}
+
+.contact-light-theme .service-chip-btn:hover {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .service-chip-btn.active {
+  background: linear-gradient(135deg, var(--primary-blue), #2563eb) !important;
+  border-color: var(--primary-blue) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 110, 218, 0.25) !important;
+}
+
+.contact-light-theme .service-chip-btn.active i {
+  color: #ffffff !important;
+}
+
+.contact-light-theme .modern-input,
+.contact-light-theme .modern-select,
+.contact-light-theme .modern-textarea {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: var(--text-dark) !important;
+}
+
+.contact-light-theme .modern-input::placeholder,
+.contact-light-theme .modern-textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.contact-light-theme .modern-input:focus,
+.contact-light-theme .modern-select:focus,
+.contact-light-theme .modern-textarea:focus {
+  border-color: var(--primary-blue) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(0, 110, 218, 0.15) !important;
+}
+
+.contact-light-theme .input-icon {
+  color: #64748b !important;
+}
+
+.contact-light-theme .form-checkbox-wrapper {
+  color: #64748b !important;
+}
+
+.contact-light-theme .form-privacy-note {
+  color: #64748b !important;
+}
