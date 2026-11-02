@@ -1,184 +1,297 @@
+"use client";
+
+import { useState } from "react";
+
+const serviceOptions = [
+  { id: "fullstack", label: "Full-Stack Web App", icon: "bi-code-slash" },
+  { id: "ai", label: "AI & LLM Integration", icon: "bi-cpu-fill" },
+  { id: "website", label: "Custom Website / Redesign", icon: "bi-laptop" },
+  { id: "seo", label: "SEO & Digital Growth", icon: "bi-graph-up-arrow" },
+  { id: "branding", label: "Brand Identity & Design", icon: "bi-palette-fill" },
+  { id: "agency", label: "TechKreative Retainer", icon: "bi-rocket-takeoff-fill" },
+];
+
+const budgetOptions = [
+  "< $500",
+  "$500 – $1,500",
+  "$1,500 – $3,500",
+  "$3,500+",
+];
+
 export default function Contact() {
+  const [selectedService, setSelectedService] = useState<string>("Full-Stack Web App");
+  const [selectedBudget, setSelectedBudget] = useState<string>("$1,500 – $3,500");
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("moeezahmad.tech@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2200);
+  };
+
   return (
     <section className="contact-section" id="contact" data-aos="fade-up">
+      <div className="contact-ambient-glow"></div>
+
       <div className="contact-layout">
+        {/* Left Column: Direct info, availability & channels */}
         <div className="contact-info">
-          <span className="contact-intro-badge">Let&apos;s Connect</span>
+          <div className="contact-badge-pill">
+            <span className="live-pulse-dot"></span> Available for Projects
+          </div>
+
           <h2>
             Looking to build a website
             <br />
-            or AI tool? Let&apos;s talk.
+            or AI tool? <span className="text-gradient-blue">Let&apos;s talk.</span>
           </h2>
 
-          <p style={{ color: "var(--text-light-muted)", fontSize: "0.95rem", marginBottom: "20px" }}>
-            I’m open to collaborations, partnerships, and projects involving custom websites, AI-powered tools, SEO, and digital growth.
+          <p className="contact-lead-desc">
+            Whether you are a startup needing a zero-to-one full-stack build, an established company integrating AI, or looking to scale with TechKreative, I&apos;m ready to turn your vision into code.
           </p>
 
-          <div className="contact-location">
-            <i className="bi bi-geo-alt-fill"></i> Lahore, Punjab, Pakistan
-          </div>
+          {/* Quick Contact Cards */}
+          <div className="contact-mini-cards">
+            <div className="contact-mini-card">
+              <div className="mini-card-icon email-icon">
+                <i className="bi bi-envelope-fill"></i>
+              </div>
+              <div className="mini-card-details">
+                <span className="mini-card-label">Direct Email</span>
+                <span className="mini-card-val">moeezahmad.tech@gmail.com</span>
+              </div>
+              <button
+                type="button"
+                className="mini-card-copy-btn"
+                onClick={copyEmail}
+                title="Copy Email"
+                aria-label="Copy Email"
+              >
+                <i className={`bi ${copied ? "bi-check2 text-emerald" : "bi-copy"}`}></i>
+                <span className="copy-tooltip">{copied ? "Copied!" : "Copy"}</span>
+              </button>
+            </div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-              marginBottom: "25px",
-            }}
-          >
-            <a
-              href="mailto:moeezahmad.tech@gmail.com"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                color: "var(--text-light-muted)",
-                fontSize: "0.95rem",
-              }}
-            >
-              <i className="bi bi-envelope-fill" style={{ color: "#60a5fa" }}></i>
-              moeezahmad.tech@gmail.com
-            </a>
             <a
               href="https://wa.me/923266037125"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                color: "var(--text-light-muted)",
-                fontSize: "0.95rem",
-              }}
+              className="contact-mini-card hover-lift"
             >
-              <i className="bi bi-whatsapp" style={{ color: "#22c55e" }}></i> +92 326
-              6037125
+              <div className="mini-card-icon whatsapp-icon">
+                <i className="bi bi-whatsapp"></i>
+              </div>
+              <div className="mini-card-details">
+                <span className="mini-card-label">WhatsApp Direct</span>
+                <span className="mini-card-val">+92 326 6037125</span>
+              </div>
+              <i className="bi bi-arrow-up-right mini-card-arrow"></i>
             </a>
+
+            <div className="contact-mini-card">
+              <div className="mini-card-icon location-icon">
+                <i className="bi bi-geo-alt-fill"></i>
+              </div>
+              <div className="mini-card-details">
+                <span className="mini-card-label">Location &amp; Timezone</span>
+                <span className="mini-card-val">Lahore, Pakistan (PKT &bull; UTC+5)</span>
+              </div>
+            </div>
           </div>
 
-          <div className="contact-social-icons">
-            <a
-              href="https://www.linkedin.com/in/moeezahmad-tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/@moeezahmad.techkreative"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i className="bi bi-youtube"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/moeezahmad.tech/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/moeezahmad.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i className="bi bi-facebook"></i>
-            </a>
-            <a
-              href="https://wa.me/923266037125"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-            >
-              <i className="bi bi-whatsapp"></i>
-            </a>
+          {/* Social Presence Pills */}
+          <div className="contact-social-bar">
+            <span className="social-bar-label">Follow &amp; Connect:</span>
+            <div className="contact-social-icons">
+              <a
+                href="https://www.linkedin.com/in/moeezahmad-tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@moeezahmad.techkreative"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <i className="bi bi-youtube"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/moeezahmad.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/moeezahmad.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://wa.me/923266037125"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i className="bi bi-whatsapp"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <form
-          className="modern-contact-form"
-          action="https://formspree.io/f/meajloeo"
-          method="POST"
-        >
-          <div className="form-row">
-            <input
-              type="text"
-              className="modern-input"
-              placeholder="First Name"
-              name="first_name"
-              required
-            />
-            <input
-              type="text"
-              className="modern-input"
-              placeholder="Last Name"
-              name="last_name"
-              required
-            />
+        {/* Right Column: High-end Contact Form */}
+        <div className="contact-form-wrapper">
+          <div className="form-glow-header">
+            <h3>Start a Project</h3>
+            <span className="form-sub-badge">
+              <i className="bi bi-clock-history"></i> Reply within 24h guaranteed
+            </span>
           </div>
 
-          <input
-            type="email"
-            className="modern-input"
-            placeholder="Your Email Address"
-            name="email"
-            required
-          />
+          <form
+            className="modern-contact-form"
+            action="https://formspree.io/f/meajloeo"
+            method="POST"
+          >
+            {/* Hidden inputs to pass state-selected service and budget */}
+            <input type="hidden" name="service_selected" value={selectedService} />
+            <input type="hidden" name="budget_selected" value={selectedBudget} />
 
-          <div className="form-row">
-            <select name="service" className="modern-select" defaultValue="" required>
-              <option value="" disabled>
-                What service do you need?
-              </option>
-              <option value="Website Development">Website Development</option>
-              <option value="AI-Powered Tool Development">AI-Powered Tool Development</option>
-              <option value="SEO & Organic Growth">SEO &amp; Organic Growth</option>
-              <option value="LinkedIn Growth & Personal Branding">LinkedIn Growth &amp; Personal Branding</option>
-              <option value="Graphic Design & Brand Identity">Graphic Design &amp; Brand Identity</option>
-              <option value="Video Editing & Content Creation">Video Editing &amp; Content Creation</option>
-              <option value="Full TechKreative Agency Partner">Full TechKreative Agency Partner</option>
-            </select>
+            {/* Service Selection Chips */}
+            <div className="form-field-group">
+              <label className="form-field-label">
+                <i className="bi bi-layers-fill"></i> Select the Service You Need:
+              </label>
+              <div className="service-chips-grid">
+                {serviceOptions.map((opt) => (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    className={`service-chip-btn ${selectedService === opt.label ? "active" : ""}`}
+                    onClick={() => setSelectedService(opt.label)}
+                  >
+                    <i className={`bi ${opt.icon}`}></i>
+                    <span>{opt.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-            <select name="budget_range" className="modern-select" defaultValue="">
-              <option value="" disabled>
-                Estimated Budget Range
-              </option>
-              <option value="Under $500">&lt; $500 (Quick Launch / Redesign)</option>
-              <option value="$500 - $1,500">$500 - $1,500 (Full Website / SEO)</option>
-              <option value="$1,500 - $3,500">$1,500 - $3,500 (Full-Stack Web App / AI)</option>
-              <option value="$3,500+">$3,500+ (Enterprise / Retainer Agency)</option>
-            </select>
-          </div>
+            {/* Name Fields */}
+            <div className="form-row">
+              <div className="input-with-icon">
+                <i className="bi bi-person input-icon"></i>
+                <input
+                  type="text"
+                  className="modern-input"
+                  placeholder="First Name *"
+                  name="first_name"
+                  required
+                />
+              </div>
+              <div className="input-with-icon">
+                <i className="bi bi-person input-icon"></i>
+                <input
+                  type="text"
+                  className="modern-input"
+                  placeholder="Last Name *"
+                  name="last_name"
+                  required
+                />
+              </div>
+            </div>
 
-          <textarea
-            rows={4}
-            className="modern-textarea"
-            name="message"
-            placeholder="Tell me about your project, goals, or idea..."
-            required
-          ></textarea>
+            {/* Email & Phone / WhatsApp */}
+            <div className="form-row">
+              <div className="input-with-icon">
+                <i className="bi bi-envelope input-icon"></i>
+                <input
+                  type="email"
+                  className="modern-input"
+                  placeholder="Your Email Address *"
+                  name="email"
+                  required
+                />
+              </div>
+              <div className="input-with-icon">
+                <i className="bi bi-whatsapp input-icon"></i>
+                <input
+                  type="text"
+                  className="modern-input"
+                  placeholder="WhatsApp / Phone (optional)"
+                  name="phone"
+                />
+              </div>
+            </div>
 
-          <div className="form-checkbox-wrapper">
-            <input
-              type="checkbox"
-              id="agreementCheck"
-              name="agree_terms"
-              required
-            />
-            <label htmlFor="agreementCheck">
-              I agree with the <b>Terms and Conditions</b>
-            </label>
-          </div>
+            {/* Budget Range Selection */}
+            <div className="form-field-group">
+              <label className="form-field-label">
+                <i className="bi bi-cash-stack"></i> Estimated Budget:
+              </label>
+              <div className="budget-chips-row">
+                {budgetOptions.map((budget) => (
+                  <button
+                    key={budget}
+                    type="button"
+                    className={`budget-chip-btn ${selectedBudget === budget ? "active" : ""}`}
+                    onClick={() => setSelectedBudget(budget)}
+                  >
+                    {budget}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          <button type="submit" className="form-submit-btn">
-            Send Message <i className="bi bi-send-fill"></i>
-          </button>
-        </form>
+            {/* Project Details Message */}
+            <div className="form-field-group">
+              <label className="form-field-label">
+                <i className="bi bi-chat-left-text-fill"></i> Project Overview:
+              </label>
+              <textarea
+                rows={4}
+                className="modern-textarea"
+                name="message"
+                placeholder="Tell me about your project, goals, key requirements, or timeline..."
+                required
+              ></textarea>
+            </div>
+
+            {/* Agreement & Submit */}
+            <div className="form-footer-row">
+              <div className="form-checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  id="agreementCheck"
+                  name="agree_terms"
+                  required
+                  defaultChecked
+                />
+                <label htmlFor="agreementCheck">
+                  I agree with confidentiality &amp; project communication terms.
+                </label>
+              </div>
+
+              <button type="submit" className="form-submit-btn-glow">
+                <span>Send Message &amp; Start</span>
+                <i className="bi bi-arrow-right"></i>
+              </button>
+            </div>
+
+            <div className="form-privacy-note">
+              <i className="bi bi-shield-lock-fill"></i>
+              <span>100% Confidential. Zero spam. Direct reply from Moeez Ahmad.</span>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );
