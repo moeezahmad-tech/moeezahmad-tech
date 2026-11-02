@@ -17,29 +17,29 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moeezahmad.techkreative.com"),
-  title: "Moeez Ahmad — Software Engineer & Digital Executioner",
+  metadataBase: new URL("https://moeezahmad.dev"),
+  title: "Moeez Ahmad — Software Engineer & Full-Stack AI Engineer | CEO @ TechKreative",
   description:
-    "Moeez Ahmad - Software Engineer & Digital Executioner. Transforming ideas into flawless code with custom, responsive websites, full-stack solutions, and digital marketing expertise.",
+    "Moeez Ahmad is a Software Engineer at SolnetInfo, Full-Stack AI Engineer, and CEO of TechKreative based in Lahore, Pakistan. From Ideation to Products: turning ideas into scalable web applications, AI tools, and high-converting digital experiences.",
   keywords: [
     "Moeez Ahmad",
-    "web developer",
-    "website design",
-    "portfolio",
-    "full stack",
-    "digital marketing",
+    "Software Engineer",
+    "Full-Stack AI Engineer",
+    "AI Engineer",
+    "TechKreative",
+    "SolnetInfo",
+    "Color Magic",
+    "Web Developer",
+    "Portfolio",
+    "Next.js Developer",
     "Lahore",
     "Pakistan",
-    "responsive websites",
-    "web development",
-    "projects",
-    "courses",
   ],
   authors: [{ name: "Moeez Ahmad" }],
   openGraph: {
-    title: "Moeez Ahmad — Software Engineer",
+    title: "Moeez Ahmad — Software Engineer & Full-Stack AI Engineer",
     description:
-      "Transforming ideas into flawless code, one pixel-perfect website at a time.",
+      "From Ideation to Products: turning ideas into scalable web applications, AI tools, and high-converting digital experiences.",
     images: ["/images/me.png"],
     type: "website",
   },

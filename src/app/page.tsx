@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -18,11 +19,42 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <Experience />
+
+        {/* Services Section with Subpage Link */}
+        <section>
+          <Services />
+          <div className="section-cta-row" data-aos="fade-up">
+            <Link href="/services" className="btn-primary-pill">
+              View All Services &amp; Tech Solutions <i className="bi bi-arrow-right"></i>
+            </Link>
+          </div>
+        </section>
+
+        {/* Work Experience with Career Journey Link */}
+        <section style={{ marginTop: "40px" }}>
+          <Experience />
+          <div className="section-cta-row" data-aos="fade-up">
+            <Link href="/experience" className="btn-primary-pill">
+              Explore Full Career Journey &amp; Roles <i className="bi bi-arrow-right"></i>
+            </Link>
+          </div>
+        </section>
+
         <Capabilities />
+
+        {/* Featured Open Source Spotlight */}
         <FeaturedProject />
-        <Projects />
+
+        {/* Projects Showcase with Portfolio Link */}
+        <section>
+          <Projects />
+          <div className="section-cta-row" data-aos="fade-up">
+            <Link href="/projects" className="btn-primary-pill">
+              View Full Portfolio &amp; Filter Projects <i className="bi bi-arrow-right"></i>
+            </Link>
+          </div>
+        </section>
+
         <Courses />
         <Testimonials />
         <Contact />

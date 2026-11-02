@@ -9,30 +9,30 @@ interface TimelineItem {
 const experiences: TimelineItem[] = [
   {
     company: "SolnetInfo",
-    date: "Jun 2026 - Present",
+    date: "July 2026 - Present",
     role: "Software Engineer",
-    desc: "Engineering scalable full-stack software solutions, crafting high-performance web applications, and collaborating on enterprise-grade software architecture.",
+    desc: "Maintains, scales, and improves production-level software as part of the SolnetInfo engineering team, focusing on system reliability, fault-tolerant architecture, and performance scalability.",
     hasLine: true,
   },
   {
     company: "TechKreative",
-    date: "2023 - Present",
-    role: "Lead Web Developer & Founder",
-    desc: "Spearheading end-to-end full-stack web applications, scalable user interfaces, and custom digital tool development for global clients and enterprise workflows.",
+    date: "June 2025 - Present",
+    role: "CEO & Co-Founder",
+    desc: "Spearheading product and technology direction at TechKreative. Leading end-to-end full-stack web applications, AI integrations, scalable user interfaces, and brand-focused digital experiences from ideation to launch.",
     hasLine: true,
   },
   {
     company: "Self-Employed, Global",
     date: "2021 - Present",
-    role: "Freelance Full-Stack Developer",
-    desc: "Delivering bespoke responsive web solutions, CMS integrations, custom APIs, and high-converting landing pages for 100+ international businesses and creators.",
+    role: "Freelance Full-Stack & AI Developer",
+    desc: "Delivering bespoke responsive web solutions, CMS integrations, custom APIs, and high-converting digital products for 100+ international businesses, startups, and creators.",
     hasLine: true,
   },
   {
     company: "Digital Creator & Educator",
     date: "2022 - Present",
     role: "Tech Instructor & Mentor",
-    desc: "Authoring comprehensive web development tutorials, project walkthroughs, and frontend masterclasses for aspiring developers worldwide.",
+    desc: "Authoring comprehensive web development tutorials, project walkthroughs, and frontend masterclasses across YouTube and social platforms for aspiring developers worldwide.",
     hasLine: false,
   },
 ];
@@ -71,4 +71,3 @@ export default function Experience() {
     </section>
   );
 }
-

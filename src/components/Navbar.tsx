@@ -1,41 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Resume", href: "#experience" },
-  { label: "Project", href: "#projects" },
-  { label: "Reviews", href: "#testimonials" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 160;
-      for (let i = navItems.length - 1; i >= 0; i--) {
-        const item = navItems[i];
-        const section = document.querySelector(item.href);
-        if (section) {
-          const top = (section as HTMLElement).offsetTop;
-          if (scrollPosition >= top) {
-            setActiveSection(item.href.replace("#", ""));
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const pathname = usePathname();
 
   const closeMenu = () => setIsOpen(false);
 
@@ -43,7 +23,7 @@ export default function Navbar() {
     <>
       <header className="nav-container">
         <nav className="nav-pill">
-          <Link href="#hero" className="nav-brand">
+          <Link href="/" className="nav-brand">
             <img
               src="/images/logo.png"
               alt="Moeez Ahmad"
@@ -54,25 +34,26 @@ export default function Navbar() {
 
           <ul className="nav-links">
             {navItems.map((item) => {
-              const sectionId = item.href.replace("#", "");
-              const isActive = activeSection === sectionId;
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(item.href);
               return (
                 <li key={item.label}>
-                  <a
+                  <Link
                     href={item.href}
                     className={isActive ? "active" : ""}
-                    onClick={() => setActiveSection(sectionId)}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
           </ul>
 
-          <a href="#contact" className="nav-cta">
+          <Link href="/contact" className="nav-cta">
             Hire Me <i className="bi bi-arrow-up-right"></i>
-          </a>
+          </Link>
 
           <button
             className="nav-toggle"
@@ -98,9 +79,9 @@ export default function Navbar() {
         <ul className="mobile-menu-links">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a href={item.href} className="mobile-link" onClick={closeMenu}>
-                {item.label === "Resume" ? "Resume / Experience" : item.label === "Project" ? "Projects" : item.label === "Contact Us" ? "Contact" : item.label}
-              </a>
+              <Link href={item.href} className="mobile-link" onClick={closeMenu}>
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
