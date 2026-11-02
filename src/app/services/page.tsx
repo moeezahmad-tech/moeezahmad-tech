@@ -22,16 +22,26 @@ export const metadata: Metadata = {
         url: "/images/me.png",
         width: 1200,
         height: 630,
-        alt: "Services & Tech Solutions",
+        alt: "Moeez Ahmad — Services & Tech Solutions",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@moeezahmad_tech",
+    creator: "@moeezahmad_tech",
     title: "Services & Solutions | Moeez Ahmad",
     description:
       "Full-stack web engineering, AI tooling, and SEO growth services.",
-    images: ["/images/me.png"],
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad — Services & Tech Solutions",
+      },
+    ],
   },
 };
 

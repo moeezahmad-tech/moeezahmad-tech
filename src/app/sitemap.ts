@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getBaseUrl } from "@/lib/seo";
+import { caseStudies } from "@/lib/projects-data";
 
 export const dynamic = "force-static";
 
@@ -47,21 +48,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic project & case study slugs
-  const projectSlugs = [
-    "color-magic",
-    "waqtai-whatsapp-ai",
-    "hisaab-ai-tax-platform",
-    "techkreative-platform",
-    "ak-executive-travel",
-  ];
-
-  const dynamicProjectRoutes: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({
-    url: `${baseUrl}/projects/${slug}`,
+  // Dynamic project & case study slugs from source data
+  const dynamicProjectRoutes: MetadataRoute.Sitemap = caseStudies.map((project) => ({
+    url: `${baseUrl}/projects/${project.slug}`,
     lastModified: currentDate,
     changeFrequency: "monthly",
-    priority: 0.7,
+    priority: 0.75,
   }));
 
   return [...staticRoutes, ...dynamicProjectRoutes];
 }
+

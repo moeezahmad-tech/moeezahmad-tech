@@ -20,16 +20,26 @@ export const metadata: Metadata = {
         url: "/images/me.png",
         width: 1200,
         height: 630,
-        alt: "Moeez Ahmad Projects",
+        alt: "Moeez Ahmad — Web & AI Engineering Projects",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@moeezahmad_tech",
+    creator: "@moeezahmad_tech",
     title: "Featured Projects & Case Studies | Moeez Ahmad",
     description:
       "Enterprise AI platforms, open-source tools, and client web applications.",
-    images: ["/images/me.png"],
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad — Web & AI Engineering Projects",
+      },
+    ],
   },
 };
 

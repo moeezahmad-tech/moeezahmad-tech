@@ -1570,10 +1570,63 @@ img {
    Footer
    ========================================================================== */
 .site-footer {
-  padding: 30px 20px 10px;
+  padding: 44px 20px 24px;
   text-align: center;
   border-top: 1px solid #e2e8f0;
-  margin-top: 40px;
+  margin-top: 50px;
+  background: #ffffff;
+}
+
+.footer-nav-links {
+  margin-bottom: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer-nav-links a {
+  color: #64748b;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-social-btn:hover {
+  background: var(--primary-blue);
+  color: #ffffff;
+  border-color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(11, 99, 229, 0.25);
 }
 
 .site-footer p {

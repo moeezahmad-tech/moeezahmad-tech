@@ -95,6 +95,14 @@ export default function Navbar() {
             <i className="bi bi-linkedin"></i>
           </a>
           <a
+            href="https://github.com/moeezahmad-tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i className="bi bi-github"></i>
+          </a>
+          <a
             href="https://www.youtube.com/@moeezahmad.techkreative"
             target="_blank"
             rel="noopener noreferrer"

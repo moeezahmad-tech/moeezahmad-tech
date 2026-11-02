@@ -59,11 +59,15 @@ export function generatePersonSchema() {
       },
     ],
     sameAs: [
+      "https://github.com/moeezahmad-tech",
       "https://www.linkedin.com/in/moeezahmad-tech/",
-      "https://www.instagram.com/moeezahmad.tech/",
       "https://www.youtube.com/@moeezahmad.techkreative",
-      "https://www.facebook.com/moeezahmad.tech/",
+      "https://www.instagram.com/moeezahmad.tech/",
+      "https://www.facebook.com/moeezahmad.tech",
+      "https://twitter.com/moeezahmad_tech",
+      "https://wa.me/923266037125",
       "https://colormagic.techkreative.com/open-source.html",
+      "https://www.techkreative.com/",
     ],
   };
 }
@@ -109,3 +113,4 @@ export function generateOrganizationSchema() {
     areaServed: "Global",
   };
 }
+

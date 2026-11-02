@@ -129,3 +129,4 @@ export const caseStudies: CaseStudy[] = [
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
   return caseStudies.find((item) => item.slug === slug);
 }
+

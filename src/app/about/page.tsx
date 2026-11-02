@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Moeez Ahmad | Full-Stack AI Engineer",
+    title: "About Moeez Ahmad | Full-Stack AI Engineer & CEO",
     description:
       "Career trajectory, computer science education at UET Lahore, certifications, and technical proficiencies.",
     url: "/about",
@@ -22,16 +22,26 @@ export const metadata: Metadata = {
         url: "/images/me.png",
         width: 1200,
         height: 630,
-        alt: "Moeez Ahmad",
+        alt: "Moeez Ahmad — About & Engineering Background",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Moeez Ahmad | Full-Stack AI Engineer",
+    site: "@moeezahmad_tech",
+    creator: "@moeezahmad_tech",
+    title: "About Moeez Ahmad | Full-Stack AI Engineer & CEO",
     description:
       "Career trajectory, education, certifications, and engineering philosophy.",
-    images: ["/images/me.png"],
+    images: [
+      {
+        url: "/images/me.png",
+        width: 1200,
+        height: 630,
+        alt: "Moeez Ahmad — About & Engineering Background",
+      },
+    ],
   },
 };
 

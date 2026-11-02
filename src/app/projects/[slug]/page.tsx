@@ -50,15 +50,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: project.image.startsWith("http") ? project.image : `${baseUrl}${project.image}`,
           width: 1200,
           height: 630,
-          alt: project.title,
+          alt: `${project.title} — Moeez Ahmad Case Study`,
+          type: "image/png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
+      site: "@moeezahmad_tech",
+      creator: "@moeezahmad_tech",
       title: project.title,
       description: project.shortDesc,
-      images: [project.image],
+      images: [
+        {
+          url: project.image.startsWith("http") ? project.image : `${baseUrl}${project.image}`,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} — Moeez Ahmad Case Study`,
+        },
+      ],
     },
   };
 }
@@ -233,3 +243,4 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
     </div>
   );
 }
+
