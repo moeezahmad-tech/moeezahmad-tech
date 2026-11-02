@@ -11,23 +11,14 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Headline matching Part 2 profile blueprint */}
+        {/* Headline */}
         <h1 className="hero-title" data-aos="fade-up" data-aos-delay="200">
           I&apos;m <span className="name-highlight">Moeez Ahmad,</span>
           <br />
           Full-Stack AI Engineer
         </h1>
 
-        <div className="hero-dual-roles" data-aos="fade-up" data-aos-delay="250">
-          <span className="role-pill">
-            <i className="bi bi-briefcase-fill"></i> Software Engineer Intern @ SolnetInfo
-          </span>
-          <span className="role-pill dark">
-            <i className="bi bi-rocket-takeoff-fill"></i> Co-Founder &amp; CEO @ TechKreative
-          </span>
-        </div>
-
-        <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+        <p className="hero-subtitle" data-aos="fade-up" data-aos-delay="250">
           I build scalable websites, AI-powered tools, and SEO-driven digital products
           that help businesses and creators turn ideas into real results.
         </p>
@@ -72,7 +63,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Rating & Experience Box */}
+          {/* Right Rating, Roles & Experience Box */}
           <div className="hero-right-widget" data-aos="fade-left" data-aos-delay="400">
             <div className="hero-rating-box">
               <div className="stars">
@@ -84,6 +75,24 @@ export default function Hero() {
               </div>
               <div className="exp-num">5+ Years</div>
               <div className="exp-label">Web &amp; Digital Experience</div>
+            </div>
+
+            {/* Structured Role Badges Card */}
+            <div className="hero-roles-widget-box">
+              <div className="hero-role-pill-item">
+                <i className="bi bi-briefcase-fill" style={{ color: "var(--primary-blue)" }}></i>
+                <div>
+                  <strong>Software Engineer Intern</strong>
+                  <span>@ SolnetInfo</span>
+                </div>
+              </div>
+              <div className="hero-role-pill-item">
+                <i className="bi bi-rocket-takeoff-fill" style={{ color: "#2563eb" }}></i>
+                <div>
+                  <strong>Co-Founder &amp; CEO</strong>
+                  <span>@ TechKreative</span>
+                </div>
+              </div>
             </div>
 
             <a
@@ -107,10 +116,10 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="trust-item"
         >
-          <i className="bi bi-rocket-takeoff"></i> TechKreative
+          <i className="bi bi-rocket-takeoff"></i> Co-Founder &amp; CEO @ TechKreative
         </a>
         <div className="trust-item">
-          <i className="bi bi-building-gear"></i> SolnetInfo
+          <i className="bi bi-building-gear"></i> Software Engineer Intern @ SolnetInfo
         </div>
         <a
           href="https://colormagic.techkreative.com/open-source.html"

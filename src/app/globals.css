@@ -3650,3 +3650,41 @@ img {
 .contact-light-theme .form-privacy-note {
   color: #64748b !important;
 }
+
+/* Hero Widget Role Badges */
+.hero-roles-widget-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-white);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+.hero-role-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+}
+
+.hero-role-pill-item i {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.hero-role-pill-item strong {
+  color: var(--text-dark);
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.hero-role-pill-item span {
+  color: var(--primary-blue);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
